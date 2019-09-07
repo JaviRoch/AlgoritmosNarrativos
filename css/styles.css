@@ -1,69 +1,17 @@
-#AlgoritmosNarrativos
+/*AlgoritmosNarrativos*/
 @font-face {
-    font-family: 'rathersemibold2';
+    font-family: 'rathersemibold';
 		src: url('Rather-SemiBold.otf');
 		font-weight: normal;
 		font-style: normal;
 }
-
-#StyloFormulario
-#Fondo
-button, input, optgroup, select, textarea {
-	background-color: transparent;
-	border: none;
-  outline: none;
-  color: rgb(235, 235, 235);
-}
-
-#QuitamosLaFlechaDelDesplegable
-.flecha select{
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-}
-
-/*Campo de texto*/
-input[type=text] {
-  border: none;
-  color: rgb(235, 235, 235);
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #747474;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #747474;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: #747474;
-}
-
-#ElTrigoAlimentacionColectiva
 
 body{
 	margin: 0;
 	padding: 0;
 	color: #333;
 	background-color: #000000;
-}
-/*
-h1, h2, h3, h4, h5, h6{
-	font-weight: 200;
-}*/
-
-h1{
-	text-align: center;
-	padding-bottom: 10px;
-	margin: 20px auto;
-}
-
-h3{
-	padding-top: 30px;
-	text-decoration: underline;
+  font-family: 'rathersemibold';
 }
 
 .sinpadding [class*="col-"] {
@@ -71,29 +19,70 @@ h3{
 		padding-right: 0;
 }
 
-.pielogos{
-		background-color: #32F616;
-}
-
-/*Relleno del color del lateral simulando misma altura de columnas*/
-.backgroundVerde{
-		background-color: #ecf110;
-
-}
-
+/*Estilo Formulario*/
+/*General*/
 #Formulario{
 	background-color: #000000;
 	padding: 7px 6% 0 6%;
-	font-family: 'rathersemibold';
 	font-size: 1.3rem;
 	margin-bottom: -16px;
+    font-family: 'rathersemibold';
 }
 
+/*Botones*/
+/*Botón nuevo del formulario*/
+.buttonNuevo {
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-top: 25px;
+  margin-left: 10px;
+  background-color: #d60c67;
+  color: #000000;
+  font-size: 18px;
+  	font-family: 'rathersemibold';
+}
+/*Botón en el lateral*/
+.buttonLateral {
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-top: 25px;
+  background-color: #000000;
+  color: #d60c67;
+  font-size: 18px;
+}
+
+/*Fondo campos de entrada*/
+button, input, optgroup, select, textarea {
+	background-color: transparent;
+	border: none;
+  outline: none;
+  color: rgb(235, 235, 235);
+}
+
+/*QuitamosLaFlechaDelDesplegable*/
+.flecha select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/*Relleno del color del formulario simulando misma altura de columnas*/
+.backgroundBlack{
+		background-color: #000;
+}
+
+
+/*Lateral*/
 #Lateral{
-	background-color: #ecf110;
+	background-color: #d60c67;
 	text-align: justify;
 	padding: 50px 6% 0 6%;
-	font-family: 'rathersemibold2';
+	font-family: 'rathersemibold';
 	font-size: 1.3rem;
 }
 
@@ -102,44 +91,3 @@ h3{
 		font-family: 'rathersemibold';
 		font-size: 3rem;
 }
-
-#Lateral a{
-		color: #333;
-}
-
-#Lateral a:hover{
-		color: #1F19FF;
-}
-
-
-/* FORM */
-
-/*Etiqueta de cada opción del formulario*/
-.form label{
-	position: absolute;
-	padding: 0px 5px 23px 5px;
-	color: #6e6b6b;
-	font-size: 24px;
-	text-align: left;
-	height: 1em;
-	line-height: 1em;
-	display: block;
-	cursor: pointer;
-	border: 3px solid transparent;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-
-/*Botóns
-.submit{
-	padding: 10px 50px;
-	display: inline-block;
-	border: none;
-	margin: 70px 0 90px;
-	background-color: #ecf110;
-	color: #333;
-	font-size: 18px;
-		cursor: pointer;
-}*/

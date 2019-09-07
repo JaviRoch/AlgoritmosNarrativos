@@ -13,11 +13,16 @@
 </head>
 <body>
     <div class="container-fluid sinpadding">
-      <div class="row backgroundVerde">
+      <div class="row backgroundBlack row-eq-height">
         <div class="col-sm-5 col-md-6 col-lg-2 sinpadding">
           <div id="Lateral">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Mollis aliquam ut porttitor leo. Arcu dictum varius duis at consectetur lorem donec. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Purus gravida quis blandit turpis. Tempor orci dapibus ultrices in iaculis nunc sed. Nunc consequat interdum varius sit amet. Dolor sit amet consectetur adipiscing. Amet nisl purus in mollis nunc. Lorem ipsum dolor sit amet.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
             </P>
+            <div class="text-center">
+              <form action="graba.php" method="POST">
+                <input class="submit buttonLateral" type="submit" value="Guardar">
+              </form>
+          </div>
           </div>
         </div>
         <div class="col-sm-7 col-md-6 col-lg-10">
@@ -29,6 +34,7 @@
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
                 <input type="text" name="comando" placeholder="Command">
               </div>
@@ -79,7 +85,7 @@
               </div>
             </form>
           </div>
-          <button onclick="muestraCampos()"/>Nuevo</button>
+          <button class="buttonNuevo" onclick="muestraCampos()"/>Nuevo</button>
           </div>
 
       </div>
