@@ -1,78 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/muestraCampos.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <title>El trigo</title>
-</head>
-<body>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/muestraCampos.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Algoritmos Narrativos</title>
+  </head>
+  <body>
     <div class="container-fluid sinpadding">
       <div class="row backgroundBlack row-eq-height">
         <div class="col-sm-5 col-md-6 col-lg-2 sinpadding">
           <div id="Lateral">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
+            <p>34333 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
             </P>
             <div class="text-center">
-              <form action="graba.php" method="POST">
+              <form action="graba.php" method="post" name="formCero">
                 <input class="submit buttonLateral" type="submit" value="Guardar">
-              </form>
-          </div>
+            </div>
           </div>
         </div>
         <div class="col-sm-7 col-md-6 col-lg-10">
           <div id="Formulario">
-            <form action="graba.php" method="POST" class="form cf" name="formCero">
               <div class="flecha">
                 <input type="time" name="hora">
-                <select name="type-al">
+                <select name="hecho1">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando1" placeholder="Command">
               </div>
               <div class="flecha" id="asiento1" style="display:none;">
                 <input type="time" name="hora">
-                <select name="type-al">
+                <select name="hecho2">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando2" placeholder="Command">
               </div>
               <div class="flecha" id="asiento2" style="display:none;">
                 <input type="time" name="hora">
-                <select name="type-al">
+                <select name="hecho3">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando3" placeholder="Command">
               </div>
               <div class="flecha" id="asiento3" style="display:none;">
                 <input type="time" name="hora">
-                <select name="type-al">
+                <select name="hecho4">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando4" placeholder="Command">
               </div>
               <div class="flecha" id="asiento4" style="display:none;">
                 <input type="time" name="hora">
-                <select name="type-al">
+                <select name="hecho5">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando5" placeholder="Command">
               </div>
               <div class="flecha" id="asiento5" style="display:none;">
                 <input type="time" name="hora">
@@ -85,11 +83,9 @@
               </div>
             </form>
           </div>
-          <button class="buttonNuevo" onclick="muestraCampos()"/>Nuevo</button>
+            <button class="buttonNuevo" onclick="muestraCampos()"/>Nuevo</button>
           </div>
-
       </div>
-
     </div>
   </body>
 </html>

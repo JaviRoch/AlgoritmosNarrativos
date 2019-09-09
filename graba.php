@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 //Código de chrishazfun https://github.com/chrishazfun/php-json-form-submit
 //Importante configurar bien los permisos para la modificación del archivo
 
@@ -13,38 +17,29 @@ try
   //Convertimos JSON a array
   $arr_data = json_decode($jsondata, true);
 
+if($_POST){
+  echo "valor de post hecho1". $_POST['hecho1']."enter ";
+}
+else{
+  echo "no hay datos";
+}
+
+$pru1 = $_POST["hora"];
+  echo ($pru1);
+
   //Cogemos los datos del formulario
   $formdata = array(
-     'NLibro'=>count($arr_data),
-     'edad'=> $_POST['edad'],
-     'genero'=> $_POST['genero'],
-     'nacimiento'=> $_POST['nacimiento'],
-     'laboral'=> $_POST['laboral'],
-     'cocinero'=> $_POST['cocinero'],
-     'granCocinero'=> $_POST['granCocinero'],
-     'plantero'=> $_POST['plantero'],
-     'celiaco'=> $_POST['celiaco'],
-     'artista'=> $_POST['artista'],
-     'viveSinPan'=> $_POST['viveSinPan'],
-     'queTrigo'=> $_POST['queTrigo'],
-     'latin'=> $_POST['latin'],
-     'hambre'=> $_POST['hambre'],
-     'comunista'=> $_POST['comunista'],
-     'fascista'=> $_POST['fascista'],
-     'virtual'=> $_POST['virtual'],
-     'ovnis'=> $_POST['ovnis'],
-     'basura'=> $_POST['basura'],
-     'sobras'=> $_POST['sobras'],
-     'tiraPan'=> $_POST['tiraPan'],
-     'flor'=> $_POST['flor'],
-     'etapaVida'=> $_POST['etapaVida'],
-     'lanzaPolitico'=> $_POST['lanzaPolitico'],
-     'comePanTrigo'=> $_POST['comePanTrigo'],
-     'alimentaSinPan'=> $_POST['alimentaSinPan'],
-     'cuandoCome'=> $_POST['cuandoCome'],
-     'confirma'=> $_POST['confirma'],
-     'titulo'=> $_POST['titulo'],
-     'autor'=> $_POST['autor'],
+     'Nhecho'=>count($arr_data),
+     'hecho1'=> $_POST['hecho1'],
+     'comando1'=> $_POST['comando1'],
+     'hecho2'=> $_POST['hecho2'],
+     'comando2'=> $_POST['comando2'],
+     'hecho3'=> $_POST['hecho3'],
+     'comando3'=> $_POST['comando3'],
+     'hecho4'=> $_POST['hecho4'],
+     'comando4'=> $_POST['comando4'],
+     'hecho5'=> $_POST['hecho5'],
+     'comando5'=> $_POST['comando5'],
   );
 
   //Insertamos datos del formulario al array
@@ -54,9 +49,10 @@ try
   //Convertimos array a JSON
   $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
 
-  //wEscribimos los dato sen el archivo
+  //Escribimos los datos en el archivo y redirrecionamos
   if(file_put_contents($myFile, $jsondata)) {
-       header("Location: creaLibro.html");
+    echo "Datos guardados2";
+       //header("Location: datosGuardados.html");
    }
   else
        echo "error al guardar datos";

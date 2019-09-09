@@ -19,7 +19,9 @@ body{
 		padding-right: 0;
 }
 
-/*Estilo Formulario*/
+/**
+Estilo Formulario
+*/
 /*General*/
 #Formulario{
 	background-color: #000000;
@@ -77,7 +79,9 @@ button, input, optgroup, select, textarea {
 }
 
 
-/*Lateral*/
+/**
+Estilo lateral
+*/
 #Lateral{
 	background-color: #d60c67;
 	text-align: justify;
