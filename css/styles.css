@@ -25,10 +25,55 @@ Estilo Formulario
 /*General*/
 #Formulario{
 	background-color: #000000;
-	padding: 7px 6% 0 6%;
+	padding: 7px 8px 0 8px;
 	font-size: 1.3rem;
 	margin-bottom: -16px;
-    font-family: 'rathersemibold';
+  font-family: 'rathersemibold';
+  	color: #333;
+}
+
+.tituloPuntoCero{
+  display: table;
+}
+
+.tituloForm{
+  color: #d60c67;
+  display: table-row;
+}
+
+.tituloFormTime{
+display: table-cell;
+}
+
+.tituloFormType{
+display: table-cell;
+padding-left: 98px;
+}
+
+.tituloFormCommand{
+display: table-cell;
+padding-left: 45px;
+}
+
+#titlePuntoCero{
+  font-size: 2rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.formTime{
+  width: 140px;
+  display: table-cell;
+}
+
+.formType{
+  padding-left: 3px;
+  display: table-cell;
+}
+
+.formCommand{
+  display: table-cell;
+  padding-left: 3px;
 }
 
 /*Botones*/

@@ -30,4 +30,9 @@
       console.log(asiento);
       return
     }
+    if (asiento==6){
+      document.getElementById('asiento6').style.display='block';
+      console.log(asiento);
+      return
+    }
   }

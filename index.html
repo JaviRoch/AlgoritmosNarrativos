@@ -16,74 +16,96 @@
       <div class="row backgroundBlack row-eq-height">
         <div class="col-sm-5 col-md-6 col-lg-2 sinpadding">
           <div id="Lateral">
-            <p>34333 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
             </P>
             <div class="text-center">
-              <form action="graba.php" method="post" name="formCero">
+              <form action="grabaCero.php" method="post" name="formCero">
                 <input class="submit buttonLateral" type="submit" value="Guardar">
             </div>
           </div>
         </div>
         <div class="col-sm-7 col-md-6 col-lg-10">
           <div id="Formulario">
+            <input type="text" name="titulo" id="titlePuntoCero" placeholder="Title">
+            <div class="tituloPuntoCero">
+              <div class="tituloForm">
+                <div class="tituloFormTime"> Time</div>
+                <div class="tituloFormType">Type</div>
+                <div class="tituloFormCommand">Command</div>
+              </div>
+            </div>
               <div class="flecha">
-                <input type="time" name="hora">
-                <select name="hecho1">
+                <div class="formTime">
+                <input type="time" name="hora1" step="1">
+              </div>
+              <div class="formType">
+                <select  name="hecho1">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando1" placeholder="Command">
               </div>
+              </div>
               <div class="flecha" id="asiento1" style="display:none;">
-                <input type="time" name="hora">
+                <input type="time" name="hora2" step="1">
                 <select name="hecho2">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
                 <input type="text" name="comando2" placeholder="Command">
               </div>
               <div class="flecha" id="asiento2" style="display:none;">
-                <input type="time" name="hora">
+                <input type="time" name="hora3" step="1">
                 <select name="hecho3">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
                 <input type="text" name="comando3" placeholder="Command">
               </div>
               <div class="flecha" id="asiento3" style="display:none;">
-                <input type="time" name="hora">
+                <input type="time" name="hora4" step="1">
                 <select name="hecho4">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
                 <input type="text" name="comando4" placeholder="Command">
               </div>
               <div class="flecha" id="asiento4" style="display:none;">
-                <input type="time" name="hora">
+                <input type="time" name="hora5" step="1">
                 <select name="hecho5">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
                 <input type="text" name="comando5" placeholder="Command">
               </div>
               <div class="flecha" id="asiento5" style="display:none;">
-                <input type="time" name="hora">
-                <select name="type-al">
+                <input type="time" name="hora6" step="1">
+                <select name="hecho6">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
                 </select>
-                <input type="text" name="comando" placeholder="Command">
+                <input type="text" name="comando6" placeholder="Command">
+              </div>
+              <div id="asiento6" style="display:none;">
+                <p>¿No serán demasiadas?</p>
               </div>
             </form>
           </div>
-            <button class="buttonNuevo" onclick="muestraCampos()"/>Nuevo</button>
+            <button class="buttonNuevo" onclick="muestraCampos()"/>New</button>
           </div>
       </div>
     </div>
