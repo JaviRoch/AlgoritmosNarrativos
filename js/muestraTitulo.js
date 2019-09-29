@@ -1,4 +1,8 @@
 // Transferencia des datos desde la base de datos JSON
+$("#botonNoQuiero").click(
+	console.log("jQuery botón")
+);
+
 var xmlhttp = new XMLHttpRequest();
 var url = "/data.json";
 // Función al finalizar operación. Status a 200 ok, status a 404 fail
@@ -17,7 +21,15 @@ xmlhttp.send();
 
 // Parseamos los datos desde JSON y guardamos el último libro en una variable
 function parseo (dat) {
-	var algoritmo = [];
   var algoritmo = JSON.parse(dat);
-	return algoritmo
+	console.log(algoritmo);
+
+}
+
+
+
+function muestraTitulo(algoritmo){
+
+console.log(algoritmo[1][2]);
+console.log("en muestraTitulo");
 }
