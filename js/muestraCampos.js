@@ -3,7 +3,6 @@
   function muestraCampos(){
     asiento += 1;
     if (asiento==1){
-            console.log(asiento);
       document.getElementById('asiento1').style.display='block';
       return
     }
