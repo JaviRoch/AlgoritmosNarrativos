@@ -7,6 +7,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/muestraCampos.js"></script>
+    <script src="js/noQuieroPensar.js"></script>
     <script src="js/muestraTitulo.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -20,7 +21,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. Sit amet mauris commodo quis imperdiet massa. Lobortis scelerisque fermentum dui faucibus in ornare. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
             </P>
             <div class="text-center">
-              <form action="grabaCero.php" method="post" name="formCero">
+              <form action="grabaCero.php" method="post" name="formCero" autocomplete="off">
                 <input class="submit buttonLateral" type="submit" value="Guardar">
             </div>
           </div>
@@ -35,12 +36,30 @@
                 <div class="tituloFormCommand">Command</div>
               </div>
             </div>
-              <div class="flecha">
-                <div class="formTime">
-                <input type="time" name="hora1" step="1">
+
+            <div class="flecha">
+              <div class="formTime">
+                <input type="time" id="time0" name="hora0" step="1">
               </div>
               <div class="formType">
-                <select  name="hecho1">
+                <select  name="hecho0">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando0" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento1" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time1" name="hora1" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho1">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
@@ -50,60 +69,317 @@
               <div class="formTime">
                 <input type="text" name="comando1" placeholder="Command">
               </div>
+            </div>
+
+            <div class="flecha" id="asiento2" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time2" name="hora2" step="1">
               </div>
-              <div class="flecha" id="asiento1" style="display:none;">
-                <input type="time" name="hora2" step="1">
+              <div class="formType">
                 <select name="hecho2">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando2" placeholder="Command">
               </div>
-              <div class="flecha" id="asiento2" style="display:none;">
-                <input type="time" name="hora3" step="1">
+            </div>
+
+            <div class="flecha" id="asiento3" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time3" name="hora3" step="1">
+              </div>
+              <div class="formType">
                 <select name="hecho3">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando3" placeholder="Command">
               </div>
-              <div class="flecha" id="asiento3" style="display:none;">
-                <input type="time" name="hora4" step="1">
+            </div>
+
+            <div class="flecha" id="asiento4" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time4" name="hora4" step="1">
+              </div>
+              <div class="formType">
                 <select name="hecho4">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando4" placeholder="Command">
               </div>
-              <div class="flecha" id="asiento4" style="display:none;">
-                <input type="time" name="hora5" step="1">
+            </div>
+
+            <div class="flecha" id="asiento5" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time5" name="hora5" step="1">
+              </div>
+              <div class="formType">
                 <select name="hecho5">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando5" placeholder="Command">
               </div>
-              <div class="flecha" id="asiento5" style="display:none;">
-                <input type="time" name="hora6" step="1">
+            </div>
+
+            <div class="flecha" id="asiento6" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time6" name="hora6" step="1">
+              </div>
+              <div class="formType">
                 <select name="hecho6">
                   <option value="Accion">Action</option>
                   <option value="2">Opción 2</option>
                   <option value="3">Opción 3</option>
                   <option value="-" selected>----</option>
                 </select>
+              </div>
+              <div class="formTime">
                 <input type="text" name="comando6" placeholder="Command">
               </div>
-              <div id="asiento6" style="display:none;">
-                <p>¿No serán demasiadas?</p>
+            </div>
+
+            <div class="flecha" id="asiento7" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time7" name="hora7" step="1">
               </div>
+              <div class="formType">
+                <select name="hecho7">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando7" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento8" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time8" name="hora8" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho8">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando8" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento9" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time9" name="hora9" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho9">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando9" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento10" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time10" name="hora10" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho10">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando10" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento11" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time11" name="hora11" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho11">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando11" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento12" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time12" name="hora12" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho12">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando12" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento13" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time13" name="hora13" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho13">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando13" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento14" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time14" name="hora14" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho14">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando14" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento15" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time15" name="hora15" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho15">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando15" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento16" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time16" name="hora16" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho16">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando16" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento17" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time17" name="hora17" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho17">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando17" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento18" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time18" name="hora18" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho18">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando18" placeholder="Command">
+              </div>
+            </div>
+
+            <div class="flecha" id="asiento19" style="display:none;">
+              <div class="formTime">
+                <input type="time" id="time19" name="hora19" step="1">
+              </div>
+              <div class="formType">
+                <select name="hecho19">
+                  <option value="Accion">Action</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="-" selected>----</option>
+                </select>
+              </div>
+              <div class="formTime">
+                <input type="text" name="comando19" placeholder="Command">
+              </div>
+            </div>
+
+            <div id="asiento20" style="display:none;">
+              <p>¿No serán demasiadas?</p>
+            </div>
             </form>
           </div>
             <button class="buttonNuevo" onclick="muestraCampos()">New</button>

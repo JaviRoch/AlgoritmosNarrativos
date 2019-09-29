@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#setText").click(function(event) {
+  $("#botonNoQuiero").click(function(event) {
     tiempos = [];
 
     function aleatoriTiempo(max,min,numAsiento){
@@ -22,7 +22,7 @@ $(document).ready(function(){
     var interTiemp3 = aleatoriTiempo(1080,900,4);
     var interTiemp4 = aleatoriTiempo(1439,1080,1);
 
-    for(var i = 0;i<6;i++){
+    for(var i = 0;i<20;i++){
 
       var tiemposConver = tiempos.map(function time_convert(num)
        {
