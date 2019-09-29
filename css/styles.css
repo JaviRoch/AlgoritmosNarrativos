@@ -17,6 +17,8 @@ body{
 .sinpadding [class*="col-"] {
     padding-left: 0;
 		padding-right: 0;
+    height: auto;
+    min-height: 100vh;
 }
 
 /**
@@ -102,6 +104,17 @@ padding-left: 45px;
   font-size: 18px;
 }
 
+.buttonLateralNo {
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #d60c67;
+  font-size: 18px;
+}
+
 /*Fondo campos de entrada*/
 button, input, optgroup, select, textarea {
 	background-color: transparent;
@@ -139,4 +152,8 @@ Estilo lateral
 		/*font-family: 'Rubik Mono One', sans-serif;*/
 		font-family: 'rathersemibold';
 		font-size: 3rem;
+}
+
+.fonLateral{
+	background-color: #d60c67;
 }
