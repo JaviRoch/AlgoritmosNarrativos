@@ -117,7 +117,7 @@ Estilo Formulario Punto Cero
 /*General*/
 #Formulario{
 	background-color: #000000;
-	padding: 25px 8px 0 8px;
+	padding: 25px 8px 0 16px;
   font-family: 'Roboto Mono', monospace;
 	font-size: 1.3rem;
 	margin-bottom: -16px;
@@ -178,7 +178,7 @@ Estilo preguntas Punto saturaciónote
 **/
 
 .formSatura{
-  padding: 32px 18px 0 18px;
+  padding: 22px 18px 0 16px;
   font-family: 'rathersemibold';
 }
 
@@ -236,6 +236,17 @@ Estilo preguntas Punto saturaciónote
   margin-bottom: 33px;
   background-color: #000000;
   color: #d60c67;
+  font-size: 18px;
+}
+
+.buttonLateral2 {
+  width: 140px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-top:40px;
+  margin-bottom: 33px;
+  background-color: #ffecc2;
+  color: #000000;
   font-size: 18px;
 }
 
