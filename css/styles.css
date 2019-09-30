@@ -21,16 +21,76 @@ body{
     min-height: 100vh;
 }
 
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/**
+Estilo Menú
+*/
+
+.menu{
+  background-color: #d60c67;
+  font-size: 2rem;
+  font-family: 'rathersemibold';
+  color: #000000;
+  height: 65px;
+}
+
+.menuSelect{
+  background-color: #000000;
+  color: #d60c67;
+  padding-top: 10px;
+}
+
+.menuNoSelect{
+  padding-top: 10px;
+}
+
+a.nounderline1:link{
+  text-decoration:none;
+  color: #000000;
+}
+
+a.nounderline1:link:hover{
+  text-decoration:none;
+  color: #ffecc2;
+}
+
+a.nounderline2:link{
+  text-decoration:none;
+  color: #000000;
+}
+
+a.nounderline2:link:hover{
+  text-decoration:none;
+  color: #c2eaff;
+}
+
+.menuNegroHover1:hover{
+  background-color: #000000;
+}
+
+.menuNegroHover2:hover{
+  background-color: #000000;
+}
+
 /**
 Estilo Formulario
 */
 /*General*/
 #Formulario{
 	background-color: #000000;
-	padding: 7px 8px 0 8px;
+	padding: 25px 8px 0 8px;
+  font-family: 'Roboto Mono', monospace;
 	font-size: 1.3rem;
 	margin-bottom: -16px;
-  font-family: 'rathersemibold';
   	color: #333;
 }
 
@@ -103,7 +163,8 @@ padding-left: 45px;
 	padding-left: 25px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	margin-top: 25px;
+	margin-top: 5px;
+  margin-bottom: 33px;
   background-color: #000000;
   color: #d60c67;
   font-size: 18px;
@@ -148,7 +209,7 @@ Estilo lateral
 #Lateral{
 	background-color: #d60c67;
 	text-align: justify;
-	padding: 72px 6% 0 6%;
+	padding: 112px 6% 0 6%;
 	font-family: 'rathersemibold';
 	font-size: 1.3rem;
 }

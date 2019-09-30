@@ -8,15 +8,15 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/muestraCampos.js"></script>
     <script src="js/noQuieroPensar.js"></script>
-    <script src="js/muestraTitulo.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>Un día en tu vida</title>
   </head>
   <body>
     <div class="container-fluid sinpadding">
       <div class="row backgroundBlack row-eq-height">
-        <div class="col-sm-5 col-md-6 col-lg-2 sinpadding fonLateral">
+        <div class="col-sm-5 col-md-12 col-lg-2 sinpadding fonLateral">
           <div id="Lateral">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. </P>
             <div class="col text-center">
@@ -30,7 +30,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-7 col-md-6 col-lg-10">
+        <div class="col-sm-12 col-md-12 col-lg-10">
+            <div class="row no-gutters menu text-center">
+              <div class="col menuSelect">
+                PUNTO CERO
+              </div>
+              <div class="col menuNoSelect menuNegroHover1">
+                <a href="http://algoritmosnarrativos.imagenred.org/punto-saturacion" class="nounderline1">PUNTO SATURACIÓN</a>
+              </div>
+                <div class="col menuNoSelect menuNegroHover2">
+                <a href="http://algoritmosnarrativos.imagenred.org/punto-salida" class="nounderline2">PUNTO SALIDA</a>
+              </div>
+            </div>
           <div id="Formulario">
             <input type="text" name="titulo" id="titlePuntoCero" placeholder="Title">
             <div class="tituloPuntoCero">
@@ -41,10 +52,10 @@
               </div>
             </div>
 
-            <div class="flecha">
-              <div class="formTime">
-                <input type="time" id="time0" name="hora0" step="1">
-              </div>
+                <div class="flecha">
+                  <div class="formTime">
+                    <input type="time" id="time0" name="hora0" step="1">
+                  </div>
               <div class="formType">
                 <select  name="hecho0">
                   <option value="Accion">Action</option>
@@ -55,7 +66,6 @@
               </div>
               <div class="formCommand">
                 <input class="inputAncho" type="text" name="comando0" placeholder="Command">
-              </div>
             </div>
 
             <div class="flecha" id="asiento1" style="display:none;">
