@@ -60,7 +60,7 @@ a.nounderline1:link{
 
 a.nounderline1:link:hover{
   text-decoration:none;
-  color: #ffecc2;
+  color: #ffecc2 !important;
 }
 
 a.nounderline2:link{
@@ -70,15 +70,17 @@ a.nounderline2:link{
 
 a.nounderline2:link:hover{
   text-decoration:none;
-  color: #c2eaff;
+  color: #c2eaff !important;
 }
 
 .menuNegroHover1:hover{
   background-color: #000000;
+  color: #ffecc2 !important;
 }
 
 .menuNegroHover2:hover{
   background-color: #000000;
+  color: #c2eaff !important;
 }
 
 /**
@@ -109,12 +111,12 @@ display: table-cell;
 
 .tituloFormType{
 display: table-cell;
-padding-left: 98px;
+padding-left: 95px;
 }
 
 .tituloFormCommand{
 display: table-cell;
-padding-left: 45px;
+padding-left: 132px;
 }
 
 #titlePuntoCero{
@@ -135,7 +137,7 @@ padding-left: 45px;
 
 .formCommand{
   display: table-cell;
-  padding-left: 3px;
+  padding-left: 10px;
   width: 80%;
 }
 
