@@ -174,9 +174,10 @@ padding-left: 132px;
 }
 
 /**
-Estilo preguntas Punto saturaciónote
+Estilo punto de saturación
 **/
 
+/*Formulario Saturación*/
 .formSatura{
   padding: 22px 18px 0 16px;
   font-family: 'rathersemibold';
@@ -212,6 +213,28 @@ Estilo preguntas Punto saturaciónote
 	outline: none;
 	-webkit-appearance: none;
 	-moz-appearance: textfield;
+}
+
+/*Estilo creación algoritmo en punto de saturación*/
+.segundoSatura{
+  padding: 0px 18px 0 16px;
+}
+
+.creaSatura{
+  color: #ffffff;
+  min-height: auto !important;
+  padding-top: 30px;
+
+}
+
+.terminalSatura{
+  color: #ffffff;
+  min-height: auto !important;
+  padding-left: 16px !important;
+  padding-top: 30px;
+	border-left-style: solid;
+	border-left-width: 5px;
+  border-left-color: #ffecc2;
 }
 
 /*Botones*/
