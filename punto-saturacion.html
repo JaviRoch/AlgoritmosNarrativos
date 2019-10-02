@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ocultaGuardaFormSatura.js"></script>
+    <script src="js/creaAlgoritmo.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -24,13 +28,13 @@
         <div class="col-sm-12 col-md-12 col-lg-10">
           <div class="row no-gutters menu2 text-center">
             <div class="col menuNoSelect menuNegroHover0">
-              <a href="index" class="nounderline0">PUNTO CERO</a>
+              <a href="index.html" class="nounderline0">PUNTO CERO</a>
             </div>
             <div class="col menuSelect1">
               PUNTO SATURACIÓN
             </div>
             <div class="col menuNoSelect menuNegroHover2">
-              <a href="punto-salida" class="nounderline2">PUNTO SALIDA</a>
+              <a href="punto-salida.html" class="nounderline2">PUNTO SALIDA</a>
             </div>
           </div>
           <div class="formSatura" id="ocultoFormulario" style="display:block;">
@@ -61,7 +65,11 @@
           </div>
           <div class="row no-gutters segundoSatura">
             <div class="col creaSatura">
-              Columna 1
+              <button class="buttonCrear1" id="buttonLugar">Lugar</Button>
+              <button class="buttonCrear2" onclick="">Característica</Button>
+              <button class="buttonCrear1" onclick="">Persona</Button>
+              <button class="buttonCrear1" onclick="">Objeto</Button>
+              <button class="buttonCrear3" onclick="">Acción</Button>
             </div>
             <div class="col terminalSatura">
               Columna 2

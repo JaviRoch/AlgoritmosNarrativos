@@ -2,7 +2,27 @@ $(document).ready(function(){
   $("#botonNoQuiero").click(function(event) {
     //Creamos el array
     tiempos = [];
-    titulos =["tituloPredef1","tituloPredef2","tituloPredef3","tituloPredef4","tituloPredef5","tituloPredef6","tituloPredef7","tituloPredef8","tituloPredef9","tituloPredef10","tituloPredef11"];
+    titulos =["Algoritmo narrativo para construir una plancha que la maquina de reconocimiento facial no lo detecte",
+    "Algoritmo narrativo para poner del revés las fotos de tu casa",
+    "Algoritmo narrativo para iniciar una colección de imágenes",
+    "Algoritmo narrativo para crear un retrato robot digital",
+    "Algoritmo narrativo para conseguir una imagen invisible",
+    "Algoritmo narrativo para hacerte invisible",
+    "Algoritmo narrativo para escuchar imágenes",
+    "Algoritmo narrativo para que una imagen me haga sentir un deseo",
+    "Algoritmo narrativo para perder el miedo a una imagen",
+    "Algoritmo narrativo para dejar de usar emoticonos durante un día",
+    "Algoritmo narrativo para conseguir expresar lo que siento haciendo una imagen",
+    "Algoritmo narrativo para evitar que se te caiga el móvil al wáter",
+    "Algoritmo narrativo para ver imágenes con los ojos cerrados",
+    "Algoritmo narrativo para robar un banco de imágenes",
+    "Algoritmo narrativo para llevarte un cartel de una pared",
+    "Algoritmo narrativo para hacer una foto familiar",
+    "Algoritmo narrativo para contar un día en mi vida con imágenes",
+    "Algoritmo narrativo para buscar un título a mis imágenes",
+    "Algoritmo narrativo para ir caminando sin mirar el móvil",
+    "Algoritmo narrativo para que una imagen me haga reír",
+    "Algoritmo narrativo para que una imagen me haga llorar"];
 
     //Función para la creación de los tiempos al pulsar el boton "No quiero pensar"
     function aleatoriTiempo(max,min,numAsiento){
@@ -21,7 +41,7 @@ $(document).ready(function(){
       $('#titlePuntoCero').val(titulos[tituloTemp]);
     }
 
-    aleatoriTitulo(10,0);
+    aleatoriTitulo(20,0);
 
     //Lanzamos función de generación de tiempos aleatorios
     //Máximo minutos en un día 1439 ->23:59 | 600 -> 10:00

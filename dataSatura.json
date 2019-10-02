@@ -1,5 +1,4 @@
 [
-    
     {
         "Nhecho": 1,
         "pregunta1": "",
@@ -42,6 +41,21 @@
     },
     {
         "Nhecho": 9,
+        "pregunta1": "",
+        "pregunta2": ""
+    },
+    {
+        "Nhecho": 9,
+        "pregunta1": "",
+        "pregunta2": ""
+    },
+    {
+        "Nhecho": 10,
+        "pregunta1": "",
+        "pregunta2": ""
+    },
+    {
+        "Nhecho": 11,
         "pregunta1": "",
         "pregunta2": ""
     }

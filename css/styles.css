@@ -151,6 +151,7 @@ padding-left: 132px;
   font-size: 2rem;
   padding-top: 8px;
   padding-bottom: 8px;
+  width: 97%;
 }
 
 .formTime{
@@ -224,6 +225,8 @@ Estilo punto de saturación
   color: #ffffff;
   min-height: auto !important;
   padding-top: 30px;
+  font-family: 'rathersemibold';
+  font-size: 2rem;
 
 }
 
@@ -282,6 +285,57 @@ Estilo punto de saturación
   background-color: #000000;
   color: #d60c67;
   font-size: 18px;
+}
+
+.buttonCrear1{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #ffecc2;
+  color: #000000;
+}
+.buttonCrear1:hover{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #000000;
+  color: #ffecc2;
+}
+
+.buttonCrear2{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #ffffff;
+  color: #ffecc2;
+}
+.buttonCrear2:hover{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #000000;
+  color: #ffecc2;
+}
+
+.buttonCrear3{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #000000;
+  color: #ffecc2;
+}
+.buttonCrear3:hover{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+  margin-left: -4px;
+  background-color: #ffffff;
+  color: #ffecc2;
 }
 
 /*Fondo campos de entrada*/
