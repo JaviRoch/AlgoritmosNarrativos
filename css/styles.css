@@ -56,6 +56,7 @@ Estilo Menú
   color: #d60c67;
   padding-top: 10px;
 }
+
 .menuSelect1{
   background-color: #000000;
   color: #ffecc2;
@@ -66,32 +67,38 @@ Estilo Menú
   padding-top: 10px;
 }
 
-a.nounderline0:link{
+.nounderline0:link{
   text-decoration:none;
   color: #000000;
 }
-
-a.nounderline0:link:hover{
+.nounderline0:visited{
+  color: #000000;
+}
+.nounderline0:hover{
   text-decoration:none;
-  color: #d60c67 !important;
+  color: #d60c67;
 }
 
-a.nounderline1:link{
+.nounderline1:link{
   text-decoration:none;
   color: #000000;
 }
-
-a.nounderline1:link:hover{
+.nounderline1:visited{
+  color: #000000;
+}
+.nounderline1:hover{
   text-decoration:none;
   color: #ffecc2 !important;
 }
 
-a.nounderline2:link{
+.nounderline2:link{
   text-decoration:none;
   color: #000000;
 }
-
-a.nounderline2:link:hover{
+.nounderline2:visited{
+  color: #000000;
+}
+.nounderline2:hover{
   text-decoration:none;
   color: #c2eaff !important;
 }
@@ -144,7 +151,8 @@ padding-left: 95px;
 
 .tituloFormCommand{
 display: table-cell;
-padding-left: 132px;
+padding-left: 133px;
+-moz-padding-start : 142px;
 }
 
 #titlePuntoCero{
@@ -253,6 +261,10 @@ Estilo punto de saturación
   font-size: 18px;
   font-family: 'rathersemibold';
 }
+.buttonNuevo:hover{
+  color: #333;
+}
+
 /*Botón en el lateral*/
 .buttonLateral {
   width: 140px;
@@ -263,6 +275,9 @@ Estilo punto de saturación
   background-color: #000000;
   color: #d60c67;
   font-size: 18px;
+}
+.buttonLateral:hover {
+  color: #333;
 }
 
 .buttonLateral2 {
@@ -276,6 +291,10 @@ Estilo punto de saturación
   font-size: 18px;
 }
 
+.buttonLateral2:hover {
+  color: #ffffff;
+}
+
 .buttonLateralNo {
 	padding-right: 25px;
 	padding-left: 25px;
@@ -287,53 +306,40 @@ Estilo punto de saturación
   font-size: 18px;
 }
 
-.buttonCrear1{
-  padding-top: 3px;
-  padding-bottom: 3px;
+.buttonLateralNo:hover {
+  color: #333;
+}
+
+.buttonCrear{
+  padding: 0px 6px 0px 6px;
   margin-bottom: 4px;
   margin-left: -4px;
+  font-size: 2rem;
+}
+
+.buttonCrear1{
   background-color: #ffecc2;
   color: #000000;
 }
 .buttonCrear1:hover{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 4px;
-  margin-left: -4px;
   background-color: #000000;
   color: #ffecc2;
 }
 
 .buttonCrear2{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 4px;
-  margin-left: -4px;
   background-color: #ffffff;
   color: #ffecc2;
 }
 .buttonCrear2:hover{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 4px;
-  margin-left: -4px;
   background-color: #000000;
   color: #ffecc2;
 }
 
 .buttonCrear3{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 4px;
-  margin-left: -4px;
   background-color: #000000;
   color: #ffecc2;
 }
 .buttonCrear3:hover{
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 4px;
-  margin-left: -4px;
   background-color: #ffffff;
   color: #ffecc2;
 }
