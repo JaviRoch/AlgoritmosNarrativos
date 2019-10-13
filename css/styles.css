@@ -267,7 +267,7 @@ Estilo punto de saturación
 
 /*Botón en el lateral*/
 .buttonLateral {
-  width: 140px;
+  width: 190px;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	margin-top: 5px;
@@ -296,11 +296,11 @@ Estilo punto de saturación
 }
 
 .buttonLateralNo {
-	padding-right: 25px;
-	padding-left: 25px;
+
 	padding-top: 8px;
 	padding-bottom: 8px;
   margin-bottom: 10px;
+  width: 190px;
   background-color: #000000;
   color: #d60c67;
   font-size: 18px;
@@ -371,18 +371,16 @@ Estilo lateral
 */
 #Lateral{
 	background-color: #d60c67;
-	text-align: justify;
 	padding: 112px 6% 0 6%;
 	font-family: 'rathersemibold';
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 #Lateral2{
 	background-color: #ffecc2;
-	text-align: justify;
 	padding: 112px 6% 0 6%;
 	font-family: 'rathersemibold';
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 #Lateral h1{

@@ -21,8 +21,9 @@
       <div class="row backgroundBlack row-eq-height">
         <div class="col-sm-5 col-md-12 col-lg-2 sinpadding fonLateral2">
           <div id="Lateral2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Varius duis at consectetur lorem. Ut placerat orci nulla pellentesque dignissim enim sit amet. </P>
-            <p>Volutpat ac tincidunt vitae semper quis. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In fermentum et sollicitudin ac orci phasellus egestas tellus. </P>
+            <p>Bienvenidxs al Punto de Saturación. Este espacio está diseñado para encarnar cualquier posibilidad de decisión en la propia mecánica del algoritmo y quiere plantear una reflexión sobre los límites morales, éticos, políticos, etc., de nuestras extensiones tecnológicas.</P>
+            <p>En el Punto de Saturación encontrarás un cuestionario sobre tus hábitos de consumo que tienes que completar. La máquina te dará instrucciones para generar un algoritmo funcional y ejecutable para un día cualquiera de tu vida. Lo que va que a pasar aquí es que entre la máquina y tú vais a tejer un algoritmo. </P>
+            <p>Una vez tienes tu algoritmo de saturación hazlo posible, ejecútalo. Después, compártelo con el resto de tus compañeros de clase a través de una asamblea de la imagen.  A partir de aquí, podéis crear un espacio de discusión, intercambio y reflexión sobre vuestros resultados.</p>
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-10">
@@ -39,25 +40,49 @@
           </div>
           <div class="formSatura" id="ocultoFormulario" style="display:block;">
             <form id="formSaturaSub" name="formSatura" action="/grabaSatura.php" autocomplete="off" method="post">
-              <div class="preguntasSatura">
-                <p>Pregunta 1</p>
-                <input class="inputAncho" type="text" name="pregunta1" placeholder="Texto ejemplo">
-              </div>
+
+
               <div class="preguntasSatura">
                 <p>Cuantas horas duermes al día</p>
-                <input type="number" name="pregunta2" >
+                <input type="number" name="pregunta1" >
               </div>
+
               <div class="preguntasSatura">
-                <p>Selecciona una opción</p>
-                <select  name="hecho0">
-                  <option value="Lugar">Lugar</option>
-                  <option value="Caracteristica">Característica</option>
-                  <option value="Persona">Persona</option>
-                  <option value="Objeto">Objeto</option>
-                  <option value="Accion">Acción</option>
-                  <option value="-" selected>----</option>
+                <p>Cuantas veces te cambias de ropa al día</p>
+                <select  name="pregunta2">
+                  <option value="No">No me cambio de ropa</option>
+                  <option value="1-3">De 1 a 3</option>
+                  <option value="Muchas">Si yo te dijera…</option>
                 </select>
               </div>
+
+              <div class="preguntasSatura">
+                <p>Cuanto dinero has derrochado en el último año</p>
+                <select  name="pregunta3">
+                  <option value="300">De 300 a 500€</option>
+                  <option value="500">De 500 a 1.500€</option>
+                  <option value="No">No tengo dinero que derrochar</option>
+                </select>
+              </div>
+
+              <div class="preguntasSatura">
+                <p>Cuanto dinero has derrochado en el último año</p>
+                <select  name="pregunta4">
+                  <option value="No">¿Cielo? ¿Donde?</option>
+                  <option value="1">De 1 a 7</option>
+                  <option value="7">De 7 a 14</option>
+                </select>
+              </div>
+
+              <div class="preguntasSatura">
+                <p>Tiempo máximo que has estado sin comer</p>
+                <select  name="pregunta5">
+                  <option value="Dormino">El tiempo que he dormido</option>
+                  <option value="1">No más de un día</option>
+                  <option value="2">Un fin de semana</option>
+                </select>
+              </div>
+
               <div>
                 <input class="buttonLateral2" type="submit" value="Guardar"/>
               </div>

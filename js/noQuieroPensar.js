@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#botonNoQuiero").click(function(event) {
     //Creamos el array
     tiempos = [];
-    titulos =["Algoritmo narrativo para construir una plancha que la maquina de reconocimiento facial no lo detecte",
+    titulos = ["Algoritmo narrativo para construir una plancha que la maquina de reconocimiento facial no lo detecte",
     "Algoritmo narrativo para poner del revés las fotos de tu casa",
     "Algoritmo narrativo para iniciar una colección de imágenes",
     "Algoritmo narrativo para crear un retrato robot digital",
@@ -22,7 +22,8 @@ $(document).ready(function(){
     "Algoritmo narrativo para buscar un título a mis imágenes",
     "Algoritmo narrativo para ir caminando sin mirar el móvil",
     "Algoritmo narrativo para que una imagen me haga reír",
-    "Algoritmo narrativo para que una imagen me haga llorar""Algoritmo narrativo para meter una fotografía en un buzón",
+    "Algoritmo narrativo para que una imagen me haga llorar",
+    "Algoritmo narrativo para meter una fotografía en un buzón",
     "Algoritmo narrativo para dejar una fotografía en un carro de la compra",
     "Algoritmo narrativo para esconder una colección de fotografías dentro de los libros de una biblioteca",
     "Algoritmo narrativo para quemar una foto sin quemarte los dedos",
@@ -35,7 +36,7 @@ $(document).ready(function(){
     "Algoritmo narrativo para definir que es una imagen sostenible",
     "Algoritmo narrativo para definir una imagen invisible",
     "Algoritmo narrativo para definir una imagen prohibida",
-    "Algoritmos narrativo para censurar una foto",
+    "Algoritmo narrativo para censurar una foto",
     "Algoritmo narrativo para hacer las fotos de tu propia campaña electoral",
     "Algoritmo narrativo para fotografiar los restos de tu comida diaria",
     "Algoritmo narrativo para retratarte con todos tus zapatos",
