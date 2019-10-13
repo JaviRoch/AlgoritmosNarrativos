@@ -2,7 +2,8 @@ $(document).ready(function(){
   $("#botonNoQuiero").click(function(event) {
     //Creamos el array
     tiempos = [];
-    titulos = ["Algoritmo narrativo para construir una plancha que la maquina de reconocimiento facial no lo detecte",
+    titulos = [
+    "Algoritmo narrativo para construir una plancha que la maquina de reconocimiento facial no lo detecte",
     "Algoritmo narrativo para poner del revés las fotos de tu casa",
     "Algoritmo narrativo para iniciar una colección de imágenes",
     "Algoritmo narrativo para crear un retrato robot digital",

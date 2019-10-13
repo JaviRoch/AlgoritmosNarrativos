@@ -11,7 +11,7 @@ ini_set('display_errors', '1');
 
 try
 {
-  //Cogemos los datos existentes en el archivo  de datos
+  //Cogemos los datos existentes en el archivo de datos
   $jsondata = file_get_contents($myFile);
 
   //Convertimos JSON a array
@@ -19,7 +19,7 @@ try
 
   //Cogemos los datos del formulario
   $formdata = array(
-     'Nhecho'=>count($arr_data),
+     'RegFecha'=>date("j/n/Y ** G:i"),
      'titulo'=> $_POST['titulo'],
      'hora0'=> $_POST['hora0'],
      'hecho0'=> $_POST['hecho0'],

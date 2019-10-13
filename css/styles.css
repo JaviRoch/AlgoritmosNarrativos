@@ -152,11 +152,11 @@ padding-left: 95px;
 .tituloFormCommand{
 display: table-cell;
 padding-left: 133px;
--moz-padding-start : 142px;
+-moz-padding-start : 131px;
 }
 
 #titlePuntoCero{
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-top: 8px;
   padding-bottom: 8px;
   width: 97%;
@@ -200,6 +200,10 @@ Estilo punto de saturación
 /*Inputs*/
 .preguntasSatura{
   margin-top: 18px;
+}
+
+.inputSatura{
+  width: 67%;
 }
 
 .preguntasSatura input{
