@@ -6,7 +6,7 @@ ini_set('display_errors', '1');
 //Código de chrishazfun https://github.com/chrishazfun/php-json-form-submit
 //Importante configurar bien los permisos para la modificación del archivo
 
-  $myFile = "data.json"; //Archivo de datos
+  $myFile = "datos/data.json"; //Archivo de datos
   $arr_data = array(); //Array de trabajo
 
 try

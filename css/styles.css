@@ -51,6 +51,14 @@ Estilo Menú
   height: 65px;
 }
 
+.menu3{
+  background-color: #c2eaff;
+  font-size: 2rem;
+  font-family: 'rathersemibold';
+  color: #000000;
+  height: 65px;
+}
+
 .menuSelect{
   background-color: #000000;
   color: #d60c67;
@@ -60,6 +68,12 @@ Estilo Menú
 .menuSelect1{
   background-color: #000000;
   color: #ffecc2;
+  padding-top: 10px;
+}
+
+.menuNoSelect2{
+  background-color: #000000;
+  color: #c2eaff;
   padding-top: 10px;
 }
 
@@ -299,6 +313,21 @@ Estilo punto de saturación
   color: #ffffff;
 }
 
+.buttonLateral3 {
+  width: 140px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-top:40px;
+  margin-bottom: 33px;
+  background-color: #000000;
+  color: #c2eaff;
+  font-size: 18px;
+}
+
+.buttonLateral3:hover {
+  color: #ffffff;
+}
+
 .buttonLateralNo {
 
 	padding-top: 8px;
@@ -387,17 +416,14 @@ Estilo lateral
 	font-size: 1.2rem;
 }
 
-#Lateral h1{
-		/*font-family: 'Rubik Mono One', sans-serif;*/
-		font-family: 'rathersemibold';
-		font-size: 3rem;
+#Lateral3{
+	background-color: #c2eaff;
+	padding: 112px 6% 0 6%;
+	font-family: 'rathersemibold';
+	font-size: 1.2rem;
 }
 
-#Lateral2 h1{
-		/*font-family: 'Rubik Mono One', sans-serif;*/
-		font-family: 'rathersemibold';
-		font-size: 3rem;
-}
+
 
 .fonLateral{
 	background-color: #d60c67;
@@ -405,4 +431,8 @@ Estilo lateral
 
 .fonLateral2{
 	background-color: #ffecc2;
+}
+
+.fonLateral3{
+	background-color: #c2eaff;
 }

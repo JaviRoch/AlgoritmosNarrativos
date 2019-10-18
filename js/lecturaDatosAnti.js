@@ -1,6 +1,6 @@
 // Transferencia des datos desde la base de datos JSON
 var xmlhttp = new XMLHttpRequest();
-var url = "/data.json";
+var url = "../datos/data.json";
 // Función al finalizar operación. Status a 200 ok, status a 404 fail
 xmlhttp.onreadystatechange = function () {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

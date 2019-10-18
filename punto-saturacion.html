@@ -44,7 +44,7 @@
 
               <div class="preguntasSatura">
                 <p>Cuantas horas duermes al día</p>
-                <input type="number" name="pregunta1" class="inputSatura">
+                <input type="number" name="pregunta1" class="inputSatura" required="required" max="24">
               </div>
 
               <div class="preguntasSatura">
@@ -77,7 +77,7 @@
               <div class="preguntasSatura">
                 <p>Tiempo máximo que has estado sin comer</p>
                 <select  name="pregunta5" class="inputSatura">
-                  <option value="Dormino">El tiempo que he dormido</option>
+                  <option value="Dormido">El tiempo que he dormido</option>
                   <option value="1">No más de un día</option>
                   <option value="2">Un fin de semana</option>
                 </select>
@@ -85,22 +85,22 @@
 
               <div class="preguntasSatura">
                 <p>Cuantos vasos de agua bebes al día</p>
-                <input type="number" name="pregunta6" class="inputSatura">
+                <input type="number" name="pregunta6" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantas veces has usado el móvil en el cine</p>
-                <input type="number" name="pregunta7" class="inputSatura">
+                <input type="number" name="pregunta7" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantos móviles hay en tu casa</p>
-                <input type="number" name="pregunta8" class="inputSatura">
+                <input type="number" name="pregunta8" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantos videos de youtube ves en un mes</p>
-                <input type="number" name="pregunta9" class="inputSatura">
+                <input type="number" name="pregunta9" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
@@ -114,7 +114,7 @@
 
               <div class="preguntasSatura">
                 <p>Cuantos seguidores tienes en Instagram</p>
-                <input type="number" name="pregunta11" class="inputSatura">
+                <input type="number" name="pregunta11" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
@@ -146,17 +146,17 @@
 
               <div class="preguntasSatura">
                 <p>Cuantos pasos das para ir al colegio</p>
-                <input type="number" name="pregunta15" class="inputSatura">
+                <input type="number" name="pregunta15" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantos cigarrillos fumas a la semana</p>
-                <input type="number" name="pregunta16" class="inputSatura">
+                <input type="number" name="pregunta16" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantas videoconsolas hay en tu casa</p>
-                <input type="number" name="pregunta17" class="inputSatura">
+                <input type="number" name="pregunta17" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
@@ -170,7 +170,7 @@
 
               <div class="preguntasSatura">
                 <p>Cual ha sido tu mayor apuesta en juegos online o loterías</p>
-                <input type="number" name="pregunta17" class="inputSatura">
+                <input type="number" name="pregunta17" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
@@ -190,10 +190,10 @@
           <div class="row no-gutters segundoSatura">
             <div class="col creaSatura">
               <button class="buttonCrear buttonCrear1" id="buttonLugar">Lugar</Button>
-              <button class="buttonCrear buttonCrear2" onclick="">Característica</Button>
-              <button class="buttonCrear buttonCrear1" onclick="">Persona</Button>
-              <button class="buttonCrear buttonCrear1" onclick="">Objeto</Button>
-              <button class="buttonCrear buttonCrear3" onclick="">Acción</Button>
+              <button class="buttonCrear buttonCrear2" id="buttonCaracteristica">Característica</Button>
+              <button class="buttonCrear buttonCrear1" id="buttonPersona">Persona</Button>
+              <button class="buttonCrear buttonCrear1" id="buttonObjeto">Objeto</Button>
+              <button class="buttonCrear buttonCrear3" id="buttonAccion">Acción</Button>
             </div>
             <div class="col terminalSatura">
               Columna 2
