@@ -1,3 +1,6 @@
+
+var pilaTiempos = [0];
+
 //Cuando esté cargado todo el html
 $(document).ready(function(){
 	$("#buttonLugar").click(function(){
@@ -402,6 +405,8 @@ $(document).ready(function(){
 			});
 	});
 
+
+
 	$("#buttonAccion").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
@@ -518,41 +523,69 @@ $(document).ready(function(){
 				var timeAccion;
 				var contenidoAccion;
 
+				//Comprobamos que el campo temporal seleccionado sea un número
 				if(validAccion.test(tempAccion) == true){
+					//Guardamos el número y el contenido posterior en el array
 					var timeAccion = tempAccion;
 					var contenidoAccion = accionExtra[indiceAccion+1];
+
+					//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
+					var timeNumerob = timeAccion.replace(":","");
+					var timeNumeroS = timeNumerob.replace(":","");
+					var timeNumero = parseInt(timeNumeroS);
+					pilaTiempos.push(timeNumero);
 					console.log(timeAccion);
 					console.log(contenidoAccion);
 				}
+				//Si el campo temporal aleatorio es el contenido de una acción la guardamos y cogemos el tiempo anterior
 				else{
 					var contenidoAccion = tempAccion;
 					var timeAccion = accionExtra[indiceAccion-1];
+
+					//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
+					var timeNumerob = timeAccion.replace(":","");
+					var timeNumeroS = timeNumerob.replace(":","");
+					var timeNumero = parseInt(timeNumeroS);
+					pilaTiempos.push(timeNumero);
+
 					console.log(timeAccion);
 					console.log(contenidoAccion);
 				}
 
-				//Creamos un Span del campo Time
-				var nuevoElementoAccionT = document.createElement("span");
-				//Cargamos en el span el contenido del time seleccionado
-				var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
-				nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
-				//Le damos formato
-				nuevoElementoAccionT.className="textoTime";
-				//Cargamos en página el nuevo time
-				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+				console.log("Pila -1 "+pilaTiempos[pilaTiempos.length-1]);
+				console.log("Pila -2 "+pilaTiempos[pilaTiempos.length-2]);
+				console.log("length "+pilaTiempos.length);
+				//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior
+				if(pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]){
 
-				//Creamos un Span del campo Contenido
-				var nuevoElementoAccionC = document.createElement("span");
-				//Cargamos en el span el contenido del lugar seleccionado
-				var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
-				nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
-				//Le damos formato
-				nuevoElementoAccionC.className="contenidoTime";
-				//Cargamos en página el nuevo lugar
-				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+					//Creamos un Span del campo Time
+					var nuevoElementoAccionT = document.createElement("span");
+					//Cargamos en el span el contenido del time seleccionado
+					var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
+					nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
+					//Le damos formato
+					nuevoElementoAccionT.className="textoTime";
+					//Cargamos en página el nuevo time
+					document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+
+					//Creamos un Span del campo Contenido
+					var nuevoElementoAccionC = document.createElement("span");
+					//Cargamos en el span el contenido del lugar seleccionado
+					var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
+					nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
+					//Le damos formato
+					nuevoElementoAccionC.className="contenidoTime";
+					//Cargamos en página el nuevo lugar
+					document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+				}
+				else{
+					pilaTiempos.pop();
+					console.log("En else");
+
+				}
 
 				//console.log("accion Extra");
-				//console.log(accionExtra);
+				console.log(pilaTiempos);
 			});
 	});
 });
