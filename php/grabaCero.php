@@ -6,7 +6,7 @@ ini_set('display_errors', '1');
 //Código de chrishazfun https://github.com/chrishazfun/php-json-form-submit
 //Importante configurar bien los permisos para la modificación del archivo
 
-  $myFile = "datos/data.json"; //Archivo de datos
+  $myFile = "../datos/data.json"; //Archivo de datos
   $arr_data = array(); //Array de trabajo
 
 try
@@ -96,7 +96,7 @@ try
   //Escribimos los datos en el archivo y redirrecionamos
   if(file_put_contents($myFile, $jsondata)) {
     echo "Datos guardados";
-    header("Location: datosGuardados.html"); //enlazar con página de resultado o algo
+    header("Location: ../datosGuardados.html"); //enlazar con página de resultado o algo
    }
   else
        echo "Error al guardar datos";

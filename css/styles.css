@@ -249,7 +249,7 @@ Estilo punto de saturación
 
 .creaSatura{
   color: #ffffff;
-  min-height: auto !important;
+  min-height: 600px !important;
   padding-top: 30px;
   font-family: 'rathersemibold';
   font-size: 2rem;
@@ -264,6 +264,19 @@ Estilo punto de saturación
 	border-left-style: solid;
 	border-left-width: 5px;
   border-left-color: #ffecc2;
+}
+
+#seccionAlgoritmo{
+  font-size: 1.2rem;
+}
+
+.textoTime{
+  font-size: 1.6rem;
+  color: #ffecc2;
+}
+
+.contenidoTime{
+  font-size: 1.2rem;
 }
 
 /*Botones*/
