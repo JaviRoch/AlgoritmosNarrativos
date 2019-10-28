@@ -406,6 +406,82 @@ $(document).ready(function(){
 	});
 
 
+	function indiceAleatorio (accionExtra,salIteracciones){
+		//Buscamos el índice aleatorio de los lugares disponibles
+		var timeAccion;
+		var contenidoAccion;
+		var indiceAccion = Math.round(Math.random()*(accionExtra.length-0)+parseInt(0));
+		var tempAccion = accionExtra[indiceAccion];
+		var validAccion = /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/gm;
+
+		//Comprobamos que el campo temporal seleccionado sea un número
+		if(validAccion.test(tempAccion) == true){
+			//Guardamos el número y el contenido posterior en el array
+			var timeAccion = tempAccion;
+			var contenidoAccion = accionExtra[indiceAccion+1];
+
+			//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
+			var timeNumerob = timeAccion.replace(":","");
+			var timeNumeroS = timeNumerob.replace(":","");
+			var timeNumero = parseInt(timeNumeroS);
+			pilaTiempos.push(timeNumero);
+			console.log(timeAccion);
+			console.log(contenidoAccion);
+		}
+		//Si el campo temporal aleatorio es el contenido de una acción la guardamos y cogemos el tiempo anterior
+		else{
+			var contenidoAccion = tempAccion;
+			var timeAccion = accionExtra[indiceAccion-1];
+
+			//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
+			var timeNumerob = timeAccion.replace(":","");
+			var timeNumeroS = timeNumerob.replace(":","");
+			var timeNumero = parseInt(timeNumeroS);
+			pilaTiempos.push(timeNumero);
+
+			console.log(timeAccion);
+			console.log(contenidoAccion);
+		}
+
+		//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior
+		if(pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]){
+
+			//Creamos un Span del campo Time
+			var nuevoElementoAccionT = document.createElement("span");
+			//Cargamos en el span el contenido del time seleccionado
+			var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
+			nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
+			//Le damos formato
+			nuevoElementoAccionT.className="textoTime";
+			//Cargamos en página el nuevo time
+			document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+
+			//Creamos un Span del campo Contenido
+			var nuevoElementoAccionC = document.createElement("span");
+			//Cargamos en el span el contenido del lugar seleccionado
+			var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
+			nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
+			//Le damos formato
+			nuevoElementoAccionC.className="contenidoTime";
+			//Cargamos en página el nuevo lugar
+			document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+		}
+		else{
+			//Comprobamos que no hayamos llegado al final del día
+			if (salIteracciones > 50) {
+				pilaTiempos.pop();
+				console.log("En else");
+			}
+			else {
+				//Hacemos llamamiento otra vez a la fución de extracción del asiento y puesta en pantalla
+				salIteracciones = salIteracciones+1;
+				console.log("Número de  iteracciones "+salIteracciones)
+				indiceAleatorio (accionExtra);
+			}
+
+		}
+	}
+
 
 	$("#buttonAccion").click(function(){
 			//Extraemos los datos del archivo
@@ -515,74 +591,13 @@ $(document).ready(function(){
 					accionExtra.push(accion[i]["hora19"]);
 					accionExtra.push(accion[i]["comando19"]);
 				}
-
-				//Buscamos el índice aleatorio de los lugares disponibles
-				var indiceAccion = Math.round(Math.random()*(accionExtra.length-0)+parseInt(0));
-				var tempAccion = accionExtra[indiceAccion];
-				var validAccion = /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/gm;
-				var timeAccion;
-				var contenidoAccion;
-
-				//Comprobamos que el campo temporal seleccionado sea un número
-				if(validAccion.test(tempAccion) == true){
-					//Guardamos el número y el contenido posterior en el array
-					var timeAccion = tempAccion;
-					var contenidoAccion = accionExtra[indiceAccion+1];
-
-					//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
-					var timeNumerob = timeAccion.replace(":","");
-					var timeNumeroS = timeNumerob.replace(":","");
-					var timeNumero = parseInt(timeNumeroS);
-					pilaTiempos.push(timeNumero);
-					console.log(timeAccion);
-					console.log(contenidoAccion);
-				}
-				//Si el campo temporal aleatorio es el contenido de una acción la guardamos y cogemos el tiempo anterior
-				else{
-					var contenidoAccion = tempAccion;
-					var timeAccion = accionExtra[indiceAccion-1];
-
-					//Convertimos el time a número para poder compararlo Eliminamos los signos de puntuación del time
-					var timeNumerob = timeAccion.replace(":","");
-					var timeNumeroS = timeNumerob.replace(":","");
-					var timeNumero = parseInt(timeNumeroS);
-					pilaTiempos.push(timeNumero);
-
-					console.log(timeAccion);
-					console.log(contenidoAccion);
-				}
-
 				console.log("Pila -1 "+pilaTiempos[pilaTiempos.length-1]);
 				console.log("Pila -2 "+pilaTiempos[pilaTiempos.length-2]);
 				console.log("length "+pilaTiempos.length);
-				//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior
-				if(pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]){
 
-					//Creamos un Span del campo Time
-					var nuevoElementoAccionT = document.createElement("span");
-					//Cargamos en el span el contenido del time seleccionado
-					var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
-					nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
-					//Le damos formato
-					nuevoElementoAccionT.className="textoTime";
-					//Cargamos en página el nuevo time
-					document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
-
-					//Creamos un Span del campo Contenido
-					var nuevoElementoAccionC = document.createElement("span");
-					//Cargamos en el span el contenido del lugar seleccionado
-					var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
-					nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
-					//Le damos formato
-					nuevoElementoAccionC.className="contenidoTime";
-					//Cargamos en página el nuevo lugar
-					document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
-				}
-				else{
-					pilaTiempos.pop();
-					console.log("En else");
-
-				}
+				//Hacemos llamamiento a la fución de extracción del asiento y puesta en pantalla
+				var salIteracciones = 0;
+				indiceAleatorio (accionExtra, salIteracciones);
 
 				//console.log("accion Extra");
 				console.log(pilaTiempos);

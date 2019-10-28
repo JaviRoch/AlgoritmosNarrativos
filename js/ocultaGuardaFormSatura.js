@@ -1,15 +1,25 @@
+$(document).ready(function(){
+    function ocultaForm(){
+      document.getElementById('ocultoFormulario').style.display='none';
+    }
+    //$(document).on('submit', 'formSaturaSub', function() {
+    $("#formSaturaSub").click(function (event) {
 
-  $('#formSaturaSub').submit(function (ev) {
-    $.ajax({
-      type: $('#formSaturaSub').attr('method'),
-      url: $('#formSaturaSub').attr('action'),
-      data: $('#formSaturaSub').serialize(),
-      success: function (data) { alert('Datos enviados !!!'); }
-    });
-    ev.preventDefault();
-  });
+      //Evitamos que recargue la página
+      event.preventDefault();
+        //Obtenemos datos formulario.
+        var data = $("form").serializeArray();
 
-function ocultaForm(){
-  console.log("En función oculta Formulario");
-  document.getElementById('ocultoFormulario').style.display='none';
-}
+        //AJAX.
+        $.ajax({
+            type : 'POST',
+            url  : '../php/grabaSatura.php',
+            data:  data,
+            success:function(data) {
+        }
+        });
+        ocultaForm()
+        return false;
+   });
+
+});

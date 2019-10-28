@@ -7,6 +7,10 @@
 			  src="https://code.jquery.com/jquery-3.4.1.js"
 			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+          document.onkeypress = KeyPressed;
+          function KeyPressed(e){
+            return ((window.event) ? event.keyCode : e.keyCode) != 13;}</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ocultaGuardaFormSatura.js"></script>
     <script src="js/creaAlgoritmo.js"></script>
@@ -39,7 +43,8 @@
             </div>
           </div>
           <div class="formSatura" id="ocultoFormulario" style="display:block;">
-            <form id="formSaturaSub" name="formSatura" action="../php/grabaSatura.php" autocomplete="off" method="post">
+            <form  autocomplete="off">
+            <!--<form id="formSaturaSub" name="formSatura" action="../php/grabaSatura.php" autocomplete="off" method="post">-->
 
 
               <div class="preguntasSatura">
@@ -138,7 +143,7 @@
               <div class="preguntasSatura">
                 <p>Cuantos kilos de basura generas en tu casa durante un año</p>
                 <select  name="pregunta14" class="inputSatura">
-                  <option value="Media">Entorno a la media nacional, 500 kg al año</option>
+                  <option value="Media">En torno a la media nacional, 500 kg al año</option>
                   <option value="Mas">Más de lo que debo</option>
                   <option value="Quiero">Quisiera generar menos basura pero el sistema no me deja</option>
                 </select>
@@ -163,7 +168,7 @@
                 <p>Cuantos minutos diarios empleas consumiendo porno</p>
                 <select  name="pregunta18" class="inputSatura">
                   <option value="Horas">Los minutos se me hacen horas</option>
-                  <option value="Mas">Mas de los que me gustaría</option>
+                  <option value="Mas">Más de los que me gustaría</option>
                   <option value="Cero">Cero</option>
                 </select>
               </div>
@@ -183,7 +188,7 @@
               </div>
 
               <div>
-                <input class="buttonLateral2" type="submit" value="Guardar"/>
+                <button id="formSaturaSub" type="button" class="buttonLateral2" value="Guardar"/>
               </div>
             </form>
           </div>
