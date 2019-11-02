@@ -1,5 +1,13 @@
 
 var pilaTiempos = [0];
+var accionExtra=[];
+var primerAccion =0;
+
+//
+//
+//---LUGARES
+//
+//
 
 //Cuando esté cargado todo el html
 $(document).ready(function(){
@@ -104,6 +112,12 @@ $(document).ready(function(){
 		 });
 	});
 
+	//
+	//
+	//---CARACTERISTICA
+	//
+	//
+
 	$("#buttonCaracteristica").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
@@ -202,6 +216,12 @@ $(document).ready(function(){
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoCaracteristica);
 			});
 	});
+
+	//
+	//
+	//---PERSONA
+	//
+	//
 
 	$("#buttonPersona").click(function(){
 			//Extraemos los datos del archivo
@@ -304,6 +324,12 @@ $(document).ready(function(){
 			});
 	});
 
+//
+//
+//---OBJETO
+//
+//
+
 	$("#buttonObjeto").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
@@ -405,8 +431,121 @@ $(document).ready(function(){
 			});
 	});
 
+//
+//
+//
+//---ACCIONES
+//
+//
+//
 
-	function indiceAleatorio (accionExtra,salIteracciones){
+//Función extrar datos de acciones en archivo data.json
+	$.getJSON("../datos/data.json", function(datos){
+		//Extraemos los campos con el tipo accion
+		var accion = datos.filter(datos => datos.hecho0 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora0"]);
+			accionExtra.push(accion[i]["comando0"]);
+		}
+		var accion = datos.filter(datos => datos.hecho1 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora1"]);
+			accionExtra.push(accion[i]["comando1"]);
+		}
+		var accion = datos.filter(datos => datos.hecho2 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora2"]);
+			accionExtra.push(accion[i]["comando2"]);
+		}
+		var accion = datos.filter(datos => datos.hecho3 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora3"]);
+			accionExtra.push(accion[i]["comando3"]);
+		}
+		var accion = datos.filter(datos => datos.hecho4 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora4"]);
+			accionExtra.push(accion[i]["comando4"]);
+		}
+		var accion = datos.filter(datos => datos.hecho5 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora5"]);
+			accionExtra.push(accion[i]["comando5"]);
+		}
+		var accion = datos.filter(datos => datos.hecho6 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora6"]);
+			accionExtra.push(accion[i]["comando6"]);
+		}
+		var accion = datos.filter(datos => datos.hecho7 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora7"]);
+			accionExtra.push(accion[i]["comando7"]);
+		}
+		var accion = datos.filter(datos => datos.hecho8 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora8"]);
+			accionExtra.push(accion[i]["comando8"]);
+		}
+		var accion = datos.filter(datos => datos.hecho9 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora9"]);
+			accionExtra.push(accion[i]["comando9"]);
+		}
+		var accion = datos.filter(datos => datos.hecho10 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora10"]);
+			accionExtra.push(accion[i]["comando10"]);
+		}
+		var accion = datos.filter(datos => datos.hecho11 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora11"]);
+			accionExtra.push(accion[i]["comando11"]);
+		}
+		var accion = datos.filter(datos => datos.hecho12 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora12"]);
+			accionExtra.push(accion[i]["comando12"]);
+		}
+		var accion = datos.filter(datos => datos.hecho13 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora13"]);
+			accionExtra.push(accion[i]["comando13"]);
+		}
+		var accion = datos.filter(datos => datos.hecho14 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora14"]);
+			accionExtra.push(accion[i]["comando14"]);
+		}
+		var accion = datos.filter(datos => datos.hecho15 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora15"]);
+			accionExtra.push(accion[i]["comando15"]);
+		}
+		var accion = datos.filter(datos => datos.hecho16 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora16"]);
+			accionExtra.push(accion[i]["comando16"]);
+		}
+		var accion = datos.filter(datos => datos.hecho17 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora17"]);
+			accionExtra.push(accion[i]["comando17"]);
+		}
+		var accion = datos.filter(datos => datos.hecho18 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora18"]);
+			accionExtra.push(accion[i]["comando18"]);
+		}
+		var accion = datos.filter(datos => datos.hecho19 == "Accion");
+		for (var i = 0; i < accion.length; i++) {
+			accionExtra.push(accion[i]["hora19"]);
+			accionExtra.push(accion[i]["comando19"]);
+		}
+	});
+
+
+	function indiceAleatorio (accionExtra,salIteracciones,horaLevantas){
 		//Buscamos el índice aleatorio de los lugares disponibles
 		var timeAccion;
 		var contenidoAccion;
@@ -425,8 +564,8 @@ $(document).ready(function(){
 			var timeNumeroS = timeNumerob.replace(":","");
 			var timeNumero = parseInt(timeNumeroS);
 			pilaTiempos.push(timeNumero);
-			console.log(timeAccion);
-			console.log(contenidoAccion);
+			//console.log(timeAccion);
+			//console.log(contenidoAccion);
 		}
 		//Si el campo temporal aleatorio es el contenido de una acción la guardamos y cogemos el tiempo anterior
 		else{
@@ -440,167 +579,97 @@ $(document).ready(function(){
 			pilaTiempos.push(timeNumero);
 
 			console.log(timeAccion);
-			console.log(contenidoAccion);
+			//console.log(contenidoAccion);
 		}
+		console.log("Pila tiempos -1 "+pilaTiempos[pilaTiempos.length-1]);
+		console.log("Pila tiempos -2 "+pilaTiempos[pilaTiempos.length-2]);
 
-		//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior
-		if(pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]){
+		//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior y no superior a dos horas y sea diferente a 0 para evitar la primera iteracción
+		//(pilaTiempos[pilaTiempos.length-1]<(pilaTiempos[pilaTiempos.length-2]+20000)) &&
+		//&& (pilaTiempos[pilaTiempos.length-1] > horaLevantas) && (pilaTiempos[pilaTiempos.length-1] < horaLevantas+50000)
+		if((pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]) && ((primerAccion ==0) || (primerAccion ==1 && pilaTiempos[pilaTiempos.length-1] < pilaTiempos[pilaTiempos.length-2]+20000))){
+			console.log("Número de  iteracciones inicio"+primerAccion);
 
-			//Creamos un Span del campo Time
-			var nuevoElementoAccionT = document.createElement("span");
-			//Cargamos en el span el contenido del time seleccionado
-			var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
-			nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
-			//Le damos formato
-			nuevoElementoAccionT.className="textoTime";
-			//Cargamos en página el nuevo time
-			document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
-
-			//Creamos un Span del campo Contenido
-			var nuevoElementoAccionC = document.createElement("span");
-			//Cargamos en el span el contenido del lugar seleccionado
-			var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
-			nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
-			//Le damos formato
-			nuevoElementoAccionC.className="contenidoTime";
-			//Cargamos en página el nuevo lugar
-			document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
-		}
-		else{
-			//Comprobamos que no hayamos llegado al final del día
-			if (salIteracciones > 50) {
-				pilaTiempos.pop();
-				console.log("En else");
+			//Condición que estemos en la primera iteracción para crearla a la hora que se levanta
+			if(primerAccion == 0){
+				primerAccion = primerAccion+1;
+				pilaTiempos.push(horaLevantas*10000);
+				console.log("Dentro de colocación en primera iteraccion");
+				console.log("Número de  iteracciones inicio"+primerAccion);
+				//Creamos un Span del campo Time
+				var nuevoElementoAccionT = document.createElement("span");
+				//Cargamos en el span el contenido del time seleccionado
+				console.log("horaLevantas dentro"+horaLevantas)
+				var nuevoContenidoAccionT = document.createTextNode(" "+horaLevantas+":"+"00"+":"+"00"+" ");
+				nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
+				//Le damos formato
+				nuevoElementoAccionT.className="textoTime";
+				//Cargamos en página el nuevo time
+				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+				//Creamos un Span del campo Contenido
+				var nuevoElementoAccionC = document.createElement("span");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
+				nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
+				//Le damos formato
+				nuevoElementoAccionC.className="contenidoTime";
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
 			}
 			else {
-				//Hacemos llamamiento otra vez a la fución de extracción del asiento y puesta en pantalla
-				salIteracciones = salIteracciones+1;
-				console.log("Número de  iteracciones "+salIteracciones)
-				indiceAleatorio (accionExtra);
+				//Creamos un Span del campo Time
+				var nuevoElementoAccionT = document.createElement("span");
+				//Cargamos en el span el contenido del time seleccionado
+				var nuevoContenidoAccionT = document.createTextNode(" "+timeAccion+" ");
+				nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
+				//Le damos formato
+				nuevoElementoAccionT.className="textoTime";
+				//Cargamos en página el nuevo time
+				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+				//Creamos un Span del campo Contenido
+				var nuevoElementoAccionC = document.createElement("span");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoContenidoAccionC = document.createTextNode(" "+contenidoAccion+".");
+				nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
+				//Le damos formato
+				nuevoElementoAccionC.className="contenidoTime";
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
 			}
+		}
+		else{
 
+			//Comprobamos que no hayamos llegado al final del día
+			if (salIteracciones > 200) {
+				pilaTiempos.pop();
+				//console.log("En else");
+				console.log("Número de  iteracciones "+salIteracciones)
+			}
+			else {
+				//Si no hemos llegado hacemos llamamiento otra vez a la fución de extracción del asiento y puesta en pantalla
+				pilaTiempos.pop();
+				salIteracciones = salIteracciones+1;
+				console.log("Número de  iteracciones "+salIteracciones);
+				indiceAleatorio (accionExtra,salIteracciones);
+			}
 		}
 	}
 
-
 	$("#buttonAccion").click(function(){
-			//Extraemos los datos del archivo
-			$.getJSON("../datos/data.json", function(datos){
-				//console.log("Datos ");
-				//console.log(datos);
+		//Extraemos los datos del archivo
+		//Hacemos llamamiento a la fución de extracción del asiento y puesta en pantalla
+		var salIteracciones = 0;
+		//Función extraer respuestas del formulario de saturación
+		$.getJSON("../datos/dataSatura.json", function(datos){
+			var horaLevantas = datos[datos.length-1]["pregunta1"];
+			console.log("horaLevantas "+horaLevantas)
+			indiceAleatorio (accionExtra, salIteracciones,horaLevantas);
+		});
 
-				//Extraemos los campos con el tipo accion
-				var accionExtra=[];
-				var accion = datos.filter(datos => datos.hecho0 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora0"]);
-					accionExtra.push(accion[i]["comando0"]);
-				}
-				var accion = datos.filter(datos => datos.hecho1 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora1"]);
-					accionExtra.push(accion[i]["comando1"]);
-				}
-				var accion = datos.filter(datos => datos.hecho2 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora2"]);
-					accionExtra.push(accion[i]["comando2"]);
-				}
-				var accion = datos.filter(datos => datos.hecho3 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora3"]);
-					accionExtra.push(accion[i]["comando3"]);
-				}
-				var accion = datos.filter(datos => datos.hecho4 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora4"]);
-					accionExtra.push(accion[i]["comando4"]);
-				}
-				var accion = datos.filter(datos => datos.hecho5 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora5"]);
-					accionExtra.push(accion[i]["comando5"]);
-				}
-				var accion = datos.filter(datos => datos.hecho6 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora6"]);
-					accionExtra.push(accion[i]["comando6"]);
-				}
-				var accion = datos.filter(datos => datos.hecho7 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora7"]);
-					accionExtra.push(accion[i]["comando7"]);
-				}
-				var accion = datos.filter(datos => datos.hecho8 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora8"]);
-					accionExtra.push(accion[i]["comando8"]);
-				}
-				var accion = datos.filter(datos => datos.hecho9 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora9"]);
-					accionExtra.push(accion[i]["comando9"]);
-				}
-				var accion = datos.filter(datos => datos.hecho10 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora10"]);
-					accionExtra.push(accion[i]["comando10"]);
-				}
-				var accion = datos.filter(datos => datos.hecho11 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora11"]);
-					accionExtra.push(accion[i]["comando11"]);
-				}
-				var accion = datos.filter(datos => datos.hecho12 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora12"]);
-					accionExtra.push(accion[i]["comando12"]);
-				}
-				var accion = datos.filter(datos => datos.hecho13 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora13"]);
-					accionExtra.push(accion[i]["comando13"]);
-				}
-				var accion = datos.filter(datos => datos.hecho14 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora14"]);
-					accionExtra.push(accion[i]["comando14"]);
-				}
-				var accion = datos.filter(datos => datos.hecho15 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora15"]);
-					accionExtra.push(accion[i]["comando15"]);
-				}
-				var accion = datos.filter(datos => datos.hecho16 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora16"]);
-					accionExtra.push(accion[i]["comando16"]);
-				}
-				var accion = datos.filter(datos => datos.hecho17 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora17"]);
-					accionExtra.push(accion[i]["comando17"]);
-				}
-				var accion = datos.filter(datos => datos.hecho18 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora18"]);
-					accionExtra.push(accion[i]["comando18"]);
-				}
-				var accion = datos.filter(datos => datos.hecho19 == "Accion");
-				for (var i = 0; i < accion.length; i++) {
-					accionExtra.push(accion[i]["hora19"]);
-					accionExtra.push(accion[i]["comando19"]);
-				}
-				console.log("Pila -1 "+pilaTiempos[pilaTiempos.length-1]);
-				console.log("Pila -2 "+pilaTiempos[pilaTiempos.length-2]);
-				console.log("length "+pilaTiempos.length);
 
-				//Hacemos llamamiento a la fución de extracción del asiento y puesta en pantalla
-				var salIteracciones = 0;
-				indiceAleatorio (accionExtra, salIteracciones);
-
-				//console.log("accion Extra");
-				console.log(pilaTiempos);
-			});
+		//console.log("Pila -1 "+pilaTiempos[pilaTiempos.length-1]);
+		//console.log("Pila -2 "+pilaTiempos[pilaTiempos.length-2]);
+		//console.log("length "+pilaTiempos.length);
+		console.log(pilaTiempos);
 	});
 });
