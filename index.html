@@ -52,7 +52,7 @@
               </div>
             </div>
           <div id="Formulario">
-            <form autocomplete="off">
+            <form id="formularioCero" autocomplete="off">
             <input type="text" name="titulo" id="titlePuntoCero" placeholder="Title">
             <div class="tituloPuntoCero">
               <div class="tituloForm">
@@ -443,12 +443,11 @@
             <div id="asiento20" style="display:none;">
               <p>¿No serán demasiadas?</p>
             </div>
-
-          </div>
-            <button class="submit buttonGuardarN" id="formCeroSub" type="button">Guardar</>
             </form>
-            <button class="buttonNuevo" onclick="muestraCampos()">New line</button>
-            <button class="buttonNoQuiero" id="botonNoQuiero" >No quiero pensar</button>
+          </div>
+              <button id="buttonNuevo" onclick="muestraCampos()">New line</button>
+              <button id="botonNoQuiero" >No quiero pensar</button>
+              <button id="formCeroSub" form="formularioCero" type="button">Guardar</>
           </div>
         </div>
         </div>

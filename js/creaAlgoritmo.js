@@ -2,6 +2,44 @@
 var pilaTiempos = [0];
 var accionExtra=[];
 var primerAccion =0;
+var indiceMenAlgoritmo = 0;
+var menAlgoritmo =[];
+var menAsiento = new Object();
+
+function grabaDatos(data){
+	//event.preventDefault();
+	console.log("En Graba Datos");
+	console.log("Después en función "+data);
+	//Obtenemos datos formulario.
+	/*$('input').each(function(index, item){
+		var $input = $(item);
+		$input.closest('div').removeClass('has-error');
+		if ($input.val().trim() == '') {
+			$input.closest('div').addClass('has-error');
+		}
+	});
+
+	var data = $("form").serializeArray();*/
+
+		//AJAX.
+		$.ajax({
+				data:  data,
+				type : 'post',
+				url  : '../php/grabaAlgoritmo.php',
+				success:function(data) {
+		}
+		})
+		.done(function( data, textStatus, jqXHR ) {
+     	if ( console && console.log ) {
+         console.log( "La solicitud se ha completado correctamente." );
+     	}
+ 		})
+ 		.fail(function( jqXHR, textStatus, errorThrown ) {
+     	if ( console && console.log ) {
+         console.log( "La solicitud a fallado: " +  textStatus);
+     	}
+	 });
+}
 
 //
 //
@@ -109,7 +147,18 @@ $(document).ready(function(){
 				nuevoElementoLugar.appendChild(nuevoContenidoLugar);
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoLugar);
-		 });
+
+				menAsiento.tipo = "normal";
+				menAsiento.contenido = lugaresExtra[indiceLugar];
+
+				console.log("Antes"+menAlgoritmo);
+				menAlgoritmo = JSON.stringify(menAsiento);
+				console.log("Después"+menAlgoritmo);
+
+				grabaDatos(menAlgoritmo);
+    });
+
+			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 	});
 
 	//
@@ -214,6 +263,7 @@ $(document).ready(function(){
 				nuevoElementoCaracteristica.appendChild(nuevoContenidoCaracteristica);
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoCaracteristica);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			});
 	});
 
@@ -321,6 +371,7 @@ $(document).ready(function(){
 				nuevoElementoPersona.appendChild(nuevoContenidoPersona);
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoPersona);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			});
 	});
 
@@ -428,6 +479,7 @@ $(document).ready(function(){
 				nuevoElementoObjeto.appendChild(nuevoContenidoObjeto);
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoObjeto);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			});
 	});
 
@@ -606,6 +658,8 @@ $(document).ready(function(){
 				nuevoElementoAccionT.className="textoTime";
 				//Cargamos en página el nuevo time
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
 				//Creamos un Span del campo Contenido
 				var nuevoElementoAccionC = document.createElement("span");
 				//Cargamos en el span el contenido del lugar seleccionado
@@ -615,6 +669,7 @@ $(document).ready(function(){
 				nuevoElementoAccionC.className="contenidoTime";
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			}
 			else {
 				//Creamos un Span del campo Time
@@ -626,6 +681,7 @@ $(document).ready(function(){
 				nuevoElementoAccionT.className="textoTime";
 				//Cargamos en página el nuevo time
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionT);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 				//Creamos un Span del campo Contenido
 				var nuevoElementoAccionC = document.createElement("span");
 				//Cargamos en el span el contenido del lugar seleccionado
@@ -635,15 +691,27 @@ $(document).ready(function(){
 				nuevoElementoAccionC.className="contenidoTime";
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			}
 		}
 		else{
 
 			//Comprobamos que no hayamos llegado al final del día
-			if (salIteracciones > 200) {
+			if (salIteracciones > 300) {
 				pilaTiempos.pop();
 				//console.log("En else");
 				console.log("Número de  iteracciones "+salIteracciones)
+
+				//Creamos un Span del campo Contenido
+				var nuevoElementoAccionC = document.createElement("span");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoContenidoAccionC = document.createTextNode(" "+"Has llegado al final de tu día"+".");
+				nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
+				//Le damos formato
+				nuevoElementoAccionC.className="contenidoFinDia";
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
+				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 			}
 			else {
 				//Si no hemos llegado hacemos llamamiento otra vez a la fución de extracción del asiento y puesta en pantalla
@@ -666,7 +734,7 @@ $(document).ready(function(){
 			console.log("horaLevantas "+horaLevantas)
 
 			//Llamamos función para comenzar algoritmo acciones
-			indiceAleatorio (accionExtra, salIteracciones,horaLevantas);
+			indiceAleatorio (accionExtra, salIteracciones, horaLevantas);
 		});
 
 

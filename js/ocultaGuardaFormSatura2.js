@@ -1,5 +1,10 @@
 $(document).ready(function(){
-    $("#formCeroSub").click(function (event) {
+    function ocultaForm(){
+      document.getElementById('ocultoFormulario').style.display='none';
+      document.getElementById('ocultoFormulario2').style.display='flex';
+    }
+    //$(document).on('submit', 'formSaturaSub', function() {
+    $("#formSaturaSub").click(function (event) {
       //Evitamos que recargue la página
       event.preventDefault();
       //Obtenemos datos formulario.
@@ -16,13 +21,12 @@ $(document).ready(function(){
         //AJAX.
         $.ajax({
             type : 'POST',
-            url  : '../php/grabaCero.php',
+            url  : '../php/grabaSatura.php',
             data:  data,
             success:function(data) {
         }
         });
-        //Acciones a realizar una vez guardado ocultaForm()
-        console.log("Datos guardados");
+        ocultaForm()
         return false;
    });
 
