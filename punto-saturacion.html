@@ -43,13 +43,15 @@
             </div>
           </div>
           <div class="formSatura" id="ocultoFormulario" style="display:block;">
-            <form  autocomplete="off">
-            <!--<form id="formSaturaSub" name="formSatura" action="../php/grabaSatura.php" autocomplete="off" method="post">-->
-
+            <form autocomplete="off">
+                <div class="preguntasSatura">
+                <p>Cuantas horas duermes al día</p>
+                <input type="number" name="pregunta1" class="inputSatura" required="required" min="0" max="24">
+              </div>
 
               <div class="preguntasSatura">
-                <p>Cuantas horas duermes al día</p>
-                <input type="number" name="pregunta1" class="inputSatura" required="required" max="24">
+                <p>Ha que hora te levantas</p>
+                <input type="time" name="pregunta21" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
@@ -175,12 +177,12 @@
 
               <div class="preguntasSatura">
                 <p>Cual ha sido tu mayor apuesta en juegos online o loterías</p>
-                <input type="number" name="pregunta17" class="inputSatura" required="required">
+                <input type="number" name="pregunta19" class="inputSatura" required="required">
               </div>
 
               <div class="preguntasSatura">
                 <p>Cuantas veces sacas al perro a pasear a la semana</p>
-                <select  name="pregunta18" class="inputSatura">
+                <select  name="pregunta20" class="inputSatura">
                   <option value="No">No tengo perro</option>
                   <option value="Padres">Si están mis padres se encargan ellos</option>
                   <option value="21">Más de 21</option>
@@ -192,7 +194,7 @@
               </div>
             </form>
           </div>
-          <div class="row no-gutters segundoSatura">
+          <div class="row no-gutters segundoSatura" id="ocultoFormulario2" style="display:none;">
             <div class="col creaSatura">
               <button class="buttonCrear buttonCrear1" id="buttonLugar">Lugar</Button>
               <button class="buttonCrear buttonCrear2" id="buttonCaracteristica">Característica</Button>

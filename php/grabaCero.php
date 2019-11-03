@@ -96,7 +96,7 @@ try
   //Escribimos los datos en el archivo y redirrecionamos
   if(file_put_contents($myFile, $jsondata)) {
     echo "Datos guardados";
-    header("Location: ../datosGuardados.html"); //enlazar con página de resultado o algo
+    //header("Location: ../datosGuardados.html"); //enlazar con página de resultado o algo
    }
   else
        echo "Error al guardar datos";

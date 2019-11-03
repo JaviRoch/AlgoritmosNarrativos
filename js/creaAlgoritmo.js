@@ -659,10 +659,13 @@ $(document).ready(function(){
 		//Extraemos los datos del archivo
 		//Hacemos llamamiento a la fución de extracción del asiento y puesta en pantalla
 		var salIteracciones = 0;
+
 		//Función extraer respuestas del formulario de saturación
 		$.getJSON("../datos/dataSatura.json", function(datos){
-			var horaLevantas = datos[datos.length-1]["pregunta1"];
+			var horaLevantas = datos[datos.length-1]["pregunta19"];
 			console.log("horaLevantas "+horaLevantas)
+
+			//Llamamos función para comenzar algoritmo acciones
 			indiceAleatorio (accionExtra, salIteracciones,horaLevantas);
 		});
 

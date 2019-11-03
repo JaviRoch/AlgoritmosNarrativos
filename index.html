@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/muestraCampos.js"></script>
     <script src="js/noQuieroPensar.js"></script>
+    <script src="js/guardaFormCero.js"></script>
     <script type="text/javascript">
       document.onkeypress = KeyPressed;
       function KeyPressed(e){
@@ -26,13 +30,13 @@
             <p>Bienvenidxs al Punto Cero donde ensayarás la comprensión fenomeno- lógica del algoritmo desde su condición social como hecho humano que desborda su naturaleza para configurarse en un sistema de conocimiento donde la inteligencia colectiva se cruza con la artificial. </P>
               <p>Punto Cero es un espacio de aprendizaje y práctica en el lenguaje y la estructura del algoritmo. Cada línea o comando define una instrucción concreta en el transcurso de un proceso. Aquí cohabitas con la máquina en un lugar común que parte de tu vida y se transforma en algoritmo. </p>
               <p>Se trata de escribir tu algoritmo, de aceptar el juego de cálculos e intensidades que pueda servirte para experimentar programaciones alternativas donde la vida algorítmica te devuelva una suerte de fantasía sobre la emancipación de las máquinas.</p>
-            <div class="col text-center">
+            <!--<div class="col text-center">
               <button class="buttonLateralNo" id="botonNoQuiero">No quiero pensar</button>
             </div>
             <div class="text-center">
               <form action="../php/grabaCero.php" method="post" name="formCero" autocomplete="off">
               <input class="submit buttonLateral" type="submit" value="Guardar">
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-10">
@@ -48,6 +52,7 @@
               </div>
             </div>
           <div id="Formulario">
+            <form autocomplete="off">
             <input type="text" name="titulo" id="titlePuntoCero" placeholder="Title">
             <div class="tituloPuntoCero">
               <div class="tituloForm">
@@ -438,9 +443,12 @@
             <div id="asiento20" style="display:none;">
               <p>¿No serán demasiadas?</p>
             </div>
-            </form>
+
           </div>
+            <button class="submit buttonGuardarN" id="formCeroSub" type="button">Guardar</>
+            </form>
             <button class="buttonNuevo" onclick="muestraCampos()">New line</button>
+            <button class="buttonNoQuiero" id="botonNoQuiero" >No quiero pensar</button>
           </div>
         </div>
         </div>
