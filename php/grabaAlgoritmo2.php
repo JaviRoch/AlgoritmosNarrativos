@@ -1,5 +1,6 @@
 <?php
 
+echo "<script>console.log("En php ");</script>";
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -21,8 +22,8 @@ try
   //Cogemos los datos del formulario
   $formdata = array(
      'RegFecha'=>date("j/n/Y ** G:i"),
-     //'tipo'=> $_POST['tipo'],
-     //'contenido'=> $_POST['contenido'],
+     'tipo'=> $_POST['tipo'],
+     'contenido'=> $_POST['contenido'],
   );
 
   //Insertamos datos del formulario al array

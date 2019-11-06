@@ -7,38 +7,23 @@ var menAlgoritmo =[];
 var menAsiento = new Object();
 
 function grabaDatos(data){
-	//event.preventDefault();
-	console.log("En Graba Datos");
-	console.log("Después en función "+data);
-	//Obtenemos datos formulario.
-	/*$('input').each(function(index, item){
-		var $input = $(item);
-		$input.closest('div').removeClass('has-error');
-		if ($input.val().trim() == '') {
-			$input.closest('div').addClass('has-error');
-		}
-	});
+	console.log(data);
 
-	var data = $("form").serializeArray();*/
+	//var data2 = data.serializeArray();
 
 		//AJAX.
 		$.ajax({
 				data:  data,
-				type : 'post',
+				type : 'POST',
 				url  : '../php/grabaAlgoritmo.php',
 				success:function(data) {
-		}
-		})
-		.done(function( data, textStatus, jqXHR ) {
-     	if ( console && console.log ) {
-         console.log( "La solicitud se ha completado correctamente." );
-     	}
- 		})
- 		.fail(function( jqXHR, textStatus, errorThrown ) {
-     	if ( console && console.log ) {
-         console.log( "La solicitud a fallado: " +  textStatus);
-     	}
-	 });
+					console.log("datos enviados a php");
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+        	alert(xhr.status);
+        	alert(thrownError);
+      	}
+	 	});
 }
 
 //
@@ -151,11 +136,12 @@ $(document).ready(function(){
 				menAsiento.tipo = "normal";
 				menAsiento.contenido = lugaresExtra[indiceLugar];
 
-				console.log("Antes"+menAlgoritmo);
+				//console.log("Antes"+menAsiento);
 				menAlgoritmo = JSON.stringify(menAsiento);
-				console.log("Después"+menAlgoritmo);
+				//console.log("Después"+menAlgoritmo);
 
-				grabaDatos(menAlgoritmo);
+				//grabaDatos(menAlgoritmo);
+				grabaDatos(menAsiento);
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;

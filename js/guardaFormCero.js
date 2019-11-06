@@ -19,6 +19,7 @@ $(document).ready(function(){
             url  : '../php/grabaCero.php',
             data:  data,
             success:function(data) {
+              alert('Datos guardados');
         }
         });
         //Acciones a realizar una vez guardado ocultaForm()
