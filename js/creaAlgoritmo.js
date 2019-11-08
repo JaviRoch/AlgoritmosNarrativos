@@ -3,8 +3,8 @@ var pilaTiempos = [0];
 var accionExtra=[];
 var primerAccion =0;
 var indiceMenAlgoritmo = 0;
-var menAlgoritmo =[];
-var menAsiento = new Object();
+var menAlgoritmo = [];
+var menAsiento = [];
 
 function grabaDatos(data){
 	console.log(data);
@@ -34,6 +34,19 @@ function grabaDatos(data){
 
 //Cuando esté cargado todo el html
 $(document).ready(function(){
+
+
+	//
+	//
+	//
+	//---------Función de impresión
+	//
+	//
+	//
+$("#algoritmoSaturaGuarda").click(function(){
+
+	});
+
 	$("#buttonLugar").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
@@ -136,23 +149,27 @@ $(document).ready(function(){
 				menAsiento.tipo = "normal";
 				menAsiento.contenido = lugaresExtra[indiceLugar];
 
-				//console.log("Antes"+menAsiento);
-				menAlgoritmo = JSON.stringify(menAsiento);
-				//console.log("Después"+menAlgoritmo);
+				console.log(menAsiento);
+
+
+				console.log("Antes"+menAlgoritmo);
+				console.log(menAlgoritmo);
+				menAlgoritmo.push(menAsiento);
+				console.log("Después"+menAlgoritmo);
 
 				//grabaDatos(menAlgoritmo);
-				grabaDatos(menAsiento);
+				//grabaDatos(menAsiento);
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 	});
 
-	//
-	//
-	//---CARACTERISTICA
-	//
-	//
 
+		//
+		//
+		//---CARACTERISTICA
+		//
+		//
 	$("#buttonCaracteristica").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
