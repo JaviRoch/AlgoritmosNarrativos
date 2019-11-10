@@ -59,15 +59,18 @@ $(document).ready(function(){
 
 		var doc = new jsPDF();
 
-		doc.rect(10, 10, 25, 25, 'F'); // empty red square
-		doc.rect(30, 10, 170, 50, 'F'); // empty red square
+
 
 	//
 	//Primera página
 	//
 
+		doc.rect(10, 10, 25, 25, 'F'); // empty red square
+		doc.rect(30, 10, 170, 50, 'F'); // empty red square
+
 		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
-		var splitTitle = doc.splitTextToSize(data2[seleccionados[0].value].titulo, 110);
+		doc.setFontSize(30);
+		var splitTitle = doc.splitTextToSize(data2[seleccionados[0].value].titulo, 200);
 		//Definimos posición izquierda/altura y texto
 		doc.setTextColor(255);
 		doc.setFontSize(80);
@@ -245,9 +248,12 @@ $(document).ready(function(){
 		//
 		//Segunda página
 		//
+		doc.rect(10, 10, 25, 25, 'F'); // empty red square
+		doc.rect(30, 10, 170, 50, 'F'); // empty red square
 
 		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
-		splitTitle = doc.splitTextToSize(data2[seleccionados[1].value].titulo, 110);
+		doc.setFontSize(30);
+		splitTitle = doc.splitTextToSize(data2[seleccionados[1].value].titulo, 190);
 		//Definimos posición izquierda/altura y texto
 		doc.setTextColor(255);
 		doc.setFontSize(80);
@@ -423,6 +429,557 @@ $(document).ready(function(){
 		doc.addPage();
 
 
+		//
+		//Tercera página
+		//
+
+		doc.rect(10, 10, 25, 25, 'F'); // empty red square
+		doc.rect(30, 10, 170, 50, 'F'); // empty red square
+
+		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
+		doc.setFontSize(30);
+		splitTitle = doc.splitTextToSize(data2[seleccionados[2].value].titulo, 190);
+		//Definimos posición izquierda/altura y texto
+		doc.setTextColor(255);
+		doc.setFontSize(80);
+		doc.text(13,32,"9");
+		doc.setFontSize(30);
+		doc.text(35,24,"PUNTO DE SALIDA");
+		doc.setFontSize(24);
+		doc.text(35, 36, splitTitle);
+
+		doc.setTextColor(255);
+		doc.setFontSize(8);
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando0, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText, data2[seleccionados[2].value].hora0);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText - 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando1, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*1), data2[seleccionados[2].value].hora1);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*1)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando2, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*2), data2[seleccionados[2].value].hora2);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*2)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando3, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*3), data2[seleccionados[2].value].hora3);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*3)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando4, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*4), data2[seleccionados[2].value].hora4);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*4)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando5, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*5), data2[seleccionados[2].value].hora5);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*5)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando6, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*6), data2[seleccionados[2].value].hora6);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*6)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando7, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*7), data2[seleccionados[2].value].hora7);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*7)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando8, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*8), data2[seleccionados[2].value].hora8);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*8)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando9, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*9), data2[seleccionados[2].value].hora9);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*9)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando10, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*10), data2[seleccionados[2].value].hora10);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*10)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando11, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*11), data2[seleccionados[2].value].hora11);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*11)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando12, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*12), data2[seleccionados[2].value].hora12);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*12)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando13, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*13), data2[seleccionados[2].value].hora13);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*13)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando14, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*14), data2[seleccionados[2].value].hora14);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*14)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando15, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*15), data2[seleccionados[2].value].hora15);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*15)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando16, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*16), data2[seleccionados[2].value].hora16);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*16)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando17, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*17), data2[seleccionados[2].value].hora17);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*17)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando18, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*18), data2[seleccionados[2].value].hora18);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*18)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[2].value].comando19, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*19), data2[seleccionados[2].value].hora19);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*19)- 0.6, splitText);
+
+		doc.addImage(imagen,'JPEG', 0, 260, 220, 28);
+		doc.addPage();
+
+
+		//
+		//Cuarta página
+		//
+
+		doc.rect(10, 10, 25, 25, 'F'); // empty red square
+		doc.rect(30, 10, 170, 50, 'F'); // empty red square
+
+		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
+		doc.setFontSize(30);
+		splitTitle = doc.splitTextToSize(data2[seleccionados[3].value].titulo, 190);
+		//Definimos posición izquierda/altura y texto
+		doc.setTextColor(255);
+		doc.setFontSize(80);
+		doc.text(13,32,"9");
+		doc.setFontSize(30);
+		doc.text(35,24,"PUNTO DE SALIDA");
+		doc.setFontSize(24);
+		doc.text(35, 36, splitTitle);
+
+		doc.setTextColor(255);
+		doc.setFontSize(8);
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando0, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText, data2[seleccionados[3].value].hora0);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText - 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando1, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*1), data2[seleccionados[3].value].hora1);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*1)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando2, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*2), data2[seleccionados[3].value].hora2);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*2)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando3, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*3), data2[seleccionados[3].value].hora3);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*3)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando4, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*4), data2[seleccionados[3].value].hora4);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*4)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando5, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*5), data2[seleccionados[3].value].hora5);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*5)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando6, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*6), data2[seleccionados[3].value].hora6);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*6)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando7, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*7), data2[seleccionados[3].value].hora7);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*7)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando8, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*8), data2[seleccionados[3].value].hora8);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*8)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando9, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*9), data2[seleccionados[3].value].hora9);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*9)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando10, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*10), data2[seleccionados[3].value].hora10);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*10)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando11, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*11), data2[seleccionados[3].value].hora11);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*11)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando12, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*12), data2[seleccionados[3].value].hora12);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*12)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando13, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*13), data2[seleccionados[3].value].hora13);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*13)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando14, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*14), data2[seleccionados[3].value].hora14);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*14)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando15, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*15), data2[seleccionados[3].value].hora15);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*15)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando16, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*16), data2[seleccionados[3].value].hora16);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*16)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando17, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*17), data2[seleccionados[3].value].hora17);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*17)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando18, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*18), data2[seleccionados[3].value].hora18);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*18)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[3].value].comando19, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*19), data2[seleccionados[3].value].hora19);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*19)- 0.6, splitText);
+
+		doc.addImage(imagen,'JPEG', 0, 260, 220, 28);
+		doc.addPage();
+
+		//
+		//Quinta página
+		//
+
+		doc.rect(10, 10, 25, 25, 'F'); // empty red square
+		doc.rect(30, 10, 170, 50, 'F'); // empty red square
+
+		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
+		doc.setFontSize(30);
+		splitTitle = doc.splitTextToSize(data2[seleccionados[4].value].titulo, 190);
+		//Definimos posición izquierda/altura y texto
+		doc.setTextColor(255);
+		doc.setFontSize(80);
+		doc.text(13,32,"9");
+		doc.setFontSize(30);
+		doc.text(35,24,"PUNTO DE SALIDA");
+		doc.setFontSize(24);
+		doc.text(35, 36, splitTitle);
+
+		doc.setTextColor(255);
+		doc.setFontSize(8);
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando0, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText, data2[seleccionados[4].value].hora0);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText - 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando1, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*1), data2[seleccionados[4].value].hora1);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*1)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando2, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*2), data2[seleccionados[4].value].hora2);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*2)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando3, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*3), data2[seleccionados[4].value].hora3);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*3)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando4, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*4), data2[seleccionados[4].value].hora4);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*4)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando5, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*5), data2[seleccionados[4].value].hora5);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*5)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando6, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*6), data2[seleccionados[4].value].hora6);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*6)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando7, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*7), data2[seleccionados[4].value].hora7);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*7)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando8, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*8), data2[seleccionados[4].value].hora8);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*8)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando9, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*9), data2[seleccionados[4].value].hora9);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*9)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando10, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*10), data2[seleccionados[4].value].hora10);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*10)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando11, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*11), data2[seleccionados[4].value].hora11);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*11)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando12, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*12), data2[seleccionados[4].value].hora12);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*12)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando13, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*13), data2[seleccionados[4].value].hora13);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*13)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando14, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*14), data2[seleccionados[4].value].hora14);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*14)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando15, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*15), data2[seleccionados[4].value].hora15);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*15)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando16, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*16), data2[seleccionados[4].value].hora16);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*16)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando17, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*17), data2[seleccionados[4].value].hora17);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*17)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando18, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*18), data2[seleccionados[4].value].hora18);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*18)- 0.6, splitText);
+
+		var splitText = doc.splitTextToSize(data2[seleccionados[4].value].comando19, anComan);
+		doc.setFontSize(10);
+		doc.setTextColor(130);
+		doc.text(margIzqui, comText+(intLi*19), data2[seleccionados[4].value].hora19);
+		doc.setFontSize(8);
+		doc.setTextColor(40);
+		doc.text(sepHo, comText+(intLi*19)- 0.6, splitText);
+
+		doc.addImage(imagen,'JPEG', 0, 260, 220, 28);
 
 		//Guardamos el pDF
 		doc.save('salida.pdf');
