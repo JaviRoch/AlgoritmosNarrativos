@@ -18,7 +18,7 @@ try
   //Convertimos JSON a array
   $arr_data = json_decode($jsondata, true);
 
-  //Cogemos los datos del formulario
+  //Cogemos los datos
   $formdata = array(
      'RegFecha'=>date("j/n/Y ** G:i"),
      'tipo'=> $_POST['tipo'],
@@ -29,14 +29,12 @@ try
   //Insertamos datos del formulario al array
   array_push($arr_data,$formdata);
 
-
   //Convertimos array a JSON
   $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
 
   //Escribimos los datos en el archivo y redirrecionamos
   if(file_put_contents($myFile, $jsondata)) {
     echo "<script>alert('Datos guardados');</script>";
-    //header("Location: datosGuardados.html"); //enlazar con página de resultado o algo
    }
   else
     echo "<script>alert('Error al guardar los datos');</script>";
