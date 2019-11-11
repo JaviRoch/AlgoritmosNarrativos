@@ -21,8 +21,9 @@ try
   //Cogemos los datos del formulario
   $formdata = array(
      'RegFecha'=>date("j/n/Y ** G:i"),
-     //'tipo'=> $_POST['tipo'],
-     //'contenido'=> $_POST['contenido'],
+     'tipo'=> $_POST['tipo'],
+     'contenido'=> $_POST['contenido'],
+     'hora'=> $_POST['hora'],
   );
 
   //Insertamos datos del formulario al array

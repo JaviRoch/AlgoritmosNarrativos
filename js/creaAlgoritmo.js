@@ -4,12 +4,15 @@ var accionExtra=[];
 var primerAccion =0;
 var indiceMenAlgoritmo = 0;
 var menAlgoritmo = [];
-var menAsiento = [];
 
+//Función de grabación de datos en JSON a través de PHP
 function grabaDatos(data){
+	console.log("data");
 	console.log(data);
 
-	//var data2 = data.serializeArray();
+	var dataSe = JSON.stringify(data);
+	console.log("dataSE");
+	console.log(dataSe);
 
 		//AJAX.
 		$.ajax({
@@ -17,7 +20,8 @@ function grabaDatos(data){
 				type : 'POST',
 				url  : '../php/grabaAlgoritmo.php',
 				success:function(data) {
-					console.log("datos enviados a php");
+					console.log("Respuesta del servidor")
+					console.log(data);
 				},
 				error: function(xhr, ajaxOptions, thrownError) {
         	alert(xhr.status);
@@ -26,26 +30,38 @@ function grabaDatos(data){
 	 	});
 }
 
-//
-//
-//---LUGARES
-//
-//
+//Función de creación del objeto de asiento
+function AsientoAlgoritmo(tipo,contenido,hora){
+	this.tipo=tipo;
+	this.contenido=contenido;
+	this.hora=hora;
+}
+
+//Función de carga de los objetos en el array del Algoritmo
+function agregarArray(){
+	menAlgoritmo.push(nuevoAsiento);
+	console.log(menAlgoritmo);
+}
+
+
 
 //Cuando esté cargado todo el html
 $(document).ready(function(){
 
-
 	//
+	//Función de guardado e impresión
 	//
-	//
-	//---------Función de impresión
-	//
-	//
-	//
-$("#algoritmoSaturaGuarda").click(function(){
+	$("#algoritmoSaturaGuarda").click(function(){
+		grabaDatos(menAlgoritmo);
 
 	});
+
+
+	//
+	//
+	//---LUGARES
+	//
+	//
 
 	$("#buttonLugar").click(function(){
 			//Extraemos los datos del archivo
@@ -53,7 +69,7 @@ $("#algoritmoSaturaGuarda").click(function(){
 				//console.log("Datos ");
 				//console.log(datos);
 
-				//Extraemos los campos con el tipo Lugar
+				//Extraemos solo los campos con el tipo Lugar
 				var lugaresExtra=[];
 				var lugares = datos.filter(datos => datos.hecho0 == "Lugar");
 				for (var i = 0; i < lugares.length; i++) {
@@ -146,19 +162,16 @@ $("#algoritmoSaturaGuarda").click(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoLugar);
 
-				menAsiento.tipo = "normal";
-				menAsiento.contenido = lugaresExtra[indiceLugar];
+				//Definimos los datos a guardar
+				var tipo = "normal";
+				var contenido = lugaresExtra[indiceLugar];
 
-				console.log(menAsiento);
+				//Creamos el objeto
+				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
+				//console.log(nuevoAsiento);
 
-
-				console.log("Antes"+menAlgoritmo);
-				console.log(menAlgoritmo);
-				menAlgoritmo.push(menAsiento);
-				console.log("Después"+menAlgoritmo);
-
-				//grabaDatos(menAlgoritmo);
-				//grabaDatos(menAsiento);
+				//Llamamos a guardar en el array
+				agregarArray();
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
@@ -167,14 +180,14 @@ $("#algoritmoSaturaGuarda").click(function(){
 
 		//
 		//
-		//---CARACTERISTICA
+		//---CARACTERISTICAS
 		//
 		//
 	$("#buttonCaracteristica").click(function(){
 			//Extraemos los datos del archivo
 			$.getJSON("../datos/data.json", function(datos){
 
-				//Extraemos los campos con el tipo Caracteristica
+				//Extraemos solo los campos con el tipo Caracteristica
 				var caracteristicasExtra=[];
 				var caracteristicas = datos.filter(datos => datos.hecho0 == "Caracteristica");
 				for (var i = 0; i < caracteristicas.length; i++) {
@@ -267,6 +280,17 @@ $("#algoritmoSaturaGuarda").click(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoCaracteristica);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				//Definimos los datos a guardar
+				var tipo = "normal";
+				var contenido = caracteristicasExtra[indiceCaracteristica];
+
+				//Creamos el objeto
+				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
+				//console.log(nuevoAsiento);
+
+				//Llamamos a guardar en el array
+				agregarArray();
 			});
 	});
 
@@ -375,6 +399,17 @@ $("#algoritmoSaturaGuarda").click(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoPersona);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				//Definimos los datos a guardar
+				var tipo = "normal";
+				var contenido = personaExtra[indicePersona];
+
+				//Creamos el objeto
+				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
+				//console.log(nuevoAsiento);
+
+				//Llamamos a guardar en el array
+				agregarArray();
 			});
 	});
 
@@ -483,6 +518,17 @@ $("#algoritmoSaturaGuarda").click(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoObjeto);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				//Definimos los datos a guardar
+				var tipo = "normal";
+				var contenido = objetoExtra[indiceObjeto];
+
+				//Creamos el objeto
+				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
+				//console.log(nuevoAsiento);
+
+				//Llamamos a guardar en el array
+				agregarArray();
 			});
 	});
 
@@ -633,29 +679,30 @@ $("#algoritmoSaturaGuarda").click(function(){
 			var timeNumero = parseInt(timeNumeroS);
 			pilaTiempos.push(timeNumero);
 
-			console.log(timeAccion);
+			//console.log(timeAccion);
 			//console.log(contenidoAccion);
 		}
-		console.log("Pila tiempos -1 "+pilaTiempos[pilaTiempos.length-1]);
-		console.log("Pila tiempos -2 "+pilaTiempos[pilaTiempos.length-2]);
+		//console.log("Pila tiempos -1 "+pilaTiempos[pilaTiempos.length-1]);
+		//console.log("Pila tiempos -2 "+pilaTiempos[pilaTiempos.length-2]);
 
 		//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior y no superior a dos horas y sea diferente a 0 para evitar la primera iteracción
 		//(pilaTiempos[pilaTiempos.length-1]<(pilaTiempos[pilaTiempos.length-2]+20000)) &&
 		//&& (pilaTiempos[pilaTiempos.length-1] > horaLevantas) && (pilaTiempos[pilaTiempos.length-1] < horaLevantas+50000)
 		if((pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]) && ((primerAccion ==0) || (primerAccion ==1 && pilaTiempos[pilaTiempos.length-1] < pilaTiempos[pilaTiempos.length-2]+20000))){
-			console.log("Número de  iteracciones inicio"+primerAccion);
+			//console.log("Número de  iteracciones inicio"+primerAccion);
 
 			//Condición que estemos en la primera iteracción para crearla a la hora que se levanta
 			if(primerAccion == 0){
 				primerAccion = primerAccion+1;
 				pilaTiempos.push(horaLevantas*10000);
-				console.log("Dentro de colocación en primera iteraccion");
-				console.log("Número de  iteracciones inicio"+primerAccion);
+				//console.log("Dentro de colocación en primera iteraccion");
+				//console.log("Número de  iteracciones inicio"+primerAccion);
 				//Creamos un Span del campo Time
 				var nuevoElementoAccionT = document.createElement("span");
 				//Cargamos en el span el contenido del time seleccionado
-				console.log("horaLevantas dentro"+horaLevantas)
+				//console.log("horaLevantas dentro"+horaLevantas)
 				var nuevoContenidoAccionT = document.createTextNode(" "+horaLevantas+":"+"00"+":"+"00"+" ");
+
 				nuevoElementoAccionT.appendChild(nuevoContenidoAccionT);
 				//Le damos formato
 				nuevoElementoAccionT.className="textoTime";
@@ -670,9 +717,22 @@ $("#algoritmoSaturaGuarda").click(function(){
 				nuevoElementoAccionC.appendChild(nuevoContenidoAccionC);
 				//Le damos formato
 				nuevoElementoAccionC.className="contenidoTime";
-				//Cargamos en página el nuevo lugar
+				//Cargamos en página la nueva acción
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				//Definimos los datos a guardar
+				var tipo = "accion";
+				var contenido = contenidoAccion;
+				var hora = horaLevantas+":"+"00"+":"+"00";
+				console.log(hora);
+
+				//Creamos el objeto
+				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+				//console.log(nuevoAsiento);
+
+				//Llamamos a guardar en el array
+				agregarArray();
 			}
 			else {
 				//Creamos un Span del campo Time
