@@ -7,8 +7,8 @@ var menAlgoritmo = [];
 
 //Función de grabación de datos en JSON a través de PHP
 function grabaDatos(data){
-	//console.log("data");
-	//console.log(data);
+	console.log("data");
+	console.log(data);
 
 	var dataSe = JSON.stringify(data);
 	//console.log("dataSE");
@@ -16,18 +16,11 @@ function grabaDatos(data){
 
 		//AJAX.
 		$.ajax({
-				data:  [
-				  {
-				    "tipo": "normal",
-				    "contenido": "Punto de identificación facial"
-				  },
-				  {
-				    "tipo": "normal",
-				    "contenido": "Se tiene que hacer cuando vas a dormir"
-				  }
-				],
+				data:  data,
+				//data:  dataSe,
 				type : 'POST',
 				url  : '../php/grabaAlgoritmo.php',
+				//dataType: "json",
 				success:function(data) {
 					console.log("Respuesta del servidor")
 					console.log(data);
