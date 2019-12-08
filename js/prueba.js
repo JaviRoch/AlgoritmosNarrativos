@@ -1,13 +1,77 @@
-var menAlgoritmo = ['Manzana', 'Banana'];
+//Función de grabación de datos en JSON a través de PHP
+function grabaDatos(data){
+	console.log("data");
+	console.log(data);
 
-var menAsiento = ['pera','melón'];
+	var dataSe = JSON.stringify(data);
+	//console.log("dataSE");
+	//console.log(dataSe);
 
-alert(menAlgoritmo);
+/*		//AJAX.
+		$.ajax({
+				/*data:  [
+				    {
+				        "RegFecha": "11\/11\/2019 ** 15:43",
+				        "tipo": "normal",
+				        "contenido": "wperjwperjwe",
+				        "hora": "11:00:00"
+				    },
+				    {
+								"RegFecha": "11\/11\/2019 ** 15:43",
+								"tipo": "normal",
+								"contenido": "wperjwperjwe",
+								"hora": "11:00:00"
+				    }
+					],
 
-menAlgoritmo.push(menAsiento);
+				//data:  dataSe,
+				data:  data,
+				type : 'GET',
+				url  : '../php/grabaAlgoritmo.php',
+				//dataType: "json",
+				success:function(data) {
+					console.log("Respuesta del servidor")
+					console.log(data);
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+        	alert(xhr.status);
+        	alert(thrownError);
+      	}
+	 	});*/
 
-alert(menAlgoritmo);
+    var net = new XMLHttpRequest();
 
-menAlgoritmo.push(menAsiento);
+    net.onload = function(e) {
+      console.log(net.responseText);
+    }
 
-alert(menAlgoritmo);
+    //var datos = { hola: "mundo" };
+    var datos_json = JSON.stringify(data);
+
+    net.open("GET", "../php/grabaAlgoritmo.php");
+
+    net.setRequestHeader("Content-Type", "application/json");
+
+    net.send(datos_json);
+}
+
+
+
+menAlgoritmo = [
+    {
+        "RegFecha": "11\/11\/2019 ** 15:43",
+        "tipo": "normal",
+        "contenido": "wperjwperjwe",
+        "hora": "11:00:00"
+    },
+    {
+        "RegFecha": "11\/11\/2019 ** 15:43",
+        "tipo": "normal",
+        "contenido": "wperjwperjwe",
+        "hora": "11:00:00"
+    }
+  ];
+
+  $(document).ready(function(){
+  grabaDatos(menAlgoritmo);
+  });
