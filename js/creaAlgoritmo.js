@@ -13,15 +13,15 @@ function grabaDatos(data){
 	console.log(data);
 
 	//Varible que define el interlineado
-	var intLi = 9;
+	var intLi = 7;
 	//Variable que define la separación entre la hora y comando
 	var sepHo = 47; //+17 al margen izquierdo
 	//Variable que define el margen izquierdo
 	var margIzqui = 30;
-	//Variable qeu de fine la altura a la que comienza el texto
-	var comText = 70;
-	//Anchura del comando
-	var anComan = 150;
+	//Variable qeu de fine la altura a la que comienza el parrafo
+	var comPar = 30;
+	//Anchura del parrafo
+	var anPar = 170;
 
 	var doc = new jsPDF();
 
@@ -40,15 +40,39 @@ function grabaDatos(data){
 	doc.setFontSize(24);
 	doc.text(35, 36, splitTitle);
 
-	doc.setTextColor(255);
+	doc.setTextColor(32, 68, 198);
 	doc.setFontSize(8);
-	var splitText = doc.splitTextToSize(data[0].tipo, anComan);
+	/*var splitText = doc.splitTextToSize(data[0].tipo, anComan);
 	doc.setFontSize(10);
 	doc.setTextColor(130);
-	doc.text(margIzqui, comText, splitText);
+	doc.text(margIzqui, comText, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 	doc.setFontSize(8);
 	doc.setTextColor(40);
-	doc.text(sepHo, comText - 0.6, splitText);
+	doc.text(sepHo, comText - 0.6, "siguiente texto");*/
+
+	/*var text = ["a bunch of text elements", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."];
+
+	//Loop con cáculo automático de final de línea y salto a la siguiete
+	for(var i = 0, textlength = text.length ; i < textlength ; i++) {
+    var splitTitle = doc.splitTextToSize(text[i], anPar);
+
+    //loop thru each line and output while increasing the vertical space
+    for(var c = 0, stlength = splitTitle.length ; c < stlength ; c++){
+        doc.text(20, comPar, splitTitle[c]);
+        comPar = comPar + intLi;
+    }
+	}*/
+
+	//Loop con cáculo automático de final de línea y salto a la siguiete
+	for(var i = 0, textlength = data.length ; i < textlength ; i++) {
+    var splitTitle = doc.splitTextToSize(data[i].contenido, anPar);
+
+    //loop thru each line and output while increasing the vertical space
+    for(var c = 0, stlength = splitTitle.length ; c < stlength ; c++){
+        doc.text(20, comPar, splitTitle[c]);
+        comPar = comPar + intLi;
+    }
+	}
 
 	doc.addImage(imagen,'JPEG', 0, 260, 220, 28);
 
@@ -75,7 +99,26 @@ function AsientoAlgoritmo(tipo,contenido,hora){
 //Función de carga de los objetos en el array del Algoritmo
 function agregarArray(){
 	menAlgoritmo.push(nuevoAsiento);
+	console.log("menAlgoritmo");
 	console.log(menAlgoritmo);
+}
+
+function tipoContenido(tipo,contenido,hora){
+	console.log(tipo);
+	console.log(contenido);
+
+	if (menAlgoritmo[0] === undefined) {
+		//Creamos nuevo objeto
+		nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+
+		//Llamamos a guardar en el array
+		agregarArray();
+	}
+	else {
+		var ultimoVal = menAlgoritmo.length - 1;	
+		menAlgoritmo[ultimoVal].contenido = menAlgoritmo[ultimoVal].contenido +". " + contenido;
+		console.log(menAlgoritmo[ultimoVal].contenido);
+	}
 }
 
 //Cuando esté cargado todo el html
@@ -199,12 +242,8 @@ $(document).ready(function(){
 				var contenido = lugaresExtra[indiceLugar];
 				var hora = " ";
 
-				//Creamos el objeto
-				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
-				//console.log(nuevoAsiento);
-
-				//Llamamos a guardar en el array
-				agregarArray();
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora)
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
