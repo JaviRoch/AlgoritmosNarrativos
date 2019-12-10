@@ -50,19 +50,6 @@ function grabaDatos(data){
 	doc.setTextColor(40);
 	doc.text(sepHo, comText - 0.6, "siguiente texto");*/
 
-	/*var text = ["a bunch of text elements", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."];
-
-	//Loop con cáculo automático de final de línea y salto a la siguiete
-	for(var i = 0, textlength = text.length ; i < textlength ; i++) {
-    var splitTitle = doc.splitTextToSize(text[i], anPar);
-
-    //loop thru each line and output while increasing the vertical space
-    for(var c = 0, stlength = splitTitle.length ; c < stlength ; c++){
-        doc.text(20, comPar, splitTitle[c]);
-        comPar = comPar + intLi;
-    }
-	}*/
-
 	//Loop con cáculo automático de final de línea y salto a la siguiete
 	for(var i = 0, textlength = data.length ; i < textlength ; i++) {
     var splitTitle = doc.splitTextToSize(data[i].contenido, anPar);
@@ -79,14 +66,6 @@ function grabaDatos(data){
 	//Guardamos el pDF
 	doc.save('salida.pdf');
 
-/*
-	console.log("extraido")
-	console.log(data[0].tipo);
-	console.log(data[0].contenido);
-	console.log(data[0].hora);*/
-
-
-
 }
 
 //Función de creación del objeto de asiento
@@ -99,14 +78,16 @@ function AsientoAlgoritmo(tipo,contenido,hora){
 //Función de carga de los objetos en el array del Algoritmo
 function agregarArray(){
 	menAlgoritmo.push(nuevoAsiento);
-	console.log("menAlgoritmo");
+	//console.log("menAlgoritmo");
 	console.log(menAlgoritmo);
 }
 
+//Función de separación de datos según sea lugar,característica, objeto, persona o bien Acción para crear estilos diferentes en el PDF
 function tipoContenido(tipo,contenido,hora){
-	console.log(tipo);
-	console.log(contenido);
+	//console.log(tipo);
+	//console.log(contenido);
 
+	//Si es el primer asiento de datos
 	if (menAlgoritmo[0] === undefined) {
 		//Creamos nuevo objeto
 		nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
@@ -114,10 +95,32 @@ function tipoContenido(tipo,contenido,hora){
 		//Llamamos a guardar en el array
 		agregarArray();
 	}
+
+	//Si ya tenemos algún asiento creado
 	else {
-		var ultimoVal = menAlgoritmo.length - 1;	
-		menAlgoritmo[ultimoVal].contenido = menAlgoritmo[ultimoVal].contenido +". " + contenido;
-		console.log(menAlgoritmo[ultimoVal].contenido);
+
+		var ultimoVal = menAlgoritmo.length - 1;
+
+		//Si el tipo de datos es normal(lugar,caractaerística, objeto, persona)
+		if (tipo == "normal" && menAlgoritmo[ultimoVal].tipo != "accion") {
+			menAlgoritmo[ultimoVal].contenido = menAlgoritmo[ultimoVal].contenido +". " + contenido;
+		}
+
+		if (tipo == "normal" && menAlgoritmo[ultimoVal].tipo == "accion") {
+			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+
+			//Llamamos a guardar en el array
+			agregarArray();
+		}
+
+		//Si el tipo de datos es acción
+		if (tipo == "accion") {
+			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+
+			//Llamamos a guardar en el array
+			agregarArray();
+
+		}
 	}
 }
 
@@ -243,7 +246,7 @@ $(document).ready(function(){
 				var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora)
+				tipoContenido(tipo,contenido,hora);
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
@@ -356,13 +359,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = caracteristicasExtra[indiceCaracteristica];
+				var hora = " ";
 
-				//Creamos el objeto
-				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
-				//console.log(nuevoAsiento);
-
-				//Llamamos a guardar en el array
-				agregarArray();
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora);
 			});
 	});
 
@@ -475,13 +475,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = personaExtra[indicePersona];
+				var hora = " ";
 
-				//Creamos el objeto
-				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
-				//console.log(nuevoAsiento);
-
-				//Llamamos a guardar en el array
-				agregarArray();
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora);
 			});
 	});
 
@@ -594,13 +591,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = objetoExtra[indiceObjeto];
+				var hora = " ";
 
-				//Creamos el objeto
-				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
-				//console.log(nuevoAsiento);
-
-				//Llamamos a guardar en el array
-				agregarArray();
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora);
 			});
 	});
 
@@ -797,14 +791,10 @@ $(document).ready(function(){
 				var tipo = "accion";
 				var contenido = contenidoAccion;
 				var hora = horaLevantas+":"+"00"+":"+"00";
-				console.log(hora);
+				//console.log(hora);
 
-				//Creamos el objeto
-				nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
-				//console.log(nuevoAsiento);
-
-				//Llamamos a guardar en el array
-				agregarArray();
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora);
 			}
 			else {
 				//Creamos un Span del campo Time
@@ -827,6 +817,15 @@ $(document).ready(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccionC);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				//Definimos los datos a guardar
+				var tipo = "accion";
+				var contenido = contenidoAccion;
+				var hora = timeAccion;
+				//console.log(hora);
+
+				//Comprobamos tipo de contenido y si está creado ya algún objeto
+				tipoContenido(tipo,contenido,hora);
 			}
 		}
 		else{
@@ -835,7 +834,7 @@ $(document).ready(function(){
 			if (salIteracciones > 300) {
 				pilaTiempos.pop();
 				//console.log("En else");
-				console.log("Número de  iteracciones "+salIteracciones)
+				//console.log("Número de  iteracciones "+salIteracciones)
 
 				//Creamos un Span del campo Contenido
 				var nuevoElementoAccionC = document.createElement("span");
