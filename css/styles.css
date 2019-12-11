@@ -126,6 +126,54 @@ Estilo Menú
   color: #c2eaff !important;
 }
 
+#flecha1{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha1:hover{
+  color:#6E7C7C;
+}
+
+#flecha2{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha2:hover{
+  color:#6E7C7C;
+}
+
+#flecha3{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha3:hover{
+  color:#6E7C7C;
+}
+
+#flecha4{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha4:hover{
+  color:#6E7C7C;
+}
+
+#flecha5{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha5:hover{
+  color:#6E7C7C;
+}
+
+#flecha6{
+  font-size: 5rem;
+  text-align: center;
+}
+#flecha6:hover{
+  color:#6E7C7C;
+}
+
 /**
 Estilo Formulario Punto Cero
 */
@@ -212,6 +260,12 @@ Estilo punto de saturación
 
 .inputSatura{
   width: 67%;
+}
+
+@media (max-width: 988px) {
+  .inputSatura{
+    width: 100%;
+  }
 }
 
 .preguntasSatura input{
@@ -301,6 +355,12 @@ Estilo punto de saturación
 .inputCero{
   width: 67%;
   margin-bottom: 40px;
+}
+
+@media (max-width: 988px) {
+.inputCero{
+  width: 100%;
+}
 }
 
 
@@ -470,23 +530,31 @@ button, input, optgroup, select, textarea {
 /**
 Estilo lateral
 */
+
+
 #Lateral{
 	background-color: #d60c67;
-	padding: 112px 6% 0 6%;
+	padding: 11px 6% 0 6%;
 	font-family: 'rathersemibold';
 	font-size: 1.2rem;
 }
 
+/*@media (max-width: 768px) {
+  #Lateral{
+    padding: 112px;
+  }
+}*/
+
 #Lateral2{
 	background-color: #ffecc2;
-	padding: 112px 6% 0 6%;
+	padding: 11px 6% 0 6%;
 	font-family: 'rathersemibold';
 	font-size: 1.2rem;
 }
 
 #Lateral3{
 	background-color: #c2eaff;
-	padding: 112px 6% 0 6%;
+	padding: 11px 6% 0 6%;
 	font-family: 'rathersemibold';
 	font-size: 1.2rem;
 }
