@@ -539,11 +539,11 @@ Estilo lateral
 	font-size: 1.2rem;
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 988px) {
   #Lateral{
-    padding: 112px;
+    padding-top: 112px;
   }
-}*/
+}
 
 #Lateral2{
 	background-color: #ffecc2;
@@ -551,12 +551,22 @@ Estilo lateral
 	font-family: 'rathersemibold';
 	font-size: 1.2rem;
 }
+@media (max-width: 988px) {
+  #Lateral2{
+    padding-top: 112px;
+  }
+}
 
 #Lateral3{
 	background-color: #c2eaff;
 	padding: 11px 6% 0 6%;
 	font-family: 'rathersemibold';
 	font-size: 1.2rem;
+}
+@media (max-width: 988px) {
+  #Lateral3{
+    padding-top: 112px;
+  }
 }
 
 
