@@ -27,22 +27,19 @@
       <div class="row backgroundBlack row-eq-height">
         <div id="LateralSup" class="col-sm-5 col-md-12 col-lg-2 sinpadding fonLateral">
           <div id="Lateral">
-            <p id="flecha1" class="d-none d-lg-block">
+            <p id="flecha1" style="cursor: pointer"class="d-none d-lg-block">
               →
             </p>
-            <p id="flecha2" style="display:none">
+            <p id="flecha2" style="display:none; cursor: pointer">
               ←
             </p>
             <p>Bienvenidxs al Punto Cero donde ensayarás la comprensión fenomeno- lógica del algoritmo desde su condición social como hecho humano que desborda su naturaleza para configurarse en un sistema de conocimiento donde la inteligencia colectiva se cruza con la artificial. </P>
               <p>Punto Cero es un espacio de aprendizaje y práctica en el lenguaje y la estructura del algoritmo. Cada línea o comando define una instrucción concreta en el transcurso de un proceso. Aquí cohabitas con la máquina en un lugar común que parte de tu vida y se transforma en algoritmo. </p>
               <p>Se trata de escribir tu algoritmo, de aceptar el juego de cálculos e intensidades que pueda servirte para experimentar programaciones alternativas donde la vida algorítmica te devuelva una suerte de fantasía sobre la emancipación de las máquinas.</p>
-            <!--<div class="col text-center">
-              <button class="buttonLateralNo" id="botonNoQuiero">No quiero pensar</button>
-            </div>
             <div class="text-center">
-              <form action="../php/grabaCero.php" method="post" name="formCero" autocomplete="off">
-              <input class="submit buttonLateral" type="submit" value="Guardar">
-            </div>-->
+              <button id="botonNoQuiero" >No quiero pensar</button>
+              <button id="formCeroSub" form="formularioCero" type="button">Guardar</>
+            </div>
           </div>
         </div>
         <div id="Contenido" class="col-sm-12 col-md-12 col-lg-10">
@@ -62,16 +59,12 @@
             <input type="text" name="titulo" id="titlePuntoCero" placeholder="Title">
             <div class="tituloPuntoCero">
               <div class="tituloForm">
-                <div class="tituloFormTime"> Time</div>
                 <div class="tituloFormType">Type</div>
                 <div class="tituloFormCommand">Command</div>
               </div>
             </div>
 
                 <div class="flecha">
-                  <div class="formTime">
-                    <input type="time" id="time0" name="hora0" step="1">
-                  </div>
               <div class="formType">
                 <select  name="hecho0">
                   <option value="Lugar">Lugar</option>
@@ -86,9 +79,6 @@
                 <input class="inputAncho" type="text" name="comando0" placeholder="Command">
               </div>
             <div class="flecha" id="asiento1" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time1" name="hora1" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho1">
                   <option value="Lugar">Lugar</option>
@@ -105,9 +95,6 @@
             </div>
 
             <div class="flecha" id="asiento2" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time2" name="hora2" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho2">
                   <option value="Lugar">Lugar</option>
@@ -124,9 +111,6 @@
             </div>
 
             <div class="flecha" id="asiento3" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time3" name="hora3" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho3">
                   <option value="Lugar">Lugar</option>
@@ -143,9 +127,6 @@
             </div>
 
             <div class="flecha" id="asiento4" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time4" name="hora4" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho4">
                   <option value="Lugar">Lugar</option>
@@ -162,9 +143,6 @@
             </div>
 
             <div class="flecha" id="asiento5" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time5" name="hora5" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho5">
                   <option value="Lugar">Lugar</option>
@@ -181,9 +159,6 @@
             </div>
 
             <div class="flecha" id="asiento6" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time6" name="hora6" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho6">
                   <option value="Lugar">Lugar</option>
@@ -200,9 +175,6 @@
             </div>
 
             <div class="flecha" id="asiento7" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time7" name="hora7" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho7">
                   <option value="Lugar">Lugar</option>
@@ -219,9 +191,6 @@
             </div>
 
             <div class="flecha" id="asiento8" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time8" name="hora8" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho8">
                   <option value="Lugar">Lugar</option>
@@ -238,9 +207,6 @@
             </div>
 
             <div class="flecha" id="asiento9" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time9" name="hora9" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho9">
                   <option value="Lugar">Lugar</option>
@@ -257,9 +223,6 @@
             </div>
 
             <div class="flecha" id="asiento10" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time10" name="hora10" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho10">
                   <option value="Lugar">Lugar</option>
@@ -276,9 +239,6 @@
             </div>
 
             <div class="flecha" id="asiento11" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time11" name="hora11" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho11">
                   <option value="Lugar">Lugar</option>
@@ -295,9 +255,6 @@
             </div>
 
             <div class="flecha" id="asiento12" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time12" name="hora12" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho12">
                   <option value="Lugar">Lugar</option>
@@ -314,9 +271,6 @@
             </div>
 
             <div class="flecha" id="asiento13" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time13" name="hora13" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho13">
                   <option value="Lugar">Lugar</option>
@@ -333,9 +287,6 @@
             </div>
 
             <div class="flecha" id="asiento14" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time14" name="hora14" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho14">
                   <option value="Lugar">Lugar</option>
@@ -352,9 +303,6 @@
             </div>
 
             <div class="flecha" id="asiento15" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time15" name="hora15" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho15">
                   <option value="Lugar">Lugar</option>
@@ -371,9 +319,6 @@
             </div>
 
             <div class="flecha" id="asiento16" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time16" name="hora16" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho16">
                   <option value="Lugar">Lugar</option>
@@ -390,9 +335,6 @@
             </div>
 
             <div class="flecha" id="asiento17" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time17" name="hora17" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho17">
                   <option value="Lugar">Lugar</option>
@@ -409,9 +351,6 @@
             </div>
 
             <div class="flecha" id="asiento18" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time18" name="hora18" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho18">
                   <option value="Lugar">Lugar</option>
@@ -428,9 +367,6 @@
             </div>
 
             <div class="flecha" id="asiento19" style="display:none;">
-              <div class="formTime">
-                <input type="time" id="time19" name="hora19" step="1">
-              </div>
               <div class="formType">
                 <select name="hecho19">
                   <option value="Lugar">Lugar</option>
@@ -452,8 +388,6 @@
             </form>
           </div>
               <button id="buttonNuevo" onclick="muestraCampos()">New line</button>
-              <button id="botonNoQuiero" >No quiero pensar</button>
-              <button id="formCeroSub" form="formularioCero" type="button">Guardar</>
           </div>
         </div>
         </div>

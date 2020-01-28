@@ -78,7 +78,32 @@ $(document).ready(function(){
     "Algoritmo narrativo para quedar con mis amigxs sin el móvil",
     "Algoritmo narrativo para que una imagen me haga reír",
     "Algoritmo narrativo para que una imagen me haga llorar",
-    "Algoritmo narrativo para explicar como ganarse la vida haciendo fotos"];
+    "Algoritmo narrativo para explicar como ganarse la vida haciendo fotos",
+    "Algoritmo narrativo para ver una imagen en la oscuridad",
+    "Algoritmo narrativo para no perderte en la búsqueda de tu identidad",
+    "Algoritmo narrativo para enviar mensajes positivos a tu mente",
+    "Algoritmo narrativo para enviar mensajes negativos a tu mente",
+    "Algoritmo narrativo para borrar mensajes negativos de tu mente",
+    "Algoritmo narrativo para bailar una imagen",
+    "Algoritmo narrativo para escribir una fotografía",
+    "Algoritmo narrativo para no olvidar aquella imagen",
+    "Algoritmo narrativo para abrazar una imagen",
+    "Algoritmo narrativo para tener dulces sueños",
+    "Algoritmo narrativo para volar con una imagen",
+    "Algoritmo narrativo para volver a comenzar",
+    "Algoritmo narrativo para hacer autofotografías",
+    "Algoritmo narrativo para que un instante dure cien años",
+    "Algoritmo narrativo para fotografiarte con un desconocido",
+    "Algoritmo narrativo para fotografiar a un desconocido",
+    "Algoritmo narrativo para decir te quiero con una imagen",
+    "Algoritmo narrativo para mirar de cerca con una foto",
+    "Algoritmo narrativo para mirar de lejos con una foto",
+    "Algoritmo narrativo para mirar un evento desde diferentes perspectivas",
+    "Algoritmo narrativo para pedir ayuda con una imagen",
+    "Algoritmo narrativo para enviar una imagen como un mensaje sin el móvil",
+    "Algoritmo narrativo para navegar en un mar de fotografías",
+    "Algoritmo narrativo para caminar en un bosque de fotografías",
+    "Algoritmo narrativo para transmitir el olor de una fotogografía"];
 
     //Función para la creación de los tiempos al pulsar el boton "No quiero pensar"
     function aleatoriTiempo(max,min,numAsiento){

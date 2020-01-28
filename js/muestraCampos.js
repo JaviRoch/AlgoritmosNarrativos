@@ -92,7 +92,7 @@ $(document).ready(function(){
     $('#Contenido').removeClass('col-lg-10');
     $('#Contenido').addClass('col-lg-6');
 
-    $('#flecha1').hide();
+    $('#flecha1').attr('style','display:none !important');
     $('#flecha2').show();
 
 	});
@@ -104,7 +104,7 @@ $(document).ready(function(){
     $('#Contenido').removeClass('col-lg-6');
     $('#Contenido').addClass('col-lg-10');
 
-    $('#flecha2').hide();
+    $('#flecha2').attr('style','display:none !important');
     $('#flecha1').show();
 
 	});
@@ -116,7 +116,7 @@ $(document).ready(function(){
     $('#Contenido2').removeClass('col-lg-10');
     $('#Contenido2').addClass('col-lg-6');
 
-    $('#flecha3').hide();
+    $('#flecha3').attr('style','display:none !important');
     $('#flecha4').show();
 
   });
@@ -128,7 +128,7 @@ $(document).ready(function(){
     $('#Contenido2').removeClass('col-lg-6');
     $('#Contenido2').addClass('col-lg-10');
 
-    $('#flecha4').hide();
+    $('#flecha4').attr('style','display:none !important');
     $('#flecha3').show();
 
   });
@@ -140,7 +140,7 @@ $(document).ready(function(){
     $('#Contenido3').removeClass('col-lg-10');
     $('#Contenido3').addClass('col-lg-6');
 
-    $('#flecha5').hide();
+    $('#flecha5').attr('style','display:none !important');
     $('#flecha6').show();
 
   });
@@ -152,7 +152,7 @@ $(document).ready(function(){
     $('#Contenido3').removeClass('col-lg-6');
     $('#Contenido3').addClass('col-lg-10');
 
-    $('#flecha6').hide();
+    $('#flecha6').attr('style','display:none !important');
     $('#flecha5').show();
 
   });

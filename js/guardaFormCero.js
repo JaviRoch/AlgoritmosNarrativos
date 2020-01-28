@@ -13,16 +13,6 @@ $(document).ready(function(){
 
       var data = $("form").serializeArray();
 
-      //Función para eliminar los tiempos puestos por "No quiero pensar" pero no rellenados
-      for (var i = 1; i < 60; i = i+3) {
-        console.log("i" + i)
-        var comand = i+2;
-        console.log()
-        if (data[comand].value == "") {
-          data[i].value = "";
-        }
-      }
-
       console.log("data");
       console.log(data);
 

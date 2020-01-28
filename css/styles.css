@@ -132,6 +132,7 @@ Estilo Menú
 }
 #flecha1:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 #flecha2{
@@ -140,6 +141,7 @@ Estilo Menú
 }
 #flecha2:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 #flecha3{
@@ -148,6 +150,7 @@ Estilo Menú
 }
 #flecha3:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 #flecha4{
@@ -156,6 +159,7 @@ Estilo Menú
 }
 #flecha4:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 #flecha5{
@@ -164,6 +168,7 @@ Estilo Menú
 }
 #flecha5:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 #flecha6{
@@ -172,6 +177,7 @@ Estilo Menú
 }
 #flecha6:hover{
   color:#6E7C7C;
+  cursor:pointer;
 }
 
 /**
@@ -202,13 +208,14 @@ display: table-cell;
 
 .tituloFormType{
 display: table-cell;
-padding-left: 95px;
+/*padding-left: 6px;*/
+-moz-padding-start : 6px;
 }
 
 .tituloFormCommand{
 display: table-cell;
 padding-left: 133px;
--moz-padding-start : 131px;
+-moz-padding-start : 139px;
 }
 
 #titlePuntoCero{
@@ -385,8 +392,8 @@ Estilo punto de saturación
   padding: 8px 20px 10px 20px;
 	margin-top: 25px;
   margin-left: -10px;
-  background-color: #d60c67;
-  color: #000000;
+  background-color: #000000;
+  color: #d60c67;
   font-size: 18px;
   font-family: 'rathersemibold';
 }
@@ -407,7 +414,7 @@ Estilo punto de saturación
 }
 
 #formCeroSub:hover{
-  color: rgb(235, 235, 235);
+  color: #000000;
 
 }
 
