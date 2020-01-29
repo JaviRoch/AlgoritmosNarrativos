@@ -1,5 +1,5 @@
 
-var pilaTiempos = [0];
+//var pilaTiempos = [0];
 var accionExtra=[];
 var primerAccion =0;
 var indiceMenAlgoritmo = 0;
@@ -18,7 +18,7 @@ function grabaDatos(data){
 	//Varible que define el interlineado
 	var intLi = 7;
 	//Variable que define la separación entre la hora y comando
-	var sepHo = 52; //+17 al margen izquierdo
+	var sepHo = 35; //+17 al margen izquierdo
 	//Variable que define el margen izquierdo
 	var margIzqui = 35;
 	//Anchura del parrafo
@@ -60,7 +60,8 @@ function grabaDatos(data){
 
 			//loop thru each line and output while increasing the vertical space
 	    for(var c = 0, stlength = splitTitle.length ; c < stlength ; c++){
-
+				doc.setFontSize(8);
+				doc.setTextColor(40);
 	      doc.text(margIzqui, comPar, splitTitle[c]);
 	      comPar = comPar + intLi;
 	    }
@@ -72,9 +73,9 @@ function grabaDatos(data){
 	    for(var c = 0, stlength = splitTitle.length ; c < stlength ; c++){
 				doc.setFontSize(12);
 				doc.setTextColor(130);
-				doc.text(margIzqui, comPar, data[i].hora);
-				doc.setFontSize(8);
-				doc.setTextColor(40);
+				//doc.text(margIzqui, comPar, data[i].hora);
+				//doc.setFontSize(8);
+				//doc.setTextColor(40);
 				doc.text(sepHo, comPar, splitTitle[c]);
 	      comPar = comPar + intLi;
 	    }
@@ -89,10 +90,9 @@ function grabaDatos(data){
 }
 
 //Función de creación del objeto de asiento
-function AsientoAlgoritmo(tipo,contenido,hora){
+function AsientoAlgoritmo(tipo,contenido){
 	this.tipo=tipo;
 	this.contenido=contenido;
-	this.hora=hora;
 }
 
 //Función de carga de los objetos en el array del Algoritmo
@@ -103,14 +103,14 @@ function agregarArray(){
 }
 
 //Función de separación de datos según sea lugar,característica, objeto, persona o bien Acción para crear estilos diferentes en el PDF
-function tipoContenido(tipo,contenido,hora){
+function tipoContenido(tipo,contenido){
 	//console.log(tipo);
 	//console.log(contenido);
 
 	//Si es el primer asiento de datos
 	if (menAlgoritmo[0] === undefined) {
 		//Creamos nuevo objeto
-		nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+		nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
 
 		//Llamamos a guardar en el array
 		agregarArray();
@@ -127,7 +127,7 @@ function tipoContenido(tipo,contenido,hora){
 		}
 
 		if (tipo == "normal" && menAlgoritmo[ultimoVal].tipo == "accion") {
-			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
 
 			//Llamamos a guardar en el array
 			agregarArray();
@@ -135,7 +135,7 @@ function tipoContenido(tipo,contenido,hora){
 
 		//Si el tipo de datos es acción
 		if (tipo == "accion") {
-			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido,hora);
+			nuevoAsiento = new AsientoAlgoritmo(tipo,contenido);
 
 			//Llamamos a guardar en el array
 			agregarArray();
@@ -263,10 +263,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = lugaresExtra[indiceLugar];
-				var hora = " ";
+				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora);
+				tipoContenido(tipo,contenido);
     });
 
 			indiceMenAlgoritmo = indiceMenAlgoritmo+1;
@@ -379,10 +379,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = caracteristicasExtra[indiceCaracteristica];
-				var hora = " ";
+				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora);
+				tipoContenido(tipo,contenido);
 			});
 	});
 
@@ -495,10 +495,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = personaExtra[indicePersona];
-				var hora = " ";
+				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora);
+				tipoContenido(tipo,contenido);
 			});
 	});
 
@@ -611,10 +611,10 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = objetoExtra[indiceObjeto];
-				var hora = " ";
+				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora);
+				tipoContenido(tipo,contenido);
 			});
 	});
 
@@ -625,123 +625,124 @@ $(document).ready(function(){
 //
 //
 //
-
+$("#buttonAccion").click(function(){
 //Función extrar datos de acciones en archivo data.json
 	$.getJSON("../datos/data.json", function(datos){
 		//Extraemos los campos con el tipo accion
 		var accion = datos.filter(datos => datos.hecho0 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora0"]);
 			accionExtra.push(accion[i]["comando0"]);
 		}
 		var accion = datos.filter(datos => datos.hecho1 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora1"]);
 			accionExtra.push(accion[i]["comando1"]);
 		}
 		var accion = datos.filter(datos => datos.hecho2 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora2"]);
 			accionExtra.push(accion[i]["comando2"]);
 		}
 		var accion = datos.filter(datos => datos.hecho3 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora3"]);
 			accionExtra.push(accion[i]["comando3"]);
 		}
 		var accion = datos.filter(datos => datos.hecho4 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora4"]);
 			accionExtra.push(accion[i]["comando4"]);
 		}
 		var accion = datos.filter(datos => datos.hecho5 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora5"]);
 			accionExtra.push(accion[i]["comando5"]);
 		}
 		var accion = datos.filter(datos => datos.hecho6 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora6"]);
 			accionExtra.push(accion[i]["comando6"]);
 		}
 		var accion = datos.filter(datos => datos.hecho7 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora7"]);
 			accionExtra.push(accion[i]["comando7"]);
 		}
 		var accion = datos.filter(datos => datos.hecho8 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora8"]);
 			accionExtra.push(accion[i]["comando8"]);
 		}
 		var accion = datos.filter(datos => datos.hecho9 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora9"]);
 			accionExtra.push(accion[i]["comando9"]);
 		}
 		var accion = datos.filter(datos => datos.hecho10 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora10"]);
 			accionExtra.push(accion[i]["comando10"]);
 		}
 		var accion = datos.filter(datos => datos.hecho11 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora11"]);
 			accionExtra.push(accion[i]["comando11"]);
 		}
 		var accion = datos.filter(datos => datos.hecho12 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora12"]);
 			accionExtra.push(accion[i]["comando12"]);
 		}
 		var accion = datos.filter(datos => datos.hecho13 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora13"]);
 			accionExtra.push(accion[i]["comando13"]);
 		}
 		var accion = datos.filter(datos => datos.hecho14 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora14"]);
 			accionExtra.push(accion[i]["comando14"]);
 		}
 		var accion = datos.filter(datos => datos.hecho15 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora15"]);
 			accionExtra.push(accion[i]["comando15"]);
 		}
 		var accion = datos.filter(datos => datos.hecho16 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora16"]);
 			accionExtra.push(accion[i]["comando16"]);
 		}
 		var accion = datos.filter(datos => datos.hecho17 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora17"]);
 			accionExtra.push(accion[i]["comando17"]);
 		}
 		var accion = datos.filter(datos => datos.hecho18 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora18"]);
 			accionExtra.push(accion[i]["comando18"]);
 		}
 		var accion = datos.filter(datos => datos.hecho19 == "Accion");
 		for (var i = 0; i < accion.length; i++) {
-			accionExtra.push(accion[i]["hora19"]);
 			accionExtra.push(accion[i]["comando19"]);
 		}
+
+
+		//Buscamos el índice aleatorio de los lugares disponibles
+		var indiceAccion = Math.round(Math.random()*(accionExtra.length-0)+parseInt(0));
+		//Creamos un Span
+		var nuevoElementoAccion = document.createElement("span");
+		//Cargamos en el span el contenido del lugar seleccionado
+		var nuevoContenidoAccion = document.createTextNode(" "+accionExtra[indiceAccion]+".");
+		nuevoElementoAccion.appendChild(nuevoContenidoAccion);
+		nuevoElementoAccion.className="textoTime";
+		//Cargamos en página el nuevo lugar
+		document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccion);
+		indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+		//Definimos los datos a guardar
+		var tipo = "accion";
+		var contenido = accionExtra[indiceAccion];
+		//var hora = " ";
+
+		//Comprobamos tipo de contenido y si está creado ya algún objeto
+		tipoContenido(tipo,contenido);
 	});
 
 
-	function indiceAleatorio (accionExtra,salIteracciones,horaLevantas){
+	/*function indiceAleatorio (accionExtra,salIteracciones){
 		//Buscamos el índice aleatorio de los lugares disponibles
-		var timeAccion;
+//var timeAccion;
 		var contenidoAccion;
 		var indiceAccion = Math.round(Math.random()*(accionExtra.length-0)+parseInt(0));
 		var tempAccion = accionExtra[indiceAccion];
-		var validAccion = /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/gm;
+//var validAccion = /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/gm;
 
 		//Comprobamos que el campo temporal seleccionado sea un número
-		if(validAccion.test(tempAccion) == true){
+		/*if(validAccion.test(tempAccion) == true){
 			//Guardamos el número y el contenido posterior en el array
 			var timeAccion = tempAccion;
 			var contenidoAccion = accionExtra[indiceAccion+1];
@@ -767,18 +768,18 @@ $(document).ready(function(){
 
 			//console.log(timeAccion);
 			//console.log(contenidoAccion);
-		}
+		}*/
 		//console.log("Pila tiempos -1 "+pilaTiempos[pilaTiempos.length-1]);
 		//console.log("Pila tiempos -2 "+pilaTiempos[pilaTiempos.length-2]);
 
 		//Comprobamos que el tiempo del nuevo asiento es mayor que el anterior y no superior a dos horas y sea diferente a 0 para evitar la primera iteracción
 		//(pilaTiempos[pilaTiempos.length-1]<(pilaTiempos[pilaTiempos.length-2]+20000)) &&
 		//&& (pilaTiempos[pilaTiempos.length-1] > horaLevantas) && (pilaTiempos[pilaTiempos.length-1] < horaLevantas+50000)
-		if((pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]) && ((primerAccion ==0) || (primerAccion ==1 && pilaTiempos[pilaTiempos.length-1] < pilaTiempos[pilaTiempos.length-2]+20000))){
+		//if((pilaTiempos[pilaTiempos.length-1] > pilaTiempos[pilaTiempos.length-2]) && ((primerAccion ==0) || (primerAccion ==1 && pilaTiempos[pilaTiempos.length-1] < pilaTiempos[pilaTiempos.length-2]+20000))){
 			//console.log("Número de  iteracciones inicio"+primerAccion);
 
 			//Condición que estemos en la primera iteracción para crearla a la hora que se levanta
-			if(primerAccion == 0){
+			/*if(primerAccion == 0){
 				primerAccion = primerAccion+1;
 				pilaTiempos.push(horaLevantas*10000);
 				//console.log("Dentro de colocación en primera iteraccion");
@@ -816,7 +817,7 @@ $(document).ready(function(){
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
 				tipoContenido(tipo,contenido,hora);
 			}
-			else {
+//else {
 				//Creamos un Span del campo Time
 				var nuevoElementoAccionT = document.createElement("span");
 				//Cargamos en el span el contenido del time seleccionado
@@ -841,12 +842,12 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "accion";
 				var contenido = contenidoAccion;
-				var hora = timeAccion;
+	//var hora = timeAccion;
 				//console.log(hora);
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
-				tipoContenido(tipo,contenido,hora);
-			}
+				tipoContenido(tipo,contenido);
+//}
 		}
 		else{
 
@@ -875,26 +876,25 @@ $(document).ready(function(){
 				indiceAleatorio (accionExtra,salIteracciones);
 			}
 		}
-	}
+	}*/
 
-	$("#buttonAccion").click(function(){
+
 		//Extraemos los datos del archivo
 		//Hacemos llamamiento a la fución de extracción del asiento y puesta en pantalla
-		var salIteracciones = 0;
+		//var salIteracciones = 0;
 
 		//Función extraer respuestas del formulario de saturación
-		$.getJSON("../datos/dataSatura.json", function(datos){
-			var horaLevantas = datos[datos.length-1]["pregunta19"];
-			console.log("horaLevantas "+horaLevantas)
+		//$.getJSON("../datos/dataSatura.json", function(datos){
+//var horaLevantas = datos[datos.length-1]["pregunta19"];
+//console.log("horaLevantas "+horaLevantas)
 
 			//Llamamos función para comenzar algoritmo acciones
-			indiceAleatorio (accionExtra, salIteracciones, horaLevantas);
+			//indiceAleatorio (accionExtra, salIteracciones);
 		});
 
 
 		//console.log("Pila -1 "+pilaTiempos[pilaTiempos.length-1]);
 		//console.log("Pila -2 "+pilaTiempos[pilaTiempos.length-2]);
 		//console.log("length "+pilaTiempos.length);
-		console.log(pilaTiempos);
+		//console.log(pilaTiempos);
 	});
-});
