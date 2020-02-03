@@ -53,7 +53,7 @@ $(document).ready(function(){
 		//Variable que define el margen izquierdo
 		var margIzqui = 30;
 		//Variable qeu de fine la altura a la que comienza el texto
-		var comText = 70;
+		var comText = 78;
 		//Anchura del comando
 		var anComan = 130;
 

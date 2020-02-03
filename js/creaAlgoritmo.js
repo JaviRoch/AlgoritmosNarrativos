@@ -4,6 +4,11 @@ var accionExtra=[];
 var primerAccion =0;
 var indiceMenAlgoritmo = 0;
 var menAlgoritmo = [];
+var pilaLugar=["Lugar localizado"];
+var pilaPersona=["Persona encontrada"];
+var pilaObjeto=["Objeto añadido"];
+var pilaCaracterística=["Característica añadida"];
+var pilaAccion=["Acción realizada"];
 
 //Variable qeu de fine la altura a la que comienza el parrafo
 var comPar = 77;
@@ -280,6 +285,13 @@ $(document).ready(function(){
 				nuevoElementoLugar.appendChild(nuevoContenidoLugar);
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoLugar);
+
+				var nuevoTerminalLugar = document.createElement("p");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoMensajeLugar = document.createTextNode("<& "+pilaLugar);
+				nuevoTerminalLugar.appendChild(nuevoMensajeLugar);
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionTerminal").appendChild(nuevoTerminalLugar);
 
 				//Definimos los datos a guardar
 				var tipo = "normal";

@@ -326,6 +326,13 @@ Estilo punto de saturación
   font-size: 1.2rem;
 }
 
+#seccionTerminal p{
+  font-family: 'Roboto Mono', monospace;
+	font-size: 1rem;
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
 .textoTime{
   font-size: 1.6rem;
   color: #ffecc2;
