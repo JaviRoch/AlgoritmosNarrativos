@@ -7,7 +7,7 @@ var menAlgoritmo = [];
 var pilaLugar=["Lugar localizado"];
 var pilaPersona=["Persona encontrada"];
 var pilaObjeto=["Objeto añadido"];
-var pilaCaracterística=["Característica añadida"];
+var pilaCaracteristica=["Característica añadida"];
 var pilaAccion=["Acción realizada"];
 
 //Variable qeu de fine la altura a la que comienza el parrafo
@@ -114,52 +114,197 @@ function creaPDF(data){
 
 }
 
+//Función para publicar directamente en el algoritmo según las respuestas del formulario
+function publicaDirectFormNorm(texto,tiempo){
+	//Termporizador con retardo de acción
+	setTimeout(function(){
+		var nuevoElementoDirecto = document.createElement("span");
+		//Cargamos en el span el contenido del lugar seleccionado
+		var nuevoContenidoDirecto = document.createTextNode(" "+texto+".");
+		nuevoElementoDirecto.appendChild(nuevoContenidoDirecto);
+		//Cargamos en página el nuevo lugar
+		document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoDirecto);
+		//indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+		//Definimos los datos a guardar
+		var tipo = "normal";
+		var contenido = texto;
+		//var hora = " ";
+
+		//Comprobamos tipo de contenido y si está creado ya algún objeto
+		tipoContenido(tipo,contenido);
+	},tiempo);
+}
+
+//Función para publicar directamente en el algoritmo según las respuestas del formulario
+function publicaDirectFormAcc(texto,tiempo){
+	//Termporizador con retardo de acción
+	setTimeout(function(){
+		var nuevoElementoDirecto = document.createElement("span");
+		//Cargamos en el span el contenido del lugar seleccionado
+		var nuevoContenidoDirecto = document.createTextNode(" "+texto+".");
+		nuevoElementoDirecto.appendChild(nuevoContenidoDirecto);
+		nuevoElementoDirecto.className="textoTime";
+		//Cargamos en página el nuevo lugar
+		document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoDirecto);
+		//indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+		//Definimos los datos a guardar
+		var tipo = "accion";
+		var contenido = texto;
+		//var hora = " ";
+
+		//Comprobamos tipo de contenido y si está creado ya algún objeto
+		tipoContenido(tipo,contenido);
+	},tiempo);
+}
+
+//
+//Función en la que cargamos las respuestas del formulario en las pilas de datos
+//
 function cargaPilasTerminal(data){
 	console.log(data);
 	console.log(data[0]["value"]);
 
+	//Cuantas veces te cambias de ropa al día (Multi)
 	switch (data[2]["value"]) {
 		case "No":
-			console.log("caso 1");
-			pilaAccion.push("Se recomienda realizar un cambio de ropa");
+			//pilaAccion.push("Se recomienda realizar un cambio de ropa");
 			break;
 
 		case "1-3":
-			console.log("caso 2");
 			pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
 			break;
 
 		case "Muchas":
-			console.log("caso 3");
 			pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
+			break;
+	}
+
+	//Cuanto dinero has derrochado en el último año (Multi)
+	switch (data[3]["value"]) {
+		case "300":
+			pilaLugar.push("Se ha detectado la caída de 1€");
+			break;
+
+		case "500":
+			publicaDirectFormAcc("Has tirado 2,73€",10000);
+			break;
+
+		case "No":
+			//pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
+			break;
+	}
+
+	//Cuantas veces miras al cielo a la semana (Multi)
+	switch (data[4]["value"]) {
+		case "No":
+			pilaLugar.push("El suelo está demasiado sucio");
+			break;
+
+		case "1":
+			publicaDirectFormNorm("Bajo un cielo azul índigo",10000);
+			break;
+
+		case "7":
+			publicaDirectFormNorm("Bajo las nubes más espectaculares que has visto en tu vida",10000);
+			break;
+	}
+
+	//Tiempo máximo que has estado sin comer
+	switch (data[5]["value"]) {
+		case "Dormido":
+			pilaAccion.push("Se necesitará comer para poder desarrollar la acción");
+			break;
+
+		case "1":
+			//publicaDirectFormNorm("Bajo un cielo azul índigo",10000);
+			break;
+
+		case "2":
+			pilaCaracteristica.push("Se ha detectado una lesión epitelial con pérdida de sustancia en la boca");
+			break;
+	}
+
+	//Cuantos vasos de agua bebes al dia
+	if (data[6]["value"] < 3) {
+		pilaObjeto.push("@recordatoriodetomaragua");
+	}
+
+	//Cuantas veces has usado el móvil en el cine
+	if (data[7]["value"] > 10) {
+		pilaLugar.push("https://www.youtube.com/watch?v=pvrp_uTEbPo");
+	}
+
+	//Cuantos móviles hay en tu casa
+	if (data[8]["value"] > 3) {
+		pilaLugar.push("Al final de la cola de 48horas para adquirir el último iPhone");
+	}
+
+	//Cuantos videos de youtube ves en un mes
+	if (data[9]["value"] > 50) {
+		pilaPersona.push("Ha habido un cambio en el módulo ideológico, en adelante pensará como un supremacista terraplanista");
+	}
+
+	//Cuanto tiempo te aburres cada día en clase
+	switch (data[10]["value"]) {
+		case "50":
+			publicaDirectFormAcc("Veo a todas las personas desnudas",15000);
+			break;
+
+		case "30":
+			publicaDirectFormAcc("Mi padre tenía razón",15000);
+			break;
+
+		case "Todo":
+			publicaDirectFormAcc("Detrás de la puerta de la que posiblemente sea la mejor clase del curso",15000);
+			break;
+	}
+
+	//Cuantos seguidores tienes en Instagram
+	if (data[11]["value"] > 1000) {
+		pilaPersona.push("Instagram acaba de eliminarle 356 seguidores");
+	}
+
+	//Cuantas calorías tiene tu merienda
+	switch (data[12]["value"]) {
+		case "No":
+			pilaPersona.push("Si sigue así va a morir");
+			break;
+
+		case "TeImporta":
+			pilaPersona.push("Si sigue así va a morir");
+			break;
+
+		case "Nunca":
+			pilaPersona.push("Si sigue así va a morir");
 			break;
 	}
 }
 
+//Función con la que aplicamos un porcentaje de repuestas fijas y las del Formulario
 function x100Pila(variable){
-	var alea = Math.round(Math.random()*(4-0)+parseInt(0));
+	var alea = Math.round(Math.random()*(2-0)+parseInt(0));
 	console.log(alea);
+	//Si aleatorio es 0 selecciona una de las variables del formulario
 	if (alea == 0) {
 		console.log("aleatorio 0");
 		console.log(variable);
 		var tempVar = variable[variable.length-1];
 		console.log("lenght"+variable.length);
-
+		//Eliminamos la variable utilizada
 		if (variable.length > 1) {
 			variable.pop();
 		}
 		console.log(variable);
 		return tempVar;
-
 	}
+	//Si aleatorio es 1-2-3-4... selecciona la varialbe fija
 	if (alea>0) {
 		console.log("aleatorio 1-2-3-4");
 		console.log(variable);
 		return variable[0];
-
 	}
-
-	return "ok";
 }
 
 //Función de creación del objeto de asiento
@@ -245,7 +390,7 @@ $(document).ready(function(){
 			var data = $("form").serializeArray();
 
 			//Comprobamos que los campos numéricos han sido rellenados
-			//if (data[0]["value"] && data[1]["value"] && data[6]["value"] && data[7]["value"] && data[8]["value"] && data[9]["value"] && data[11]["value"] && data[15]["value"] && data[16]["value"] && data[17]["value"] && data[19]["value"] != ""){
+			if (data[0]["value"] && data[1]["value"] && data[6]["value"] && data[7]["value"] && data[8]["value"] && data[9]["value"] && data[11]["value"] && data[15]["value"] && data[16]["value"] && data[17]["value"] && data[19]["value"] != ""){
 
 				//AJAX envío de los datos a php
 				$.ajax({
@@ -257,10 +402,10 @@ $(document).ready(function(){
 							ocultaForm()
 				}
 				});
-			//} else {
+			} else {
 				//Alerta si hay campos vacíos
-				//alert('Campos númericos vacíos');
-			//}
+				alert('Campos númericos vacíos');
+			}
 
 			//Llamamos función cargar los datos del formualrio al terminal
 			cargaPilasTerminal(data);
@@ -505,6 +650,13 @@ $(document).ready(function(){
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoCaracteristica);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 
+				var nuevoTerminalCaracteristica = document.createElement("p");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoMensajeCaracteristica = document.createTextNode(x100Pila(pilaCaracteristica));
+				nuevoTerminalCaracteristica.appendChild(nuevoMensajeCaracteristica);
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionTerminal").appendChild(nuevoTerminalCaracteristica);
+
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = caracteristicasExtra[indiceCaracteristica];
@@ -620,6 +772,13 @@ $(document).ready(function(){
 				//Cargamos en página el nuevo lugar
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoPersona);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+				var nuevoTerminalPersona = document.createElement("p");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoMensajePersona = document.createTextNode(x100Pila(pilaPersona));
+				nuevoTerminalPersona.appendChild(nuevoMensajePersona);
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionTerminal").appendChild(nuevoTerminalPersona);
 
 				//Definimos los datos a guardar
 				var tipo = "normal";
@@ -737,6 +896,13 @@ $(document).ready(function(){
 				document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoObjeto);
 				indiceMenAlgoritmo = indiceMenAlgoritmo+1;
 
+				var nuevoTerminalObjeto = document.createElement("p");
+				//Cargamos en el span el contenido del lugar seleccionado
+				var nuevoMensajeObjeto = document.createTextNode(x100Pila(pilaObjeto));
+				nuevoTerminalObjeto.appendChild(nuevoMensajeObjeto);
+				//Cargamos en página el nuevo lugar
+				document.querySelector("#seccionTerminal").appendChild(nuevoTerminalObjeto);
+
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = objetoExtra[indiceObjeto];
@@ -839,7 +1005,6 @@ $("#buttonAccion").click(function(){
 			accionExtra.push(accion[i]["comando19"]);
 		}
 
-
 		//Buscamos el índice aleatorio de los lugares disponibles
 		var indiceAccion = Math.round(Math.random()*(accionExtra.length-0)+parseInt(0));
 		//Creamos un Span
@@ -851,6 +1016,13 @@ $("#buttonAccion").click(function(){
 		//Cargamos en página el nuevo lugar
 		document.querySelector("#seccionAlgoritmo").appendChild(nuevoElementoAccion);
 		indiceMenAlgoritmo = indiceMenAlgoritmo+1;
+
+		var nuevoTerminalAccion = document.createElement("p");
+		//Cargamos en el span el contenido del lugar seleccionado
+		var nuevoMensajeAccion = document.createTextNode(x100Pila(pilaAccion));
+		nuevoTerminalAccion.appendChild(nuevoMensajeAccion);
+		//Cargamos en página el nuevo lugar
+		document.querySelector("#seccionTerminal").appendChild(nuevoTerminalAccion);
 
 		//Definimos los datos a guardar
 		var tipo = "accion";
