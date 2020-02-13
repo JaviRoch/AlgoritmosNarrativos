@@ -347,6 +347,21 @@ Estilo punto de saturación
   color: #ffecc2;
 }
 
+/*.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+  padding-top: 70px;
+}*/
+
+/*#menuCreaSatura{
+  position:fixed;
+  z-index: 1;
+  width: 33.66%;
+}*/
 
 /*Estilo punto de salida*/
 
@@ -394,17 +409,17 @@ Estilo punto de saturación
   color: #333;
 }
 
-#botonNoQuiero {
+.ayudaPuntoCero{
   width: auto;
   padding: 8px 20px 10px 20px;
-	margin-top: 25px;
+	margin-top: 5px;
   margin-left: -10px;
   background-color: #000000;
   color: #d60c67;
   font-size: 18px;
   font-family: 'rathersemibold';
 }
-#botonNoQuiero:hover{
+.ayudaPuntoCero:hover{
   color: #333;
 }
 

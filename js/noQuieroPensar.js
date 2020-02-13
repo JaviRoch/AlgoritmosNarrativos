@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+  $("botonVerEjemplo").click(function(event){
+
+  });
   $("#botonNoQuiero").click(function(event) {
     //Creamos el array
     tiempos = [];
@@ -130,7 +134,16 @@ $(document).ready(function(){
     "Algoritmo narrativo para caminar en un bosque de fotografía",
     "Algoritmo narrativo para transmitir el olor de una fotogografía"];
 
-    //Función para la creación de los tiempos al pulsar el boton "No quiero pensar"
+    ejemplo =[
+    "tipo1", "comando1",
+    "tipo2", "comando2",
+  /*quitar la última coma*/];
+
+    function rellenaEjemplo(ejemplo){
+      $('#asiento1').val(ejemplo[0]);
+      $('#asiento1Com').val(ejemplo[0]);
+    }
+    /*//Función para la creación de los tiempos al pulsar el boton "No quiero pensar"
     function aleatoriTiempo(max,min,numAsiento){
       for(var i = 0; i<numAsiento;i++){
         var tiempoTemp = Math.round(Math.random()*(max-min)+parseInt(min));
@@ -140,16 +153,16 @@ $(document).ready(function(){
       tiempos.sort(function(a, b) {
       return a - b;
     });
-    }
+  }*/
 
     function aleatoriTitulo(max,min){
       var tituloTemp = Math.round(Math.random()*(max-min)+parseInt(min));
       $('#titlePuntoCero').val(titulos[tituloTemp]);
     }
 
-    aleatoriTitulo(73,0);
+    aleatoriTitulo(125,0);
 
-    //Lanzamos función de generación de tiempos aleatorios
+    /*/Lanzamos función de generación de tiempos aleatorios
     //Máximo minutos en un día 1439 ->23:59 | 600 -> 10:00
     //De  12:00 a 8:00 con siete asientos
     //Aquí configuramos los rangos de tiempo y la cantidad de asientos
@@ -172,6 +185,6 @@ $(document).ready(function(){
       });
       //Cargamos los valores en los inputs del formulario
       $('#time'+i).val(tiemposConver[i]);
-    };
+    };*/
   });
 });
