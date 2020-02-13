@@ -37,10 +37,10 @@ Estilo Menú
 
 .menu{
   background-color: #d60c67;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: 'rathersemibold';
   color: #000000;
-  min-height: 65px;
+  min-height: 60px;
   height: auto;
 
 }

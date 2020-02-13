@@ -11,6 +11,9 @@ RewriteRule ^([^\.]+)$ $1.html [L]
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^([^\.]+)$ $1.php [L]
 
+#Prefijamos la página index en el punto cero
+DirectoryIndex punto-cero.html
+
 <Files .htaccess>
 Order allow,deny
 Deny from all
