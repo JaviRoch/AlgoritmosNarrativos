@@ -1,6 +1,51 @@
 $(document).ready(function(){
 
-  $("botonVerEjemplo").click(function(event){
+  //Función para rellenar los campos del formulario con un ejemplo
+  $("#botonVerEjemplo").click(function(event){
+    ejemplo =[
+    "Lugar", "comando1",
+    "Accion", "comando2",
+    "Lugar", "comando3",
+    "Objeto", "comando4",
+    "Lugar", "comando1",
+    "Accion", "comando2",
+    "Lugar", "comando3",
+    "Objeto", "comando4"
+  /*quitar la última coma*/];
+
+
+    function rellenaEjemplo(ejemplo){
+
+      //Expandimos todos los asientos ocultos
+      document.getElementById('asiento1').style.display='block';
+      document.getElementById('asiento2').style.display='block';
+      document.getElementById('asiento3').style.display='block';
+      document.getElementById('asiento4').style.display='block';
+      document.getElementById('asiento5').style.display='block';
+      document.getElementById('asiento6').style.display='block';
+      document.getElementById('asiento7').style.display='block';
+      document.getElementById('asiento8').style.display='block';
+      document.getElementById('asiento9').style.display='block';
+      document.getElementById('asiento10').style.display='block';
+      document.getElementById('asiento11').style.display='block';
+      document.getElementById('asiento12').style.display='block';
+      document.getElementById('asiento13').style.display='block';
+      document.getElementById('asiento14').style.display='block';
+      document.getElementById('asiento15').style.display='block';
+      document.getElementById('asiento16').style.display='block';
+      document.getElementById('asiento17').style.display='block';
+      document.getElementById('asiento18').style.display='block';
+      document.getElementById('asiento19').style.display='block';
+
+      //For para iterar las varibles por los campos del array de ejemplo
+      for (var i = 0; i < 38; i+=2) {
+        $("#campoCeroT"+i).val(ejemplo[i]);
+        var ip = i+1;
+        $("#campoCeroC"+i).attr("placeholder", ejemplo[ip]);
+      }
+    }
+
+    rellenaEjemplo(ejemplo);
 
   });
   $("#botonNoQuiero").click(function(event) {
@@ -134,15 +179,7 @@ $(document).ready(function(){
     "Algoritmo narrativo para caminar en un bosque de fotografía",
     "Algoritmo narrativo para transmitir el olor de una fotogografía"];
 
-    ejemplo =[
-    "tipo1", "comando1",
-    "tipo2", "comando2",
-  /*quitar la última coma*/];
 
-    function rellenaEjemplo(ejemplo){
-      $('#asiento1').val(ejemplo[0]);
-      $('#asiento1Com').val(ejemplo[0]);
-    }
     /*//Función para la creación de los tiempos al pulsar el boton "No quiero pensar"
     function aleatoriTiempo(max,min,numAsiento){
       for(var i = 0; i<numAsiento;i++){
