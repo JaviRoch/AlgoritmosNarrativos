@@ -409,6 +409,20 @@ Estilo punto de saturación
   color: #333;
 }
 
+/*Botón nuevo de acción*/
+#buttonNuevoA {
+  width: auto;
+  padding: 8px 20px 10px 20px;
+  /*margin-left: 10px;*/
+  background-color: #c2eaff;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'rathersemibold';
+}
+#buttonNuevoA:hover{
+  color: #ffffff;
+}
+
 .ayudaPuntoCero{
   width: auto;
   padding: 8px 20px 10px 20px;
