@@ -46,11 +46,14 @@ $(document).ready(function(){
 
 	//Función para visibilizar los campos del formulario
 	$("#buttonNuevoA").click(function(){ // Una vez que se haga clic en el boton
-		console.log("desplegable antes "+desplegable);
+		//Evitamos que cuente más de los 24 campos
 		if (desplegable < 23) {
 				desplegable += 1;
 		}
-		console.log("desplegable después "+desplegable);
+		//Función para hacer scroll automático
+		$('html, body').animate({
+			scrollTop: $("#buttonNuevoA").offset().top
+		}, 150);
 		if (desplegable==1){
 			document.getElementById('desplegable2').style.display='block';
 			return
