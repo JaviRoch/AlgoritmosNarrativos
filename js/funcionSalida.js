@@ -46,7 +46,11 @@ $(document).ready(function(){
 
 	//Función para visibilizar los campos del formulario
 	$("#buttonNuevoA").click(function(){ // Una vez que se haga clic en el boton
-		desplegable += 1;
+		console.log("desplegable antes "+desplegable);
+		if (desplegable < 23) {
+				desplegable += 1;
+		}
+		console.log("desplegable después "+desplegable);
 		if (desplegable==1){
 			document.getElementById('desplegable2').style.display='block';
 			return
@@ -172,137 +176,14 @@ $(document).ready(function(){
 		var doc = new jsPDF();
 
 
+// Creación de páginas
 
-	//
-	//Primera página
-	//
+		for (paginas = 0; paginas <= desplegable; paginas++) {
 
-		doc.rect(20, 20, 25, 25, 'F'); // empty red square
-		doc.rect(40, 20, 130, 51, 'F'); // empty red square
+			if (paginas != 0) {
+				doc.addPage();
+			}
 
-		//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
-		doc.setFontSize(22); //Tamaño de texto para el cáculo de longitud
-		var splitTitle = doc.splitTextToSize(data2[seleccionados[0].value].titulo, 120);
-		//Definimos posición izquierda/altura y texto
-		doc.setTextColor(255);
-		doc.setFontSize(80);
-		doc.text(21,42,"9");
-		doc.setFontSize(30);
-		doc.text(43,32,"PUNTO DE SALIDA");
-		doc.setFontSize(22);
-		doc.text(43,42, splitTitle);
-
-		doc.setTextColor(255);
-		doc.setFontSize(8);
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando0, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText - 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando1, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*1)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando2, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*2)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando3, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*3)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando4, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*4)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando5, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*5)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando6, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*6)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando7, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*7)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando8, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*8)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando9, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*9)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando10, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*10)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando11, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*11)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando12, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*12)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando13, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*13)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando14, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*14)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando15, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*15)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando16, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*16)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando17, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*17)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando18, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*18)- 0.6, splitText);
-
-		var splitText = doc.splitTextToSize(data2[seleccionados[0].value].comando19, anComan);
-		doc.setFontSize(8);
-		doc.setTextColor(40);
-		doc.text(sepHo, comText+(intLi*19)- 0.6, splitText);
-
-		doc.addImage(imagen,'JPEG', 168, 17, 28, 254);
-
-		//
-		//Resto de páginas
-		//
-
-		for (paginas = 1; paginas < desplegable; paginas++) {
-
-			doc.addPage();
 			doc.rect(20, 20, 25, 25, 'F'); // empty red square
 			doc.rect(40, 20, 130, 51, 'F'); // empty red square
 
