@@ -31,7 +31,7 @@ $(document).ready(function(){
             url  : '../php/grabaCero.php',
             data:  data,
             success:function(data) {
-
+              //console.log(data);
               alert('Datos guardados');
         }
       });

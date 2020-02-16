@@ -9,8 +9,6 @@ var imagen = 'data:image/jpeg;base64,/9j/4QogRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAE
 
 $.getJSON('../datos/data.json', function(data) {
 	$.each(data, function(key,value) {
-
-
 		$("#desplegable1").append("<option value="+key+">"+value['titulo']+"</option>");
 		$("#desplegable2").append("<option value="+key+">"+value['titulo']+"</option>");
 		$("#desplegable3").append("<option value="+key+">"+value['titulo']+"</option>");

@@ -372,6 +372,7 @@ $(document).ready(function(){
 	function ocultaForm(){
 		document.getElementById('ocultoFormulario').style.display='none';
 		document.getElementById('ocultoFormulario2').style.display='flex';
+		window.scrollTo(0, 0);
 	}
 
 	$("#formSaturaSub").click(function (event) {
