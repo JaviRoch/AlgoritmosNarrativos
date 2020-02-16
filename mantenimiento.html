@@ -20,9 +20,13 @@
         <div id="divFoMan" class="col-sm-12 col-md-12 col-lg-12 ">
           <form id="foMantenimiento" >
 
-            <div><button id="cargaDatos" type="button" class="buttonMant">Carga datos</button></div>
+            <div><button id="cargaDatos" type="button" class="buttonMant">Carga datos</button>
+              <button id="guardarModifica" type="button" class="buttonMant">Guardar modificación</button>
+                <button id="eliminaMant" type="button" class="buttonMant">Eliminar entrada</button></div>
             <p id="numEntrada" class="entradaMan"></p>
-            <div><select name="titulo" id="titleMan" class="inputMant"></select></div>
+            <div><select name="titulo" id="titleMan" class="inputMant inputManDes"></select></div>
+            <div><input type="text" name="titulo" id="titleManMod" class="inputMant"></div>
+            <div><input type="text" name="regFechaMan" id="regFechaMan" class="inputMant" readonly></div>
             <div><select  name="hecho0" id="hecho0" class="inputMantS">
                 <option value="Lugar">Lugar</option>
                 <option value="Caracteristica">Característica</option>
@@ -203,6 +207,8 @@
                 <option value="-" selected>----</option>
             </select></div>
             <div><input type="text" name="comando19" id="comando19" class="inputMant"></div>
+            //Metemos también el índice del array para enviarlo por ajax
+            <div><input type="text" name="nEntrada" id="nEntrada" class="inputMant" style="display:none;" readonly></div>
           </form>
         </div>
       </div>

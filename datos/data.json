@@ -1,70 +1,51 @@
-[
-    {
-        "Nhecho": 2,
-        "titulo": "Algoritmo narrativo para construir una plancha que la m\u00e1quina de reconocimiento facial no detecte",
-        "hora0": "09:38:00",
+{
+    "0": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
+        "titulo": "Algoritmo narrativo para construir una plancha que la m\u00e1quina de reconocimiento facial no detecte 2",
         "hecho0": "Lugar",
-        "comando0": "tu habitaci\u00f3n",
-        "hora1": "09:39:00",
+        "comando0": "tu habitaci\u00f3n 2",
         "hecho1": "Objeto",
-        "comando1": "ordenador personal",
-        "hora2": "11:26:00",
+        "comando1": "ordenador personal 2",
         "hecho2": "Accion",
-        "comando2": "Investigar sobre sistemas de identificaci\u00f3n facial",
-        "hora3": "11:48:00",
+        "comando2": "Investigar sobre sistemas de identificaci\u00f3n facial 2",
         "hecho3": "Accion",
-        "comando3": "Meditar a cerca de la influencia de estos sistemas en mi vida cotidiana",
-        "hora4": "12:19:00",
+        "comando3": "Meditar a cerca de la influencia de estos sistemas en mi vida cotidiana 2",
         "hecho4": "Accion",
-        "comando4": "Investigar sobre sistemas de contraidentificaci\u00f3n facial",
-        "hora5": "12:21:00",
+        "comando4": "Investigar sobre sistemas de contraidentificaci\u00f3n facial 2",
         "hecho5": "Accion",
-        "comando5": "Listar y conseguir los materiales necesarios para construir sistemas de contraidentificaci\u00f3n facial",
-        "hora6": "12:37:00",
+        "comando5": "Listar y conseguir los materiales necesarios para construir sistemas de contraidentificaci\u00f3n facial 2",
         "hecho6": "Objeto",
-        "comando6": "conjunto de materiales necesarios para construir sistemas de contraidentificaci\u00f3n facial",
-        "hora7": "13:37:00",
+        "comando6": "conjunto de materiales necesarios para construir sistemas de contraidentificaci\u00f3n facial 2",
         "hecho7": "Accion",
-        "comando7": "Crear y construir tu propio sistema de contraidentificaci\u00f3n facial",
-        "hora8": "13:59:00",
+        "comando7": "Crear y construir tu propio sistema de contraidentificaci\u00f3n facial 2",
         "hecho8": "Accion",
-        "comando8": "Localizar puntos de identificaci\u00f3n facial",
-        "hora9": "14:21:00",
+        "comando8": "Localizar puntos de identificaci\u00f3n facial 2",
         "hecho9": "Lugar",
-        "comando9": "Punto de identificaci\u00f3n facial",
-        "hora10": "17:13:00",
+        "comando9": "Punto de identificaci\u00f3n facial 2",
         "hecho10": "Objeto",
-        "comando10": "Sistema personal de contraidentificaci\u00f3n facial",
-        "hora11": "17:14:00",
+        "comando10": "Sistema personal de contraidentificaci\u00f3n facial 2",
         "hecho11": "Accion",
-        "comando11": "Probar sistema personal de contraidentificaci\u00f3n facial",
-        "hora12": "17:16:00",
+        "comando11": "Probar sistema personal de contraidentificaci\u00f3n facial 2",
         "hecho12": "Accion",
-        "comando12": "Esperar consecuencias de la prueba del sistema personal de contraidentificaci\u00f3n facial",
-        "hora13": "17:40:00",
+        "comando12": "Esperar consecuencias de la prueba del sistema personal de contraidentificaci\u00f3n facial 2",
         "hecho13": "Lugar",
-        "comando13": "Segundo lugar en el 0",
-        "hora14": "17:56:00",
+        "comando13": "Segundo lugar en el 0 2",
         "hecho14": "Lugar",
-        "comando14": "Tercer lugar en el 0",
-        "hora15": "",
-        "hecho15": "",
-        "comando15": "",
-        "hora16": "",
-        "hecho16": "",
-        "comando16": "",
-        "hora17": "",
-        "hecho17": "",
-        "comando17": "",
-        "hora18": "",
-        "hecho18": "",
-        "comando18": "",
-        "hora19": "",
-        "hecho19": "",
-        "comando19": ""
+        "comando14": "Tercer lugar en el 0 2",
+        "hecho15": "-",
+        "comando15": "2",
+        "hecho16": "-",
+        "comando16": "2",
+        "hecho17": "-",
+        "comando17": "2",
+        "hecho18": "-",
+        "comando18": "2",
+        "hecho19": "-",
+        "comando19": "2",
+        "nEntrada": "0"
     },
-    {
-        "Nhecho": 3,
+    "1": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para poner del rev\u00e9s las fotos de tu casa",
         "hora0": "12:37:00",
         "hecho0": "Persona",
@@ -127,8 +108,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 4,
+    "2": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo Narrativo para experimentar el museo",
         "hora0": "02:34:00",
         "hecho0": "Persona",
@@ -191,8 +172,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 5,
+    "3": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para quemar una imagen",
         "hora0": "08:31:00",
         "hecho0": "Persona",
@@ -255,8 +236,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 7,
+    "4": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para dejar de usar emoticonos durante un d\u00eda",
         "hora0": "08:33:00",
         "hecho0": "Persona",
@@ -319,8 +300,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 8,
+    "5": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para buscar un t\u00edtulo a mis im\u00e1genes",
         "hora0": "08:36:00",
         "hecho0": "Persona",
@@ -383,8 +364,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 11,
+    "6": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para escuchar im\u00e1genes",
         "hora0": "10:03:00",
         "hecho0": "Lugar",
@@ -447,8 +428,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 15,
+    "7": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para que una imagen me haga llorar",
         "hora0": "08:02:00",
         "hecho0": "Objeto",
@@ -511,8 +492,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 22,
+    "8": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para escuchar im\u00e1genes",
         "hora0": "08:19:00",
         "hecho0": "Persona",
@@ -575,8 +556,8 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "Nhecho": 24,
+    "9": {
+        "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para contar un d\u00eda en mi vida con im\u00e1genes",
         "hora0": "09:05:00",
         "hecho0": "Persona",
@@ -639,7 +620,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "10": {
         "RegFecha": "26\/10\/2019 ** 13:02",
         "titulo": "Algoritmo narrativo para encontrar el cargador del m\u00f3vil",
         "hora0": "08:08:00",
@@ -703,7 +684,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "11": {
         "RegFecha": "26\/10\/2019 ** 13:12",
         "titulo": "Algoritmo narrativo para robar un banco de im\u00e1genes",
         "hora0": "08:03:00",
@@ -767,7 +748,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "12": {
         "RegFecha": "30\/10\/2019 ** 19:11",
         "titulo": "Algoritmo narrativo para dormir con una foto bajo la almohada",
         "hora0": "08:09:00",
@@ -831,7 +812,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "13": {
         "RegFecha": "30\/10\/2019 ** 19:21",
         "titulo": "Algoritmo narrativo para quedar con mis amigxs sin el m\u00f3vil",
         "hora0": "08:01:00",
@@ -895,7 +876,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "14": {
         "RegFecha": "13\/11\/2019 ** 18:04",
         "titulo": "Algoritmo narrativo para dormir con una foto bajo la almohada",
         "hora0": "08:11:00",
@@ -959,7 +940,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "15": {
         "RegFecha": "13\/11\/2019 ** 18:04",
         "titulo": "Algoritmo narrativo para dormir con una foto bajo la almohada",
         "hora0": "08:11:00",
@@ -1023,7 +1004,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "16": {
         "RegFecha": "13\/11\/2019 ** 18:11",
         "titulo": "Algoritmo narrativo para filmar como crece un \u00e1rbol",
         "hora0": "08:49:00",
@@ -1087,7 +1068,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "17": {
         "RegFecha": "13\/11\/2019 ** 18:21",
         "titulo": "Algoritmo narrativo para meter una fotograf\u00eda en un buz\u00f3n",
         "hora0": "08:13:00",
@@ -1151,7 +1132,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "18": {
         "RegFecha": "13\/11\/2019 ** 18:42",
         "titulo": "Algoritmo narrativo para ir caminando sin mirar el m\u00f3vil",
         "hora0": "08:38:00",
@@ -1215,7 +1196,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "19": {
         "RegFecha": "13\/11\/2019 ** 18:42",
         "titulo": "Algoritmo narrativo para ir caminando sin mirar el m\u00f3vil",
         "hora0": "08:38:00",
@@ -1279,7 +1260,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "20": {
         "RegFecha": "15\/11\/2019 ** 10:42",
         "titulo": "Algoritmo narrativo para definir una imagen invisible",
         "hora0": "08:11:00",
@@ -1343,7 +1324,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "21": {
         "RegFecha": "15\/11\/2019 ** 10:42",
         "titulo": "Algoritmo narrativo para definir una imagen invisible",
         "hora0": "08:11:00",
@@ -1407,7 +1388,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "22": {
         "RegFecha": "15\/11\/2019 ** 10:57",
         "titulo": "Algoritmo narrativo para conseguir que tu mascota destroce una imagen",
         "hora0": "09:01:00",
@@ -1471,7 +1452,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "23": {
         "RegFecha": "15\/11\/2019 ** 10:57",
         "titulo": "Algoritmo narrativo para conseguir que tu mascota destroce una imagen",
         "hora0": "09:01:00",
@@ -1535,7 +1516,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "24": {
         "RegFecha": "15\/11\/2019 ** 12:24",
         "titulo": "Algoritmo narrativo para descongelar tus fotos en el microondas",
         "hora0": "08:02:00",
@@ -1599,7 +1580,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "25": {
         "RegFecha": "15\/11\/2019 ** 12:25",
         "titulo": "Algoritmo narrativo para descongelar tus fotos en el microondas",
         "hora0": "08:02:00",
@@ -1663,7 +1644,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "26": {
         "RegFecha": "15\/11\/2019 ** 12:42",
         "titulo": "Algoritmo narrativo para ponerte en el lugar del otro",
         "hora0": "08:14:00",
@@ -1727,7 +1708,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "27": {
         "RegFecha": "15\/11\/2019 ** 12:42",
         "titulo": "Algoritmo narrativo para ponerte en el lugar del otro",
         "hora0": "08:14:00",
@@ -1791,7 +1772,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "28": {
         "RegFecha": "15\/11\/2019 ** 17:54",
         "titulo": "Algoritmo narrativo para congelar im\u00e1genes",
         "hora0": "08:25:00",
@@ -1855,7 +1836,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "29": {
         "RegFecha": "15\/11\/2019 ** 17:54",
         "titulo": "Algoritmo narrativo para congelar im\u00e1genes",
         "hora0": "08:25:00",
@@ -1919,7 +1900,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "30": {
         "RegFecha": "15\/11\/2019 ** 18:05",
         "titulo": "Algoritmo narrativo para sembrar una imagen",
         "hora0": "08:08:00",
@@ -1983,7 +1964,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "31": {
         "RegFecha": "15\/11\/2019 ** 18:05",
         "titulo": "Algoritmo narrativo para sembrar una imagen",
         "hora0": "08:08:00",
@@ -2047,7 +2028,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "32": {
         "RegFecha": "15\/11\/2019 ** 18:21",
         "titulo": "Algoritmo narrativo para crear un retrato robot digital",
         "hora0": "08:05:00",
@@ -2111,7 +2092,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "33": {
         "RegFecha": "15\/11\/2019 ** 18:31",
         "titulo": "Algoritmo narrativo para buscar un t\u00edtulo a mis im\u00e1genes",
         "hora0": "08:14:00",
@@ -2175,7 +2156,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "34": {
         "RegFecha": "20\/11\/2019 ** 17:32",
         "titulo": "Algoritmo narrativo para hacer carteles de objetos perdidos",
         "hora0": "08:12:00",
@@ -2239,7 +2220,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "35": {
         "RegFecha": "20\/11\/2019 ** 17:47",
         "titulo": "Algoritmo narrativo para esconder una colecci\u00f3n de fotograf\u00edas dentro de los libros de una biblioteca",
         "hora0": "08:52:00",
@@ -2303,7 +2284,7 @@
         "hecho19": "Caracteristica",
         "comando19": "Espera un mes y repite la acci\u00f3n, ya que el algoritmo este no me deja a\u00f1adir m\u00e1s campos"
     },
-    {
+    "36": {
         "RegFecha": "20\/11\/2019 ** 17:54",
         "titulo": "Algoritmo narrativo para ir caminando sin mirar el m\u00f3vil",
         "hora0": "08:11:00",
@@ -2367,7 +2348,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "37": {
         "RegFecha": "26\/1\/2020 ** 12:31",
         "titulo": "Algoritmos narrativo para transmitir el olor de una fotograf\u00eda",
         "hora0": "08:03:00",
@@ -2431,7 +2412,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "38": {
         "RegFecha": "4\/2\/2020 ** 13:03",
         "titulo": "Algoritmo narrativo para contar un d\u00eda de mi vida con im\u00e1genes",
         "hora0": "06:30",
@@ -2495,7 +2476,7 @@
         "hecho19": "Accion",
         "comando19": "Empezar a pensar a ir teminando el d\u00eda y ver el resultado de las fotos"
     },
-    {
+    "39": {
         "RegFecha": "10\/2\/2020 ** 18:30",
         "titulo": "Algoritmo narrativo para dividir una imagen",
         "hecho0": "Lugar",
@@ -2539,7 +2520,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "40": {
         "RegFecha": "10\/2\/2020 ** 18:34",
         "titulo": "636Algoritmo narrativo para dividir una imagen",
         "hecho0": "Lugar",
@@ -2583,7 +2564,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "41": {
         "RegFecha": "11\/2\/2020 ** 9:57",
         "titulo": "Algoritmo narrativo para sentirte empoderada",
         "hecho0": "Persona",
@@ -2627,7 +2608,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "42": {
         "RegFecha": "11\/2\/2020 ** 12:38",
         "titulo": "Algoritmo narrativo para tener dulces sue\u00f1os",
         "hecho0": "Lugar",
@@ -2671,7 +2652,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "43": {
         "RegFecha": "11\/2\/2020 ** 13:15",
         "titulo": "Algoritmo narrativo para enviar una im\u00e1gen como un mensaje sin el m\u00f3vil",
         "hecho0": "Lugar",
@@ -2715,7 +2696,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "44": {
         "RegFecha": "11\/2\/2020 ** 14:09",
         "titulo": "Algoritmo narrativo para ver una imagen en la oscuridad",
         "hecho0": "Objeto",
@@ -2759,7 +2740,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "45": {
         "RegFecha": "11\/2\/2020 ** 14:09",
         "titulo": "Algoritmo narrativo para ver una imagen en la oscuridad",
         "hecho0": "Objeto",
@@ -2803,7 +2784,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "46": {
         "RegFecha": "11\/2\/2020 ** 15:36",
         "titulo": "Algoritmo narrativo para enviar mensajes positivos a tu mente",
         "hecho0": "Persona",
@@ -2847,7 +2828,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "47": {
         "RegFecha": "11\/2\/2020 ** 18:38",
         "titulo": "Algoritmo narrativo para no olvidar aquella im\u00e1gen",
         "hecho0": "Lugar",
@@ -2891,7 +2872,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "48": {
         "RegFecha": "11\/2\/2020 ** 21:50",
         "titulo": "Algoritmo narrativo para hacer carteles de objetos perdidos",
         "hecho0": "-",
@@ -2935,51 +2916,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
-        "RegFecha": "11\/2\/2020 ** 21:52",
-        "titulo": "",
-        "hecho0": "-",
-        "comando0": "",
-        "hecho1": "-",
-        "comando1": "",
-        "hecho2": "-",
-        "comando2": "",
-        "hecho3": "-",
-        "comando3": "",
-        "hecho4": "-",
-        "comando4": "",
-        "hecho5": "-",
-        "comando5": "",
-        "hecho6": "-",
-        "comando6": "",
-        "hecho7": "-",
-        "comando7": "",
-        "hecho8": "-",
-        "comando8": "",
-        "hecho9": "-",
-        "comando9": "",
-        "hecho10": "-",
-        "comando10": "",
-        "hecho11": "-",
-        "comando11": "",
-        "hecho12": "-",
-        "comando12": "",
-        "hecho13": "-",
-        "comando13": "",
-        "hecho14": "-",
-        "comando14": "",
-        "hecho15": "-",
-        "comando15": "",
-        "hecho16": "-",
-        "comando16": "",
-        "hecho17": "-",
-        "comando17": "",
-        "hecho18": "-",
-        "comando18": "",
-        "hecho19": "-",
-        "comando19": ""
-    },
-    {
+    "50": {
         "RegFecha": "11\/2\/2020 ** 22:20",
         "titulo": "Algoritmo narrativo para ver una imagen en la oscuridad",
         "hecho0": "Persona",
@@ -3023,7 +2960,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "51": {
         "RegFecha": "11\/2\/2020 ** 22:21",
         "titulo": "Algoritmo narrativo para ver una imagen en la oscuridad",
         "hecho0": "Persona",
@@ -3067,7 +3004,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "52": {
         "RegFecha": "11\/2\/2020 ** 22:45",
         "titulo": "Algoritmo narrativo para no olvidar aquella imagen",
         "hecho0": "Persona",
@@ -3111,7 +3048,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "53": {
         "RegFecha": "11\/2\/2020 ** 23:10",
         "titulo": "Algoritmo narrativo para caminar en un bosque de fotograf\u00edas",
         "hecho0": "Persona",
@@ -3155,7 +3092,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "54": {
         "RegFecha": "11\/2\/2020 ** 23:22",
         "titulo": "Algoritmo narrativo para abrazar una imagen",
         "hecho0": "Persona",
@@ -3199,7 +3136,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "55": {
         "RegFecha": "12\/2\/2020 ** 11:45",
         "titulo": "Algoritmo narrativo para tener dulces sue\u00f1os",
         "hecho0": "Persona",
@@ -3243,7 +3180,7 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "56": {
         "RegFecha": "12\/2\/2020 ** 12:07",
         "titulo": "Algoritmo narrativo para tener dulces sue\u00f1os",
         "hecho0": "Persona",
@@ -3287,9 +3224,9 @@
         "hecho19": "-",
         "comando19": ""
     },
-    {
+    "57": {
         "RegFecha": "12\/2\/2020 ** 12:17",
-        "titulo": "algoritmo narrativo para que un momento dure 100 a\u00f1os",
+        "titulo": "Algoritmo narrativo para que un momento dure 100 a\u00f1os",
         "hecho0": "Persona",
         "comando0": "T\u00fa",
         "hecho1": "Lugar",
@@ -3329,9 +3266,10 @@
         "hecho18": "-",
         "comando18": "",
         "hecho19": "-",
-        "comando19": ""
+        "comando19": "",
+        "nEntrada": "57"
     },
-    {
+    "58": {
         "RegFecha": "12\/2\/2020 ** 13:06",
         "titulo": "Algoritmo narrativo para volar con una imagen",
         "hecho0": "Persona",
@@ -3375,4 +3313,4 @@
         "hecho19": "-",
         "comando19": ""
     }
-]
+}

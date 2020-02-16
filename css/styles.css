@@ -411,6 +411,10 @@ Estilo punto de saturación
 	-moz-appearance: textfield;
 }
 
+.inputManDes{
+  color: #ff0000;
+}
+
 /*Botones*/
 /*Botón nuevo del formulario*/
 #buttonNuevo {

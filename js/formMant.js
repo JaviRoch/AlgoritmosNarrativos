@@ -1,6 +1,6 @@
 var data2 = [];
 var seleccionado = [];
-
+var titulMan;
 
 
 $.getJSON('../datos/data.json', function(data) {
@@ -24,6 +24,8 @@ $(document).ready(function(){
 	console.log(data2[titulMan]["hecho0"]);
 	var entradaTxt = document.createTextNode("Entrada Nº "+ titulMan+"; ");
 	document.getElementById("numEntrada").appendChild(entradaTxt);
+	document.getElementById("titleManMod").value = data2[titulMan]["titulo"];
+	document.getElementById("regFechaMan").value = data2[titulMan]["RegFecha"];
 	document.getElementById("hecho0").value = data2[titulMan]["hecho0"];
 	document.getElementById("comando0").value = data2[titulMan]["comando0"];
 	document.getElementById("hecho1").value = data2[titulMan]["hecho1"];
@@ -64,6 +66,63 @@ $(document).ready(function(){
 	document.getElementById("comando18").value = data2[titulMan]["comando18"];
 	document.getElementById("hecho19").value = data2[titulMan]["hecho19"];
 	document.getElementById("comando19").value = data2[titulMan]["comando19"];
-
+	//Metemos también el índice del array para enviarlo por ajax
+	document.getElementById("nEntrada").value = titulMan;
 	});
+
+	$("#guardarModifica").click(function (event) {
+		//Evitamos que recargue la página
+		event.preventDefault();
+		//Obtenemos datos formulario.
+		$('input').each(function(index, item){
+			var $input = $(item);
+			$input.closest('div').removeClass('has-error');
+			if ($input.val().trim() == '') {
+				$input.closest('div').addClass('has-error');
+			}
+		});
+
+		var data = $("form").serializeArray();
+
+			//AJAX.
+			$.ajax({
+					type : 'POST',
+					url  : '../php/grabaManteni.php',
+					data:  data,
+					success:function(data) {
+						//console.log(data);
+						alert('Datos guardados');
+			}
+		});
+			//Acciones a realizar una vez guardado ocultaForm()
+			return false;
+ 	});
+
+	$("#eliminaMant").click(function (event) {
+		//Evitamos que recargue la página
+		event.preventDefault();
+		//Obtenemos datos formulario.
+		$('input').each(function(index, item){
+			var $input = $(item);
+			$input.closest('div').removeClass('has-error');
+			if ($input.val().trim() == '') {
+				$input.closest('div').addClass('has-error');
+			}
+		});
+
+		var data = $("form").serializeArray();
+
+			//AJAX.
+			$.ajax({
+					type : 'POST',
+					url  : '../php/eliminaManteni.php',
+					data:  data,
+					success:function(data) {
+						//console.log(data);
+						alert('Datos guardados');
+			}
+		});
+			//Acciones a realizar una vez guardado ocultaForm()
+			return false;
+ });
 });
