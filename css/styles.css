@@ -347,22 +347,6 @@ Estilo punto de saturación
   color: #ffecc2;
 }
 
-/*.affix {
-  top: 0;
-  width: 100%;
-  z-index: 9999 !important;
-}
-
-.affix + .container-fluid {
-  padding-top: 70px;
-}*/
-
-/*#menuCreaSatura{
-  position:fixed;
-  z-index: 1;
-  width: 33.66%;
-}*/
-
 /*Estilo punto de salida*/
 
 .formCero{
@@ -380,6 +364,11 @@ Estilo punto de saturación
 	-webkit-appearance: none;
 	-moz-appearance: textfield;
 }
+.entradaMan{
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 10px 0 0 20px;
+}
 
 .inputCero{
   width: 67%;
@@ -392,6 +381,35 @@ Estilo punto de saturación
 }
 }
 
+
+/*Estilo página mantenimiento*/
+
+.inputMant{
+  width: 80%;
+  margin: 20px 0px 0px 20px;
+  font-size: 1.3rem;
+  padding: 8px 3px 8px 5px;
+	border: 4px solid #ffffff;
+	border-radius: 0;
+	background-color: transparent;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+}
+
+.inputMantS{
+  color: #14ff00;
+  width: 80%;
+  margin: 20px 0px 0px 20px;
+  font-size: 1.3rem;
+  padding: 8px 3px 8px 5px;
+	border: 4px solid #ffffff;
+	border-radius: 0;
+	background-color: transparent;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: textfield;
+}
 
 /*Botones*/
 /*Botón nuevo del formulario*/
@@ -451,7 +469,21 @@ Estilo punto de saturación
 
 #formCeroSub:hover{
   color: #000000;
+}
 
+/*Botón nuevo de acción*/
+.buttonMant {
+  width: auto;
+  padding: 8px 20px 10px 20px;
+  margin: 20px 10px 0 20px;
+  background-color:#ffffff ;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'rathersemibold';
+}
+.buttonMant:hover{
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /*Botón en el lateral*/

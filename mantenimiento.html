@@ -9,17 +9,203 @@
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/formMant.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title>Mantenimiento</title>
   </head>
   <body>
     <div class="container-fluid sinpadding" id="algoritmosMan">
-      <form id="foMantenimiento">
-        <div id="divFoMan">
+      <div class="row backgroundBlack row-eq-height">
+        <div id="divFoMan" class="col-sm-12 col-md-12 col-lg-12 ">
+          <form id="foMantenimiento" >
 
+            <div><button id="cargaDatos" type="button" class="buttonMant">Carga datos</button></div>
+            <p id="numEntrada" class="entradaMan"></p>
+            <div><select name="titulo" id="titleMan" class="inputMant"></select></div>
+            <div><select  name="hecho0" id="hecho0" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando0" id="comando0" class="inputMant"></div>
+            <div><select  name="hecho1" id="hecho1" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando1" id="comando1" class="inputMant"></div>
+            <div><select  name="hecho2" id="hecho2" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando2" id="comando2" class="inputMant"></div>
+            <div><select  name="hecho3" id="hecho3" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando3" id="comando3" class="inputMant"></div>
+            <div><select  name="hecho4" id="hecho4" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando4" id="comando4" class="inputMant"></div>
+            <div><select  name="hecho5" id="hecho5" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando5" id="comando5" class="inputMant"></div>
+            <div><select  name="hecho6" id="hecho6" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando6" id="comando6" class="inputMant"></div>
+            <div><select  name="hecho7" id="hecho7" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando7" id="comando7" class="inputMant"></div>
+            <div><select  name="hecho8" id="hecho8" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando8" id="comando8" class="inputMant"></div>
+            <div><select  name="hecho9" id="hecho9" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando9" id="comando9" class="inputMant"></div>
+            <div><select  name="hecho10" id="hecho10" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando10" id="comando10" class="inputMant"></div>
+            <div><select  name="hecho11" id="hecho11" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando11" id="comando11" class="inputMant"></div>
+            <div><select  name="hecho12" id="hecho12" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando12" id="comando12" class="inputMant"></div>
+            <div><select  name="hecho13" id="hecho13" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando13" id="comando13" class="inputMant"></div>
+            <div><select  name="hecho14" id="hecho14" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando14" id="comando14" class="inputMant"></div>
+            <div><select  name="hecho15" id="hecho15" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando15" id="comando15" class="inputMant"></div>
+            <div><select  name="hecho16" id="hecho16" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando16" id="comando16" class="inputMant"></div>
+            <div><select  name="hecho17" id="hecho17" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando17" id="comando17" class="inputMant"></div>
+            <div><select  name="hecho18" id="hecho18" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando18" id="comando18" class="inputMant"></div>
+            <div><select  name="hecho19" id="hecho19" class="inputMantS">
+                <option value="Lugar">Lugar</option>
+                <option value="Caracteristica">Característica</option>
+                <option value="Persona">Persona</option>
+                <option value="Objeto">Objeto</option>
+                <option value="Accion">Acción</option>
+                <option value="-" selected>----</option>
+            </select></div>
+            <div><input type="text" name="comando19" id="comando19" class="inputMant"></div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
-    <script src="js/formMant.js"></script>
   </body>
 </html>
