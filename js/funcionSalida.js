@@ -164,7 +164,7 @@ $(document).ready(function(){
 		//
 
 		//Varible que define el interlineado
-		var intLi = 9;
+		var intLi = 6;
 		//Variable que define la separación entre la hora y comando
 		var sepHo = 43; //+17 al margen izquierdo
 		//Variable que define el margen izquierdo
@@ -172,9 +172,10 @@ $(document).ready(function(){
 		//Variable qeu de fine la altura a la que comienza el texto
 		var comText = 78;
 		//Anchura del comando
-		var anComan = 130;
-
+		var anComan = 125;
+		console.log(comText);
 		var doc = new jsPDF();
+		console.log(comText);
 
 
 // Creación de páginas
@@ -182,6 +183,8 @@ $(document).ready(function(){
 		for (paginas = 0; paginas <= desplegable; paginas++) {
 
 			if (paginas != 0) {
+				//Variable qeu de fine la altura a la que comienza el texto
+				var comText = 78;
 				doc.addPage();
 			}
 
@@ -201,106 +204,165 @@ $(document).ready(function(){
 			doc.text(43,42, splitTitle);
 
 			doc.setTextColor(255);
-			doc.setFontSize(8);
+			doc.setFontSize(11);
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando0, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText - 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando1, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*1)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando2, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*2)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando3, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*3)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando4, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*4)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando5, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*5)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando6, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*6)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando7, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*7)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando8, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*8)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando9, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*9)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando10, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*10)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando11, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*11)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando12, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*12)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando13, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*13)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando14, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*14)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando15, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*15)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando16, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*16)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando17, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*17)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando18, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*18)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
+			comText = comText +2;
 			var splitText = doc.splitTextToSize(data2[seleccionados[paginas].value].comando19, anComan);
-			doc.setFontSize(8);
-			doc.setTextColor(40);
-			doc.text(sepHo, comText+(intLi*19)- 0.6, splitText);
+			for(var c = 0, stlength = splitText.length ; c < stlength ; c++){
+				doc.setTextColor(40);
+				doc.text(sepHo, comText, splitText[c]);
+				comText = comText + intLi;
+			}
 
 			doc.addImage(imagen,'JPEG', 168, 17, 28, 254);
 		}
