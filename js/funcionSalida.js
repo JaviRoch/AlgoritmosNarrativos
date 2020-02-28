@@ -199,7 +199,7 @@ $(document).ready(function(){
 			doc.setFontSize(80);
 			doc.text(21,42,"9");
 			doc.setFontSize(30);
-			doc.text(43,32,"PUNTO DE SALIDA");
+			doc.text(43,32,"PUNTO DE ACCIÓN");
 			doc.setFontSize(22);
 			doc.text(43,42, splitTitle);
 

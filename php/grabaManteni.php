@@ -66,8 +66,8 @@ try
   );
 
   //Insertamos datos del formulario al array
-  //array_push($arr_data,$formdata);
-  $arr_data[$formdata['nEntrada']] = $formdata;
+  array_push($arr_data,$formdata);
+  //$arr_data[$formdata['nEntrada']] = $formdata;
 
 
   //Convertimos array a JSON

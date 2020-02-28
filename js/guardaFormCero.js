@@ -24,7 +24,7 @@ $(document).ready(function(){
       });
 
       var data = $("form").serializeArray();
-
+        if (data[0]["value"] != ""){
         //AJAX.
         $.ajax({
             type : 'POST',
@@ -38,6 +38,10 @@ $(document).ready(function(){
         //Acciones a realizar una vez guardado ocultaForm()
         vaciaFormulario();
         return false;
+      }else{
+        //Alerta si el título está vacio
+				alert('Debes de rellenar el título');
+      }
    });
 
 });

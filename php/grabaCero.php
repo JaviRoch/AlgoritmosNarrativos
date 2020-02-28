@@ -73,13 +73,6 @@ try
   //Escribimos los datos en el archivo y redirrecionamos
   if(file_put_contents($myFile, $jsondata)) {
     echo "Datos guardados";
-
-    $to = "javi@javierroche.es";
-    $subject = "Asunto del email";
-    $message = "Este es mi primer envío de email con PHP";
-
-    mail($to, $subject, $message);
-
    }
   else
     echo "Error al guardar datos";

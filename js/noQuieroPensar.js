@@ -2,17 +2,101 @@ $(document).ready(function(){
 
   //Función para rellenar los campos del formulario con un ejemplo
   $("#botonVerEjemplo").click(function(event){
-    ejemplo =[
-    "Lugar", "comando1",
-    "Accion", "comando2",
-    "Lugar", "comando3",
-    "Objeto", "comando4",
-    "Lugar", "comando1",
-    "Accion", "comando2",
-    "Lugar", "comando3",
-    "Objeto", "comando4"
-  /*quitar la última coma*/];
+    ejemplo0 =[
+    "Persona", "T\u00fa y m\u00e1s gente si quiere colaborar",
+    "Objeto", "Imagen en papel y una garrafa de agua",
+    "Objeto", "Una semilla de un \u00e1rbol, el que se quiera",
+    "Objeto", "Azada y pico",
+    "Lugar", "En un campo, alejado de la poblaci\u00f3n",
+    "Caracteristica", "Esperar a que sea Luna llena, porque favorece el crecimiento de la semilla",
+    "Caracteristica", "La acci\u00f3n debe realizarse al amanecer o al atardecer, nunca a mediod\u00eda",
+    "Accion", "Acudir al lugar",
+    "Accion", "Escoger el lugar concreto y empezar a utilizar el pico para romper la tierra compactada",
+    "Accion", "Cuando te canses, pasa el pico a tu compa\u00f1era o compa\u00f1ero ",
+    "Caracteristica", "Si vas s\u00f3lo, se paciente",
+    "Accion", "Cuando tengas un agujero de unos cuarenta cent\u00edmetros de hondo, empieza a utilizar la azada para hacerlo ancho, junto con el pico",
+    "Accion", "Cuando est\u00e9 terminado, deposita la imagen en un costado del agujero y t\u00e1palo con tierra",
+    "Accion", "Cuando est\u00e9 a unos quince cent\u00edmetros del ras del suelo, pon la semilla y c\u00fabrela con la tierra",
+    "Accion", "Al acabar, regar sin abusar",
+    "Caracteristica", "Durante las primeras semanas, conviene controlar el riego",
+    "Accion", "Cuando salga el brote, ayudarlo con tutores o gu\u00edas para que siga creciendo",
+    "-", "",
+    "-", "",
+    "-", "",
+    "Algoritmo narrativo para sembrar una imagen"
+    ];
 
+    ejemplo1 =[
+      "Persona", "T\u00fa",
+      "Objeto", "Una colecci\u00f3n de fotograf\u00edas variada",
+      "Objeto", "Una azada",
+      "Objeto", "Una regadora",
+      "Objeto", "Un libro de la historia de la fotograf\u00eda",
+      "Lugar", "El descampado de tu barrio",
+      "Accion", "Cava tantos hoyos como fotograf\u00edas tengas ",
+      "Accion", "Planta las fotograf\u00edas en cada uno de ellos",
+      "Accion", "Riega",
+      "Accion", "L\u00e9ete el libro entero",
+      "Accion", "Si todav\u00eda no ha crecido el bosque de fotograf\u00edas, sigue leyendo, aunque ya hayas le\u00eddo esas p\u00e1ginas.",
+      "Accion", "Lev\u00e1ntate y anda entonces en el bosque de fotograf\u00edas",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "Algoritmo narrativo para caminar en un bosque de fotograf\u00edas"
+    ]
+
+    ejemplo2 =[
+      "Persona", " T\u00fa",
+      "Objeto", " c\u00e1mara de fotos o m\u00f3vil",
+      "Accion", " Haz una foto al Sol de mediod\u00eda en un d\u00eda sin nubes",
+      "Caracteristica", " Puedes hacer m\u00e1s fotos, se trata de conseguir im\u00e1genes quemadas",
+      "Caracteristica", " Para que la acci\u00f3n se lleve de forma correcta,se tiene que introducir un dedo en el encuadre del Sol",
+      "Accion", " Despu\u00e9s puedes imprimirla o no, pero ya habr\u00e1s conseguido el objetivo",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", " ",
+      "-", "",
+      "Algoritmo narrativo para quemar una foto sin quemarte los dedos"
+    ]
+
+    ejemplo3=[
+      "Lugar", "En casa",
+      "Persona", "Yo",
+      "Accion", "Corta dos rodajas de pepino",
+      "Accion", "Si\u00e9ntate o t\u00fambate en el sof\u00e1",
+      "Caracteristica", "O donde quieras",
+      "Accion", "Cierra los ojos",
+      "Accion", "Ponte una rodaja de pepino en cada ojo",
+      "Accion", "Intenta no pensar para que tampoco te lleguen im\u00e1genes mentales",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "-", "",
+      "Algoritmo narrativo para descansar la mirada"
+    ]
 
     function rellenaEjemplo(ejemplo){
 
@@ -38,14 +122,30 @@ $(document).ready(function(){
       document.getElementById('asiento19').style.display='block';
 
       //For para iterar las varibles por los campos del array de ejemplo
-      for (var i = 0; i < 38; i+=2) {
+      for (var i = 0; i < 40; i+=2) {
         $("#campoCeroT"+i).val(ejemplo[i]);
         var ip = i+1;
         $("#campoCeroC"+i).attr("placeholder", ejemplo[ip]);
       }
+      $("#titlePuntoCero").attr("placeholder", ejemplo[40]);
     }
 
-    rellenaEjemplo(ejemplo);
+      var ejemploTemp = Math.round(Math.random()*(3-0)+parseInt(0));
+      switch (ejemploTemp) {
+        case 0:
+          rellenaEjemplo(ejemplo0);
+          break;
+        case 1:
+          rellenaEjemplo(ejemplo1);
+          break;
+        case 2:
+          rellenaEjemplo(ejemplo2);
+          break;
+        case 3:
+          rellenaEjemplo(ejemplo3);
+          break;    
+      }
+
 
   });
   $("#botonNoQuiero").click(function(event) {

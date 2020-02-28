@@ -685,83 +685,83 @@ $(document).ready(function(){
 				var persona = datos.filter(datos => datos.hecho0 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando0"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho1 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando1"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho2 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando2"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho3 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando3"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho4 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando4"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho5 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando5"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho6 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando6"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho7 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando7"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho8 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando8"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho9 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando9"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho10 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando10"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho11 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando11"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho12 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando12"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho13 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando13"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho14 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando14"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho15 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando15"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho16 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando16"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho17 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando17"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho18 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando18"]);
-				}
+				};
 				var persona = datos.filter(datos => datos.hecho19 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando19"]);
-				}
+				};
 
 				//Buscamos el índice aleatorio de los lugares disponibles
 				var indicePersona = Math.round(Math.random()*(personaExtra.length-0)+parseInt(0));
