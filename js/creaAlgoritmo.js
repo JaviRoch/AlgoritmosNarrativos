@@ -167,10 +167,7 @@ function publicaDirectFormAcc(texto,tiempo){
 //Función en la que cargamos las respuestas del formulario en las pilas de datos
 //
 function cargaPilasTerminal(data){
-	console.log(data);
-	console.log("valor hora");
-	console.log(data[1]["value"]);
-
+	//console.log(data);
 	//¿Cuántas horas duermes al día?
 	if (data[0]["value"] < 6) {
 		publicaDirectFormAcc("El sueño te impide ver con claridad",60000);
@@ -194,115 +191,272 @@ function cargaPilasTerminal(data){
 	//¿A qué hora del día consultas por primera vez el móvil?
 	switch (data[2]["value"]) {
 		case "Nunca":
-			accionExtra.push("Se está agotando la batería del móvil");
+			pilaObjeto.push("Se está agotando la batería del móvil");
 			break;
 
 		case "Primero":
-			accionExtra.push("No has empezado bien el día");
+			pilaAccion.push("No has empezado bien el día");
 			break;
 
 		case "Que":
-			accionExtra.push("1839, Daguerre va a hacer público un gran avance");
+			pilaAccion.push("1839, Daguerre va a hacer público un gran avance");
 			break;
 	}
 
-	//Cuanto dinero has derrochado en el último año (Multi)
+	//¿Qué es lo primero que miras al abrir los ojos por la mañana?
 	switch (data[3]["value"]) {
-		case "300":
-			pilaLugar.push("Se ha detectado la caída de 1€");
+		case "Hora":
+			objetoExtra.push("Un reloj");
 			break;
 
-		case "500":
-			publicaDirectFormAcc("Has tirado 2,73€",10000);
+		case "Redes":
+			personaExtra.push("Alguien al que sigues en redes sociales y no saludas por la calle");
 			break;
 
-		case "No":
-			//pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
+		case "Techo":
+			pilaLugar.push("Reset y listo para comenzar proceso creativo");
 			break;
 	}
 
-	//Cuantas veces miras al cielo a la semana (Multi)
+	//¿Cuántas veces te miras en el espejo al día?
 	switch (data[4]["value"]) {
-		case "No":
-			pilaLugar.push("El suelo está demasiado sucio");
-			break;
-
 		case "1":
-			publicaDirectFormNorm("Bajo un cielo azul índigo",10000);
+			pilaCaracteristica.push("Eres guap@");
 			break;
 
-		case "7":
-			publicaDirectFormNorm("Bajo las nubes más espectaculares que has visto en tu vida",10000);
+		case "5":
+			pilaCaracteristica.push("Eres muy muy guap@");
+			break;
+
+		case "10":
+			pilaPersona.push("Se ha encontrado una nueva cana en tu cabeza");
 			break;
 	}
 
-	//Tiempo máximo que has estado sin comer
+	//¿Qué contenido tienen mayoritariamente las imágenes de tu dormitorio?
 	switch (data[5]["value"]) {
-		case "Dormido":
-			pilaAccion.push("Se necesitará comer para poder desarrollar la acción");
-			break;
-
-		case "1":
-			//publicaDirectFormNorm("Bajo un cielo azul índigo",10000);
-			break;
-
-		case "2":
-			pilaCaracteristica.push("Se ha detectado una lesión epitelial con pérdida de sustancia en la boca");
-			break;
-	}
-
-	//Cuantos vasos de agua bebes al dia
-	if (data[6]["value"] < 3) {
-		pilaObjeto.push("@recordatoriodetomaragua");
-	}
-
-	//Cuantas veces has usado el móvil en el cine
-	if (data[7]["value"] > 10) {
-		pilaLugar.push("https://www.youtube.com/watch?v=pvrp_uTEbPo");
-	}
-
-	//Cuantos móviles hay en tu casa
-	if (data[8]["value"] > 3) {
-		pilaLugar.push("Al final de la cola de 48horas para adquirir el último iPhone");
-	}
-
-	//Cuantos videos de youtube ves en un mes
-	if (data[9]["value"] > 50) {
-		pilaPersona.push("Ha habido un cambio en el módulo ideológico, en adelante pensará como un supremacista terraplanista");
-	}
-
-	//Cuanto tiempo te aburres cada día en clase
-	switch (data[10]["value"]) {
-		case "50":
-			publicaDirectFormAcc("Veo a todas las personas desnudas",15000);
-			break;
-
-		case "30":
-			publicaDirectFormAcc("Mi padre tenía razón",15000);
-			break;
-
-		case "Todo":
-			publicaDirectFormAcc("Detrás de la puerta de la que posiblemente sea la mejor clase del curso",15000);
-			break;
-	}
-
-	//Cuantos seguidores tienes en Instagram
-	if (data[11]["value"] > 1000) {
-		pilaPersona.push("Instagram acaba de eliminarle 356 seguidores");
-	}
-
-	//Cuantas calorías tiene tu merienda
-	switch (data[12]["value"]) {
 		case "No":
-			pilaPersona.push("Si sigue así va a morir");
+			pilaLugar.push("El lugar de despierte ha sido un dormitorio lleno de fotografías :-o");
 			break;
 
-		case "TeImporta":
-			pilaPersona.push("Si sigue así va a morir");
+		case "Familia":
+		  pilaLugar.push("Reconocidas estas imágenes como generadoras de muchos recuerdos");
+			break;
+
+		case "Abstractas":
+			pilaLugar.push("El identificador de imágenes no encuentra relación con el mundo real");
+			break;
+
+		case "Viajes":
+			accionExtra.push("Te lleva a ese rincón tan recóndito en el que estuviste");
+			break;
+	}
+
+	//¿Dónde guardas tus fotografías?
+	switch (data[6]["value"]) {
+		case "Disco":
+			pilaAccion.push("¿Desea borrar la carpeta “todas las fotografías de mi vida”? La acción no es puede rehacer. Acción realizada con exito");
+			break;
+
+		case "Album":
+			objetoExtra.push("El álbum al que todavía le quedan hojas libres");
+			break;
+
+		case "Caja":
+			pilaPersona.push("Se han sacado todos tus recuerdos de la caja");
+			break;
+	}
+
+	//¿Con qué frecuencia recuerdas lo que sueñas?
+	switch (data[7]["value"]) {
+		case "Siempre":
+			caracteristicasExtra.push("Como en mis sueños");
+			break;
+
+		case "No":
+			pilaAccion.push("Acabas de despertar de un sueño húmedo");
+			break;
+
+		case "Rara":
+			pilaAccion.push("Escribe lo que acabas de soñar");
+			break;
+	}
+
+	//¿Te has emocionado alguna vez con una fotografía?
+	switch (data[8]["value"]) {
+		case "Si":
+			pilaCaracteristica.push("Me hace llorar");
+			break;
+
+		case "Familia":
+			pilaCaracteristica.push("Me hace reír");
 			break;
 
 		case "Nunca":
-			pilaPersona.push("Si sigue así va a morir");
+			caracteristicasExtra.push("No me afecta");
+			break;
+	}
+
+	//¿Cuántas pestañas tienes abiertas en tu navegador de internet?
+	switch (data[9]["value"]) {
+		case "Ojos":
+			publicaDirectFormNorm("Una persona muy dispersa",45000);
+			break;
+
+		case "Utilizo":
+			pilaPersona.push("Sistema de pestañas del navegador optimizado correctamente");
+			break;
+
+		case "Meses":
+			pilaAccion.push("Encontradas pestañas del navegador a punto de caducar");
+			break;
+	}
+
+	//¿Cuántos emails sin abrir tienes en la bandeja de entrada?
+	switch (data[10]["value"]) {
+		case "Dia":
+			publicaDirectFormNorm("Una persona muy organizada y resuelta",80000);
+			break;
+
+		case "5000":
+			pilaAccion.push("Has recibido una amonestación de tu jefe por falta de comunicación");
+			break;
+	}
+
+
+	//¿Qué fondo de pantalla tienes en tu móvil?
+	switch (data[11]["value"]) {
+		case "Stock":
+			publicaDirectFormAcc("Haz yoga durante 30 minutos",100000);
+			break;
+
+		case "Suegra":
+			publicaDirectFormNorm("Una persona querida por mucha gente",120000);
+			break;
+
+		case "Yo":
+			pilaAccion.push("Cámara frontal averiada, característica selfie deshabilitada");
+			break;
+	}
+
+
+	//¿Qué emoji usas más?
+	switch (data[12]["value"]) {
+		case "Flamenca":
+			pilaPersona.push("&#128131;&#127997; &#128131;&#127997; &#128131;&#127997;");
+			break;
+
+		case "Corazon":
+			pilaPersona.push("&#128148; &#128148;");
+			break;
+
+		case "Berenjena":
+			pilaPersona.push("&#127814;&#127849;");
+			break;
+	}
+
+
+	//¿Cuántas veces publicas en Instagram al día?
+	switch (data[13]["value"]) {
+		case "Menos":
+			pilaAccion.push("Comprobada actividad por tercera vez en 5 min, sin me gustas nuevos");
+			break;
+
+		case "Influencer":
+			pilaPersona.push("El feo de detrás te ha estropeado el post");
+			break;
+	}
+
+	//¿Cuántas stories de Instagram ves al día?
+	switch (data[14]["value"]) {
+		case "Todas":
+			pilaAccion.push("Fin, te has pasado Internet");
+			break;
+
+		case "Ex":
+			publicaDirectFormAcc("Haz un collage con fotografías de tu ex y ponlo en la casa que compartes con tu novia", 92000);
+			break;
+	}
+
+	//¿Cuántas fotos recibes en Whatsapp al día? (número/tipo)
+	switch (data[15]["value"]) {
+		case "3450325":
+			pilaObjeto.push("Whatsapp ya no será gratuito y cobrará por fotografía recibida");
+			break;
+
+		case "Sobrina":
+			personaExtra.push("La madre de tu sobrina");
+			break;
+
+		case "No":
+			accionExtra.push("El SMS es el nuevo SOS");
+			break;
+	}
+
+	//¿Cuántos memes recibes al día?
+	switch (data[16]["value"]) {
+		case "Hostia":
+			personaExtra.push("Successs Kid");
+			break;
+
+		case "Refieres":
+			pilaCaracteristica.push("Se recomienda instalar la librería de memes");
+			break;
+	}
+
+	//¿Cuántas fotografías tomas un día cualquiera?
+	switch (data[17]["value"]) {
+		case "Ninguna":
+			personaExtra.push("Un gato negro");
+			break;
+
+		case "Capturas":
+			personaExtra.push("Pingüinos");
+			break;
+
+		case "Nunca":
+			pilaObjeto.push("Se necesita realizar proceso de edición. Tiempo estimado: 8 años");
+			break;
+	}
+
+	//¿Qué imágenes te impactan más en tu día a día?
+	switch (data[18]["value"]) {
+		case "Pantallas":
+			pilaLugar.push("No veas tanto la televisión");
+			break;
+
+		case "Papel":
+			objetoExtra.push("Un fotolibro");
+			break;
+	}
+
+	//¿Cuál es el contenido principal de la última imagen que
+	switch (data[19]["value"]) {
+		case "Yo":
+			pilaAccion.push("20 selfies iguales son suficientes");
+			break;
+
+		case "Producto":
+			pilaObjeto.push("Según tus patrones de navegación te recomendamos compres un test de embarazo");
+			break;
+
+		case "Paisaje":
+			pilaLugar.push("Según tus patrones de navegación te recomendamos viajes a Teruel");
+			break;
+	}
+
+	//¿Cuántas veces miras al cielo a la semana?
+	switch (data[20]["value"]) {
+		case "Cielo":
+			pilaCaracteristica.push("El suelo está demasiado sucio");
+			break;
+
+		case "1":
+			publicaDirectFormNorm("Bajo un cielo azul índigo", 70000);
+			break;
+
+		case "7":
+			publicaDirectFormNorm("Bajo las nubes más espectaculares que has visto en tu vida", 110000);
 			break;
 	}
 }
@@ -310,24 +464,24 @@ function cargaPilasTerminal(data){
 //Función con la que aplicamos un porcentaje de repuestas fijas y las del Formulario
 function x100Pila(variable){
 	var alea = Math.round(Math.random()*(2-0)+parseInt(0));
-	console.log(alea);
+	//console.log(alea);
 	//Si aleatorio es 0 selecciona una de las variables del formulario
 	if (alea == 0) {
-		console.log("aleatorio 0");
-		console.log(variable);
+		//console.log("aleatorio 0");
+		//console.log(variable);
 		var tempVar = variable[variable.length-1];
-		console.log("lenght"+variable.length);
+		//console.log("lenght"+variable.length);
 		//Eliminamos la variable utilizada
 		if (variable.length > 1) {
 			variable.pop();
 		}
-		console.log(variable);
+		//console.log(variable);
 		return tempVar;
 	}
 	//Si aleatorio es 1-2-3-4... selecciona la varialbe fija
 	if (alea>0) {
-		console.log("aleatorio 1-2-3-4");
-		console.log(variable);
+		//console.log("aleatorio 1-2-3-4");
+		//console.log(variable);
 		return variable[0];
 	}
 }
@@ -342,7 +496,7 @@ function AsientoAlgoritmo(tipo,contenido){
 function agregarArray(){
 	menAlgoritmo.push(nuevoAsiento);
 	//console.log("menAlgoritmo");
-	console.log(menAlgoritmo);
+	//console.log(menAlgoritmo);
 }
 
 //Función de separación de datos según sea lugar,característica, objeto, persona o bien Acción para crear estilos diferentes en el PDF
