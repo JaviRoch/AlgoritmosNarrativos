@@ -43,6 +43,7 @@ try
      'pregunta19'=> $_POST['pregunta19'],
      'pregunta20'=> $_POST['pregunta20'],
      'pregunta21'=> $_POST['pregunta21'],
+     'pregunta22'=> $_POST['pregunta22'],
   );
 
   //Insertamos datos del formulario al array

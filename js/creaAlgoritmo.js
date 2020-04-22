@@ -1,6 +1,10 @@
 
 //var pilaTiempos = [0];
 var accionExtra=[];
+var objetoExtra=[];
+var lugaresExtra=[];
+var personaExtra=[];
+var caracteristicasExtra=[];
 var primerAccion =0;
 var indiceMenAlgoritmo = 0;
 var menAlgoritmo = [];
@@ -164,20 +168,41 @@ function publicaDirectFormAcc(texto,tiempo){
 //
 function cargaPilasTerminal(data){
 	console.log(data);
-	console.log(data[0]["value"]);
+	console.log("valor hora");
+	console.log(data[1]["value"]);
 
-	//Cuantas veces te cambias de ropa al día (Multi)
+	//¿Cuántas horas duermes al día?
+	if (data[0]["value"] < 6) {
+		publicaDirectFormAcc("El sueño te impide ver con claridad",60000);
+	}
+	if (data[0]["value"] > 9) {
+		pilaAccion.push("La alarma fue pospuesta tres veces, imposible ejecutar proceso de inicio");
+	}
+
+	//¿A qué hora te despiertas?
+	var horaTemp = parseInt(data[1]["value"])
+	if (horaTemp <= 6) {
+		accionExtra.push("Verás un bonito amanecer");
+	}
+	if (horaTemp >= 12 && horaTemp <= 14) {
+		accionExtra.push("Subiendo una foto de mi desayuno mientras la gente está almorzando ya");
+	}
+	if (horaTemp >= 14) {
+		pilaAccion.push("El sistema horario está corrupto, para reiniciarlo deberá dormir lo que queda de día");
+	}
+
+	//¿A qué hora del día consultas por primera vez el móvil?
 	switch (data[2]["value"]) {
-		case "No":
-			//pilaAccion.push("Se recomienda realizar un cambio de ropa");
+		case "Nunca":
+			accionExtra.push("Se está agotando la batería del móvil");
 			break;
 
-		case "1-3":
-			pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
+		case "Primero":
+			accionExtra.push("No has empezado bien el día");
 			break;
 
-		case "Muchas":
-			pilaLugar.push("Te vas a tener que cambiar de ropa otra vez");
+		case "Que":
+			accionExtra.push("1839, Daguerre va a hacer público un gran avance");
 			break;
 	}
 
@@ -391,7 +416,7 @@ $(document).ready(function(){
 			var data = $("form").serializeArray();
 
 			//Comprobamos que los campos numéricos han sido rellenados
-			if (data[0]["value"] && data[1]["value"] && data[6]["value"] && data[7]["value"] && data[8]["value"] && data[9]["value"] && data[11]["value"] && data[15]["value"] && data[16]["value"] && data[17]["value"] && data[19]["value"] != ""){
+			if (data[0]["value"] && data[1]["value"] != ""){
 
 				//AJAX envío de los datos a php
 				$.ajax({
@@ -436,7 +461,6 @@ $(document).ready(function(){
 				//console.log(datos);
 
 				//Extraemos solo los campos con el tipo Lugar
-				var lugaresExtra=[];
 				var lugares = datos.filter(datos => datos.hecho0 == "Lugar");
 				for (var i = 0; i < lugares.length; i++) {
 					lugaresExtra.push(lugares[i]["comando0"]);
@@ -558,7 +582,6 @@ $(document).ready(function(){
 			$.getJSON("../datos/data.json", function(datos){
 
 				//Extraemos solo los campos con el tipo Caracteristica
-				var caracteristicasExtra=[];
 				var caracteristicas = datos.filter(datos => datos.hecho0 == "Caracteristica");
 				for (var i = 0; i < caracteristicas.length; i++) {
 					caracteristicasExtra.push(caracteristicas[i]["comando0"]);
@@ -679,9 +702,7 @@ $(document).ready(function(){
 			$.getJSON("../datos/data.json", function(datos){
 				//console.log("Datos ");
 				//console.log(datos);
-
 				//Extraemos los campos con el tipo Persona
-				var personaExtra=[];
 				var persona = datos.filter(datos => datos.hecho0 == "Persona");
 				for (var i = 0; i < persona.length; i++) {
 					personaExtra.push(persona[i]["comando0"]);
@@ -802,9 +823,7 @@ $(document).ready(function(){
 			$.getJSON("../datos/data.json", function(datos){
 				//console.log("Datos ");
 				//console.log(datos);
-
 				//Extraemos los campos con el tipo objeto
-				var objetoExtra=[];
 				var objeto = datos.filter(datos => datos.hecho0 == "Objeto");
 				for (var i = 0; i < objeto.length; i++) {
 					objetoExtra.push(objeto[i]["comando0"]);
