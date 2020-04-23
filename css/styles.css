@@ -246,6 +246,27 @@ padding-left: 137px;
 }
 
 /**
+Estilo punto acción
+**/
+
+#visualAlgoritmo {
+  padding: 15px 0 0 0;
+  font-family: 'rathersemibold';
+	font-size: 1.4rem;
+  line-height: 0.8;
+  margin-bottom: 0rem !important;
+  text-align: left;
+  color: #ffffff;
+}
+
+.tituloAlgoritmo{
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #c2eaff;
+}
+
+
+/**
 Estilo punto de saturación
 **/
 
@@ -347,7 +368,7 @@ Estilo punto de saturación
   color: #ffecc2;
 }
 
-/*Estilo punto de salida*/
+/*Estilo punto de saturación*/
 
 .formCero{
   padding: 52px 18px 0 16px;

@@ -146,6 +146,268 @@ $(document).ready(function(){
 		}
 	});
 
+
+	//Función para visualizar el algoritmo seleccionado
+
+	function visualizaAlgoritmo(variableIti, funci){
+
+		//Cargamos el contenido del desplegable seleccionado
+		var seleccionadoAlgo = funci;
+		//Borramos contenido
+		$("#visualAlgoritmo").empty();
+
+		//Añadimos título
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		//var nuevoMensajeAlgor = document.createTextNode(data2[$('select[id='+variableIti+']').val()].titulo);
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].titulo);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		nuevoParrafoVisu.className="tituloAlgoritmo";
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando0);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando1);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando2);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando3);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando4);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando5);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando6);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando7);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando8);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando9);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando10);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando11);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando12);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando13);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando14);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando15);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando16);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando17);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando18);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+		//Añadimos contenido
+		var nuevoParrafoVisu = document.createElement("p");
+		//Cargamos en el span el contenido del algoritmo seleccionado
+		var nuevoMensajeAlgor = document.createTextNode(data2[seleccionadoAlgo.val()].comando19);
+		nuevoParrafoVisu.appendChild(nuevoMensajeAlgor);
+		//Cargamos en página el nuevo Titulo
+		document.querySelector("#visualAlgoritmo").appendChild(nuevoParrafoVisu);
+
+		};
+
+	//Llamamos a la función al cambiar de selección
+	$("#desplegable1").change(function(){
+		visualizaAlgoritmo(desplegable1, $('select[id=desplegable1]'));
+	});
+
+	$("#desplegable2").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable2]'));
+	});
+
+	$("#desplegable3").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable3]'));
+	});
+
+	$("#desplegable4").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable4]'));
+	});
+
+	$("#desplegable5").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable5]'));
+	});
+
+	$("#desplegable6").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable6]'));
+	});
+
+	$("#desplegable7").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable7]'));
+	});
+
+	$("#desplegable8").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable8]'));
+	});
+
+	$("#desplegable9").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable9]'));
+	});
+
+	$("#desplegable10").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable10]'));
+	});
+
+	$("#desplegable11").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable11]'));
+	});
+
+	$("#desplegable12").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable12]'));
+	});
+
+	$("#desplegable13").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable13]'));
+	});
+
+	$("#desplegable14").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable14]'));
+	});
+
+	$("#desplegable15").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable15]'));
+	});
+
+	$("#desplegable16").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable16]'));
+	});
+
+	$("#desplegable17").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable17]'));
+	});
+
+	$("#desplegable18").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable18]'));
+	});
+
+	$("#desplegable19").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable19]'));
+	});
+
+	$("#desplegable20").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable20]'));
+	});
+
+	$("#desplegable21").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable21]'));
+	});
+
+	$("#desplegable22").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable22]'));
+	});
+
+	$("#desplegable23").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable23]'));
+	});
+
+	$("#desplegable24").change(function(){
+		visualizaAlgoritmo(desplegable2, $('select[id=desplegable24]'));
+	});
+
+
+	//Funciónn de creación del PDF
 	$("#imprimirSalida").click(function (event) {
 		//Evitamos que recargue la página
 		event.preventDefault();
@@ -172,10 +434,8 @@ $(document).ready(function(){
 		//Variable qeu de fine la altura a la que comienza el texto
 		var comText = 78;
 		//Anchura del comando
-		var anComan = 125;
-		console.log(comText);
+		var anComan = 122;
 		var doc = new jsPDF();
-		console.log(comText);
 
 
 // Creación de páginas
@@ -192,7 +452,7 @@ $(document).ready(function(){
 			doc.rect(40, 20, 130, 51, 'F'); // empty red square
 
 			//Dividimos el texto para el espacio marcado y cambiamos de línea si es necesario
-			doc.setFontSize(22); //Tamaño de texto para el cáculo de longitud
+			doc.setFontSize(18); //Tamaño de texto para el cáculo de longitud
 			var splitTitle = doc.splitTextToSize(data2[seleccionados[paginas].value].titulo, 120);
 			//Definimos posición izquierda/altura y texto
 			doc.setTextColor(255);
@@ -200,7 +460,7 @@ $(document).ready(function(){
 			doc.text(21,42,"9");
 			doc.setFontSize(30);
 			doc.text(43,32,"PUNTO DE ACCIÓN");
-			doc.setFontSize(22);
+			doc.setFontSize(18);
 			doc.text(43,42, splitTitle);
 
 			doc.setTextColor(255);
@@ -368,7 +628,8 @@ $(document).ready(function(){
 		}
 
 		//Guardamos el pDF
-		doc.save('salida.pdf');
+		var f = new Date();
+		doc.save('acción_' + f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear() +"_"+ f.getUTCHours() + ":" + f.getMinutes() + '.pdf');
 
  });
 });

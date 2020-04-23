@@ -114,7 +114,8 @@ function creaPDF(data){
 	doc.addImage(imagen,'JPEG', 168, 17, 28, 254);
 
 	//Guardamos el pDF
-	doc.save('salida.pdf');
+	var f = new Date();
+	doc.save('saturación_' + f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear() +"_"+ f.getUTCHours() + ":" + f.getMinutes() + '.pdf');
 
 }
 
@@ -206,6 +207,33 @@ function cargaPilasTerminal(data){
 	//¿Qué es lo primero que miras al abrir los ojos por la mañana?
 	switch (data[3]["value"]) {
 		case "Hora":
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
+			objetoExtra.push("Un reloj");
 			objetoExtra.push("Un reloj");
 			break;
 
@@ -716,7 +744,6 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = lugaresExtra[indiceLugar];
-				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
 				tipoContenido(tipo,contenido);
@@ -838,7 +865,6 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = caracteristicasExtra[indiceCaracteristica];
-				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
 				tipoContenido(tipo,contenido);
@@ -959,7 +985,6 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = personaExtra[indicePersona];
-				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
 				tipoContenido(tipo,contenido);
@@ -1080,7 +1105,6 @@ $(document).ready(function(){
 				//Definimos los datos a guardar
 				var tipo = "normal";
 				var contenido = objetoExtra[indiceObjeto];
-				//var hora = " ";
 
 				//Comprobamos tipo de contenido y si está creado ya algún objeto
 				tipoContenido(tipo,contenido);
@@ -1201,7 +1225,6 @@ $("#buttonAccion").click(function(){
 		//Definimos los datos a guardar
 		var tipo = "accion";
 		var contenido = accionExtra[indiceAccion];
-		//var hora = " ";
 
 		//Comprobamos tipo de contenido y si está creado ya algún objeto
 		tipoContenido(tipo,contenido);
