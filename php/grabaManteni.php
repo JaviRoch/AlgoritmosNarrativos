@@ -77,12 +77,6 @@ try
   if(file_put_contents($myFile, $jsondata)) {
     echo "Datos guardados";
 
-    //Mandamos un mail
-    $to = "javi@javierroche.es";
-    $subject = "Asunto del email";
-    $message = "Este es mi primer envío de email con PHP";
-    mail($to, $subject, $message);
-
    }
   else
     echo "Error al guardar datos";

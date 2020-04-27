@@ -19,6 +19,7 @@ $(document).ready(function(){
 
 	//Obtenemos la posición del título en el array
 	var titulMan = document.getElementById("titleMan").value;
+	console.log(data2);
 	console.log (titulMan);
 	console.log(data2[titulMan]);
 	console.log(data2[titulMan]["hecho0"]);
