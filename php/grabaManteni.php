@@ -65,10 +65,13 @@ try
      'nEntrada' => $_POST['nEntrada'],
   );
 
-  //Insertamos datos del formulario al array
-  array_push($arr_data,$formdata);
-  //$arr_data[$formdata['nEntrada']] = $formdata;
+  //Cogemos el número de entrada
+  $formKey = array(
+     'nEntrada' => $_POST['nEntrada'],
+  );
 
+  //Insertamos datos del formulario al array
+  $arr_data[$formKey['nEntrada']] = $formdata;
 
   //Convertimos array a JSON
   $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);

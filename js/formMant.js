@@ -15,14 +15,14 @@ $.getJSON('../datos/data.json', function(data) {
 $(document).ready(function(){
 	$("#cargaDatos").click(function () {
 	//Evitamos que recargue la página
-	console.log("en cargaDatos");
+	//console.log("en cargaDatos");
 
 	//Obtenemos la posición del título en el array
 	var titulMan = document.getElementById("titleMan").value;
-	console.log(data2);
-	console.log (titulMan);
-	console.log(data2[titulMan]);
-	console.log(data2[titulMan]["hecho0"]);
+	//console.log(data2);
+	//console.log (titulMan);
+	//console.log(data2[titulMan]);
+	//console.log(data2[titulMan]["hecho0"]);
 	var entradaTxt = document.createTextNode("Entrada Nº "+ titulMan+"; ");
 	document.getElementById("numEntrada").appendChild(entradaTxt);
 	document.getElementById("titleManMod").value = data2[titulMan]["titulo"];

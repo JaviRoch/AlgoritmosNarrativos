@@ -24,6 +24,7 @@ try
      'nEntrada' => $_POST['nEntrada'],
   );
 
+
   //Insertamos datos del formulario al array
   //array_push($arr_data,$formdata);
   //$arr_data[$formdata['nEntrada']] = $formdata;

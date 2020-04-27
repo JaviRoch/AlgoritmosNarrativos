@@ -36,7 +36,7 @@ $(document).ready(function(){
         }
       });
         //Acciones a realizar una vez guardado ocultaForm()
-        console.log(data);
+        //console.log(data);
         vaciaFormulario();
         return false;
       }else{

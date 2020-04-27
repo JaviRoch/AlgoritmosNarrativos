@@ -21,8 +21,8 @@ var imagen = 'data:image/jpeg;base64,/9j/4QogRXhpZgAATU0AKgAAAAgABwESAAMAAAABAAE
 
 //Función de creación del PDF
 function creaPDF(data){
-	console.log("data");
-	console.log(data);
+	//console.log("data");
+	//console.log(data);
 
 	//Varible que define el interlineado
 	var intLi = 6;
