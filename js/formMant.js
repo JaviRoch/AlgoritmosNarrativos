@@ -121,6 +121,7 @@ $(document).ready(function(){
 					success:function(data) {
 						//console.log(data);
 						alert('Datos guardados');
+						location.reload();
 			}
 		});
 			//Acciones a realizar una vez guardado ocultaForm()

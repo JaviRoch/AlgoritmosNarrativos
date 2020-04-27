@@ -24,7 +24,7 @@ $(document).ready(function(){
       });
 
       var data = $("form").serializeArray();
-        if (data[0]["value"] != ""){
+        if (data[0]["value"] != ""&&data[2]["value"] != ""){
         //AJAX.
         $.ajax({
             type : 'POST',
@@ -41,7 +41,7 @@ $(document).ready(function(){
         return false;
       }else{
         //Alerta si el título está vacio
-				alert('Debes de rellenar el título');
+				alert('Debes de rellenar el título, si se ha mostrado el algoritmo de ejemplo debes poner a ---- los Types no rellenados');
       }
    });
 
